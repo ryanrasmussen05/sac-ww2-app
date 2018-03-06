@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{ exhibit.name }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let artifact of exhibit.artifacts">
+            <span>{{ artifact.number }}</span>
+            <span>{{ artifact.name }}</span>
+        </button>
+    </ion-list>
+</ion-content>

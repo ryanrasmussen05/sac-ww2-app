@@ -8,8 +8,10 @@
 </ion-header>
 
 
-<ion-content padding>
-
-    <div>Individual Exhibits Page</div>
-
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let exhibit of exhibits" (click)="exhibitClicked(exhibit)">
+            {{ exhibit.name }}
+        </button>
+    </ion-list>
 </ion-content>
