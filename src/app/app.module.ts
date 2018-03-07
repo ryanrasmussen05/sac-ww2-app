@@ -10,6 +10,7 @@ import { ContinuousExhibitsPage } from '../pages/continuousExhibits/continuous.e
 import { ExhibitDataService } from '../data/exhibit.data.service';
 import { ExhibitPage } from '../pages/exhibit/exhibit.page';
 import { ArtifactPage } from '../pages/artifact/artifact.page';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { ArtifactPage } from '../pages/artifact/artifact.page';
         IonicModule.forRoot(AppComponent, {
             //mode: 'ios'
         }),
+        IonicImageViewerModule
     ],
     bootstrap: [IonicApp],
     entryComponents: [
