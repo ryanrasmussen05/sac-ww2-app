@@ -9,6 +9,7 @@ import { IndividualExhibitsPage } from '../pages/individualExhibits/individual.e
 import { ContinuousExhibitsPage } from '../pages/continuousExhibits/continuous.exhibits.page';
 import { ExhibitDataService } from '../data/exhibit.data.service';
 import { ExhibitPage } from '../pages/exhibit/exhibit.page';
+import { ArtifactPage } from '../pages/artifact/artifact.page';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { ExhibitPage } from '../pages/exhibit/exhibit.page';
         HomePage,
         IndividualExhibitsPage,
         ContinuousExhibitsPage,
-        ExhibitPage
+        ExhibitPage,
+        ArtifactPage
     ],
     imports: [
         BrowserModule,
@@ -30,7 +32,8 @@ import { ExhibitPage } from '../pages/exhibit/exhibit.page';
         HomePage,
         IndividualExhibitsPage,
         ContinuousExhibitsPage,
-        ExhibitPage
+        ExhibitPage,
+        ArtifactPage
     ],
     providers: [
         StatusBar,

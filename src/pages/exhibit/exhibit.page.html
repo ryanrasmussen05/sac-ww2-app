@@ -6,7 +6,7 @@
 
 <ion-content>
     <ion-list>
-        <button ion-item *ngFor="let artifact of exhibit.artifacts">
+        <button ion-item *ngFor="let artifact of exhibit.artifacts" (click)="artifactClicked(artifact)">
             <span>{{ artifact.number }}</span>
             <span>{{ artifact.name }}</span>
         </button>
