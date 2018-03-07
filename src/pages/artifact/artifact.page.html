@@ -6,25 +6,37 @@
 
 <ion-content class="artifact">
 
-    <div class="small-carousel-wrapper">
-        <div class="small-carousel-content">
+    <div *ngIf="true">
+        <div class="small-carousel-wrapper">
+            <div class="small-carousel-content">
 
-            <ion-slides #slider [zoom]="false" [effect]="'slide'" [pager]="true" (ionSlideWillChange)="onSlideChanged()">
+                <ion-slides #slider [zoom]="false" [effect]="'slide'" [pager]="true" (ionSlideWillChange)="onSlideChanged()">
 
-                <ion-slide *ngFor="let picture of artifact.pictures">
-                    <img [src]="'assets/pictures/' + picture + '.jpg'">
-                </ion-slide>
+                    <ion-slide *ngFor="let picture of artifact.pictures">
+                        <img [src]="'assets/pictures/' + picture + '.jpg'">
+                    </ion-slide>
 
-            </ion-slides>
+                </ion-slides>
 
-            <div *ngIf="currentIndex > 0" class="swiper-button-prev swiper-button-white" (click)="previousSlide()"></div>
-            <div *ngIf="currentIndex < artifact.pictures.length-1" class="swiper-button-next swiper-button-white" (click)="nextSlide()"></div>
+                <div *ngIf="currentIndex > 0" class="swiper-button-prev swiper-button-white" (click)="previousSlide()"></div>
+                <div *ngIf="currentIndex < artifact.pictures.length-1" class="swiper-button-next swiper-button-white" (click)="nextSlide()"></div>
 
+            </div>
         </div>
+
+        <h1 text-center>{{ artifact.name }}</h1>
+
+        <div padding class="artifact-description">{{ artifact.description }}</div>
     </div>
 
-    <h1 text-center>{{ artifact.name }}</h1>
+    <!--<ion-slides [effect]="'fade'">-->
 
-    <div padding class="artifact-description">{{ artifact.description }}</div>
+        <!--<ion-slide *ngFor="let picture of artifact.pictures">-->
+            <!--<ion-scroll scrollX="true" scrollY="true" zoom="true">-->
+                <!--<img [src]="'assets/pictures/' + picture + '.jpg'">-->
+            <!--</ion-scroll>-->
+        <!--</ion-slide>-->
+
+    <!--</ion-slides>-->
 
 </ion-content>

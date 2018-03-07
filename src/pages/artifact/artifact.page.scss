@@ -21,9 +21,12 @@
             right:0;
         }
 
-        //internal ionic class, force tall images to scale
+        //internal ionic class, force images to scale
         .slide-zoom {
             height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
