@@ -26,6 +26,25 @@
 
         <h1 text-center>{{ artifact.name }}</h1>
 
+        <audio-track #audioTrack [track]="track">
+            <div class="audio-wrapper" padding-left padding-right>
+                <div *ngIf="audioTrack.canPlay" class="control-wrapper">
+                    <button *ngIf="!audioTrack.isPlaying" ion-button icon-only (click)="audioTrack.play()"><ion-icon name="play"></ion-icon></button>
+                    <button *ngIf="audioTrack.isPlaying" ion-button icon-only (click)="audioTrack.pause()"><ion-icon name="pause"></ion-icon></button>
+                </div>
+                <div class="progress-bar-wrapper">
+                    <audio-track-progress-bar duration progress [audioTrack]="audioTrack"></audio-track-progress-bar>
+                </div>
+            </div>
+        </audio-track>
+
+        <div padding-left padding-right>
+            <audio controls controlsList="nodownload">
+                <source src="assets/audio/sample.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
         <div padding class="artifact-description">{{ artifact.description }}</div>
     </div>
 

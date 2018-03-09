@@ -11,6 +11,7 @@ import { ExhibitDataService } from '../data/exhibit.data.service';
 import { ExhibitPage } from '../pages/exhibit/exhibit.page';
 import { ArtifactPage } from '../pages/artifact/artifact.page';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
         IonicModule.forRoot(AppComponent, {
             //mode: 'ios'
         }),
-        IonicImageViewerModule
+        IonicImageViewerModule,
+        IonicAudioModule.forRoot(defaultAudioProviderFactory)
     ],
     bootstrap: [IonicApp],
     entryComponents: [

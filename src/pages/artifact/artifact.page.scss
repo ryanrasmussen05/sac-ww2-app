@@ -33,4 +33,25 @@
             align-items: center;
         }
     }
+
+    .audio-wrapper {
+        display: flex;
+
+        .control-wrapper {
+            flex-shrink: 0;
+        }
+
+        .progress-bar-wrapper {
+            flex: 1;
+            display: flex;
+
+            audio-track-progress-bar {
+                flex: 1;
+            }
+        }
+    }
+
+    audio {
+        width: 100%;
+    }
 }
