@@ -25,7 +25,8 @@ const greenExhibit: Exhibit = {
                 'green-artifact-1-3',
                 'green-artifact-1-4',
                 'green-artifact-1-5'
-            ]
+            ],
+            audio: 'green-artifact-1.mp3'
         },
         {
             number: '2',
@@ -48,7 +49,8 @@ const greenExhibit: Exhibit = {
                 'green-artifact-2-3',
                 'green-artifact-2-4',
                 'green-artifact-2-5'
-            ]
+            ],
+            audio: 'green-artifact-2.mp3'
         }
     ]
 };

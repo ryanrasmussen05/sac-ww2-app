@@ -25,7 +25,8 @@ const yellowExhibit: Exhibit = {
                 'yellow-artifact-1-3',
                 'yellow-artifact-1-4',
                 'yellow-artifact-1-5'
-            ]
+            ],
+            audio: 'yellow-artifact-1.mp3'
         },
         {
             number: '2',
@@ -48,7 +49,8 @@ const yellowExhibit: Exhibit = {
                 'yellow-artifact-2-3',
                 'yellow-artifact-2-4',
                 'yellow-artifact-2-5'
-            ]
+            ],
+            audio: 'yellow-artifact-2.mp3'
         }
     ]
 };

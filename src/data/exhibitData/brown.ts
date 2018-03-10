@@ -25,7 +25,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-1-3',
                 'brown-artifact-1-4',
                 'brown-artifact-1-5'
-            ]
+            ],
+            audio: 'brown-artifact-1.mp3'
         },
         {
             number: '2',
@@ -48,7 +49,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-2-3',
                 'brown-artifact-2-4',
                 'brown-artifact-2-5'
-            ]
+            ],
+            audio: 'brown-artifact-2.mp3'
         },
         {
             number: '3',
@@ -71,7 +73,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-3-3',
                 'brown-artifact-3-4',
                 'brown-artifact-3-5'
-            ]
+            ],
+            audio: 'brown-artifact-3.mp3'
         },
         {
             number: '4',
@@ -94,7 +97,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-4-3',
                 'brown-artifact-4-4',
                 'brown-artifact-4-5'
-            ]
+            ],
+            audio: 'brown-artifact-4.mp3'
         },
         {
             number: '5',
@@ -117,7 +121,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-5-3',
                 'brown-artifact-5-4',
                 'brown-artifact-5-5'
-            ]
+            ],
+            audio: 'brown-artifact-5.mp3'
         },
         {
             number: '6',
@@ -140,7 +145,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-6-3',
                 'brown-artifact-6-4',
                 'brown-artifact-6-5'
-            ]
+            ],
+            audio: 'brown-artifact-6.mp3'
         },
         {
             number: '7',
@@ -163,7 +169,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-7-3',
                 'brown-artifact-7-4',
                 'brown-artifact-7-5'
-            ]
+            ],
+            audio: 'brown-artifact-7.mp3'
         },
         {
             number: '8',
@@ -186,7 +193,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-8-3',
                 'brown-artifact-8-4',
                 'brown-artifact-8-5'
-            ]
+            ],
+            audio: 'brown-artifact-8.mp3'
         },
         {
             number: '9',
@@ -209,7 +217,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-9-3',
                 'brown-artifact-9-4',
                 'brown-artifact-9-5'
-            ]
+            ],
+            audio: 'brown-artifact-9.mp3'
         },
         {
             number: '10',
@@ -232,7 +241,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-10-3',
                 'brown-artifact-10-4',
                 'brown-artifact-10-5'
-            ]
+            ],
+            audio: 'brown-artifact-10.mp3'
         },
         {
             number: '11',
@@ -255,7 +265,8 @@ const brownExhibit: Exhibit = {
                 'brown-artifact-11-3',
                 'brown-artifact-11-4',
                 'brown-artifact-11-5'
-            ]
+            ],
+            audio: 'brown-artifact-11.mp3'
         }
     ]
 };

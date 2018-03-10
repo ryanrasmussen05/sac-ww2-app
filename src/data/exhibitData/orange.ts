@@ -25,7 +25,8 @@ const orangeExhibit: Exhibit = {
                 'orange-artifact-1-3',
                 'orange-artifact-1-4',
                 'orange-artifact-1-5'
-            ]
+            ],
+            audio: 'orange-artifact-1.mp3'
         },
         {
             number: '2',
@@ -48,7 +49,8 @@ const orangeExhibit: Exhibit = {
                 'orange-artifact-2-3',
                 'orange-artifact-2-4',
                 'orange-artifact-2-5'
-            ]
+            ],
+            audio: 'orange-artifact-2.mp3'
         },
         {
             number: '3',
@@ -71,7 +73,8 @@ const orangeExhibit: Exhibit = {
                 'orange-artifact-3-3',
                 'orange-artifact-3-4',
                 'orange-artifact-3-5'
-            ]
+            ],
+            audio: 'orange-artifact-3.mp3'
         },
         {
             number: '4',
@@ -94,7 +97,8 @@ const orangeExhibit: Exhibit = {
                 'orange-artifact-4-3',
                 'orange-artifact-4-4',
                 'orange-artifact-4-5'
-            ]
+            ],
+            audio: 'orange-artifact-4.mp3'
         },
         {
             number: '5',
@@ -117,7 +121,8 @@ const orangeExhibit: Exhibit = {
                 'orange-artifact-5-3',
                 'orange-artifact-5-4',
                 'orange-artifact-5-5'
-            ]
+            ],
+            audio: 'orange-artifact-5.mp3'
         },
         {
             number: '6',
@@ -140,7 +145,8 @@ const orangeExhibit: Exhibit = {
                 'orange-artifact-6-3',
                 'orange-artifact-6-4',
                 'orange-artifact-6-5'
-            ]
+            ],
+            audio: 'orange-artifact-6.mp3'
         },
         {
             number: '7',
@@ -163,7 +169,8 @@ const orangeExhibit: Exhibit = {
                 'orange-artifact-7-3',
                 'orange-artifact-7-4',
                 'orange-artifact-7-5'
-            ]
+            ],
+            audio: 'orange-artifact-7.mp3'
         }
     ]
 };

@@ -9,4 +9,5 @@ export interface Artifact {
     name: string;
     description: string;
     pictures: string[];
+    audio: string;
 }

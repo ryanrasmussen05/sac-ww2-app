@@ -40,7 +40,7 @@
 
         <div padding-left padding-right>
             <audio controls controlsList="nodownload">
-                <source src="assets/audio/sample.mp3" type="audio/mpeg">
+                <source [src]="'assets/audio/' + artifact.audio" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>

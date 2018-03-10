@@ -22,7 +22,7 @@ export class ArtifactPage implements OnDestroy {
         this.artifact = navParams.get('artifact');
 
         this.track = {
-            src: 'assets/audio/sample.mp3',
+            src: 'assets/audio/' + this.artifact.audio,
             preload: 'metadata'
         };
     }

@@ -21,7 +21,8 @@ const blueExhibit: Exhibit = {
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
                 'DeHavilland',
-            ]
+            ],
+            audio: 'blue-artifact-1.mp3'
         },
         {
             number: '2',
@@ -40,7 +41,8 @@ const blueExhibit: Exhibit = {
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
                 'Flag'
-            ]
+            ],
+            audio: 'blue-artifact-2.mp3'
         },
         {
             number: '3',
@@ -59,7 +61,8 @@ const blueExhibit: Exhibit = {
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
                 'Mask'
-            ]
+            ],
+            audio: 'blue-artifact-3.mp3'
         },
         {
             number: '4',
@@ -78,7 +81,8 @@ const blueExhibit: Exhibit = {
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
                 'MusicalClubs'
-            ]
+            ],
+            audio: 'blue-artifact-4.mp3'
         },
         {
             number: '5',
@@ -97,7 +101,8 @@ const blueExhibit: Exhibit = {
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
                 'Offutt'
-            ]
+            ],
+            audio: 'blue-artifact-5.mp3'
         },
         {
             number: '6',
@@ -116,7 +121,8 @@ const blueExhibit: Exhibit = {
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
                 'Rifle'
-            ]
+            ],
+            audio: 'blue-artifact-6.mp3'
         }
     ]
 };
