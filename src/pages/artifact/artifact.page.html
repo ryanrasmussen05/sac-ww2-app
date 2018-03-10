@@ -10,7 +10,7 @@
         <div class="small-carousel-wrapper">
             <div class="small-carousel-content">
 
-                <ion-slides #slider [zoom]="false" [effect]="'slide'" [pager]="true" (ionSlideWillChange)="onSlideChanged()">
+                <ion-slides #slider [zoom]="false" [effect]="'slide'" [pager]="artifact.pictures.length > 1" (ionSlideDidChange)="onSlideChanged()">
 
                     <ion-slide *ngFor="let picture of artifact.pictures">
                         <img [src]="'assets/pictures/' + picture + '.jpg'" imageViewer>
@@ -18,8 +18,8 @@
 
                 </ion-slides>
 
-                <div *ngIf="currentIndex > 0" class="swiper-button-prev swiper-button-white" (click)="previousSlide()"></div>
-                <div *ngIf="currentIndex < artifact.pictures.length-1" class="swiper-button-next swiper-button-white" (click)="nextSlide()"></div>
+                <div *ngIf="currentIndex > 0 && artifact.pictures.length > 1" class="swiper-button-prev swiper-button-white" (click)="previousSlide()"></div>
+                <div *ngIf="currentIndex < artifact.pictures.length-1 && artifact.pictures.length > 1" class="swiper-button-next swiper-button-white" (click)="nextSlide()"></div>
 
             </div>
         </div>

@@ -20,11 +20,7 @@ const blueExhibit: Exhibit = {
        ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
-                'blue-artifact-1-1',
-                'blue-artifact-1-2',
-                'blue-artifact-1-3',
-                'blue-artifact-1-4',
-                'blue-artifact-1-5'
+                'DeHavilland',
             ]
         },
         {
@@ -43,11 +39,7 @@ const blueExhibit: Exhibit = {
        ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
-                'blue-artifact-2-1',
-                'blue-artifact-2-2',
-                'blue-artifact-2-3',
-                'blue-artifact-2-4',
-                'blue-artifact-2-5'
+                'Flag'
             ]
         },
         {
@@ -66,11 +58,7 @@ const blueExhibit: Exhibit = {
        ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
-                'blue-artifact-3-1',
-                'blue-artifact-3-2',
-                'blue-artifact-3-3',
-                'blue-artifact-3-4',
-                'blue-artifact-3-5'
+                'Mask'
             ]
         },
         {
@@ -89,11 +77,7 @@ const blueExhibit: Exhibit = {
        ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
-                'blue-artifact-4-1',
-                'blue-artifact-4-2',
-                'blue-artifact-4-3',
-                'blue-artifact-4-4',
-                'blue-artifact-4-5'
+                'MusicalClubs'
             ]
         },
         {
@@ -112,11 +96,7 @@ const blueExhibit: Exhibit = {
        ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
-                'blue-artifact-5-1',
-                'blue-artifact-5-2',
-                'blue-artifact-5-3',
-                'blue-artifact-5-4',
-                'blue-artifact-5-5'
+                'Offutt'
             ]
         },
         {
@@ -135,34 +115,7 @@ const blueExhibit: Exhibit = {
        ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
-                'blue-artifact-6-1',
-                'blue-artifact-6-2',
-                'blue-artifact-6-3',
-                'blue-artifact-6-4',
-                'blue-artifact-6-5'
-            ]
-        },
-        {
-            number: '7',
-            name: 'Blue Artifact #7',
-            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-      laborum.  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam 
-      rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores 
-      eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
-      consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam 
-      quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-       ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
-       nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
-            pictures: [
-                'blue-artifact-7-1',
-                'blue-artifact-7-2',
-                'blue-artifact-7-3',
-                'blue-artifact-7-4',
-                'blue-artifact-7-5'
+                'Rifle'
             ]
         }
     ]
