@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, OnDestroy } from '@angular/core';
+import { NavController, Platform } from 'ionic-angular';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { IndividualExhibitsPage } from '../individualExhibits/individual.exhibits.page';
 import { ContinuousExhibitsPage } from '../continuousExhibits/continuous.exhibits.page';
 
@@ -7,8 +8,17 @@ import { ContinuousExhibitsPage } from '../continuousExhibits/continuous.exhibit
     selector: 'home-page',
     templateUrl: 'home.page.html'
 })
-export class HomePage {
-    constructor(public navCtrl: NavController) {
+export class HomePage implements OnDestroy {
+    constructor(public navCtrl: NavController, public screenOrientation: ScreenOrientation, public platform: Platform) {
+        if (platform.is('cordova')) {
+            this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+        }
+    }
+
+    ngOnDestroy(): void {
+        if (this.platform.is('cordova')) {
+            this.screenOrientation.unlock();
+        }
     }
 
     goToIndividualExhibits(): void {
