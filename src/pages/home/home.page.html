@@ -1,17 +1,14 @@
-<ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>Home Page</ion-title>
-    </ion-navbar>
-</ion-header>
-
-
 <ion-content padding>
 
-    <div>This is the home page</div>
+    <div class="home-page-wrapper">
+        <div class="title">
+            COURAGE FROM ABOVE
+        </div>
 
-    <button ion-button (click)="goToIndividualExhibits()">Individual Exhibits</button>
-    <button ion-button (click)="goToContinuousExhibits()">Continuous Exhibits</button>
+        <div class="button-wrapper">
+            <button ion-button color="dark" (click)="goToIndividualExhibits()">Browse Exhibits</button>
+            <button ion-button color="dark" (click)="goToContinuousExhibits()">Continuous Exhibits</button>
+        </div>
+    </div>
+
 </ion-content>

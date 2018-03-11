@@ -1,0 +1,33 @@
+home-page {
+
+    ion-content::after {
+        content: "";
+        background: url("../assets/pictures/crew.jpg") center;
+        background-size: cover;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .home-page-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title {
+            font-size: 9vh;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
