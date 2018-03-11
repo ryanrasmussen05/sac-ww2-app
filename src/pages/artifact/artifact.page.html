@@ -10,7 +10,8 @@
         <div class="small-carousel-wrapper">
             <div class="small-carousel-content">
 
-                <ion-slides #slider [zoom]="false" [effect]="'slide'" [pager]="artifact.pictures.length > 1" (ionSlideDidChange)="onSlideChanged()">
+                <ion-slides #slider [style.background-color]="artifact.background" [zoom]="false" [effect]="'slide'"
+                            [pager]="artifact.pictures.length > 1" (ionSlideDidChange)="onSlideChanged()">
 
                     <ion-slide *ngFor="let picture of artifact.pictures">
                         <img [src]="'assets/pictures/' + picture + '.jpg'" imageViewer>

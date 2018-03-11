@@ -10,4 +10,5 @@ export interface Artifact {
     description: string;
     pictures: string[];
     audio: string;
+    background?: string;
 }

@@ -62,7 +62,8 @@ const blueExhibit: Exhibit = {
             pictures: [
                 'Mask'
             ],
-            audio: 'blue-artifact-3.mp3'
+            audio: 'blue-artifact-3.mp3',
+            background: '#f6f5f1'
         },
         {
             number: '4',
