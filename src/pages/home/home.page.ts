@@ -22,10 +22,10 @@ export class HomePage implements OnDestroy {
     }
 
     goToIndividualExhibits(): void {
-        this.navCtrl.setRoot(IndividualExhibitsPage);
+        this.navCtrl.push(IndividualExhibitsPage);
     }
 
     goToContinuousExhibits(): void {
-        this.navCtrl.setRoot(ContinuousExhibitsPage);
+        this.navCtrl.push(ContinuousExhibitsPage);
     }
 }
