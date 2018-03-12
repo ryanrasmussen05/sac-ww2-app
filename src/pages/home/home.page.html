@@ -5,9 +5,24 @@
             COURAGE FROM ABOVE
         </div>
 
-        <div class="button-wrapper">
-            <button ion-button color="dark" (click)="goToIndividualExhibits()">Browse Exhibits</button>
-            <button ion-button color="dark" (click)="goToContinuousExhibits()">Continuous Exhibits</button>
+        <div class="nav-wrapper">
+            <div class="nav-chip" (click)="goToIndividualExhibits()">
+                <div class="nav-title-wrapper">
+                    <div class="nav-title">Browse Artifacts</div>
+                    <div class="nav-subtitle">Browse Individual Artifacts</div>
+                </div>
+                <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+            </div>
+
+            <div style="width: 16px"></div>
+
+            <div class="nav-chip" (click)="goToContinuousExhibits()">
+                <div class="nav-title-wrapper">
+                    <div class="nav-title">Audio Tour</div>
+                    <div class="nav-subtitle">Take a guided walkthrough of the entire exhibit</div>
+                </div>
+                <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+            </div>
         </div>
     </div>
 

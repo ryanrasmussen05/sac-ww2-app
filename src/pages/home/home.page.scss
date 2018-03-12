@@ -4,7 +4,7 @@ home-page {
         content: "";
         background: url("../assets/pictures/crew.jpg") center;
         background-size: cover;
-        opacity: 0.5;
+        opacity: 0.6;
         top: 0;
         left: 0;
         bottom: 0;
@@ -20,14 +20,57 @@ home-page {
         justify-content: space-between;
 
         .title {
-            font-size: 9vh;
+            font-size: 15vw;
             font-weight: 700;
             text-align: center;
         }
 
-        .button-wrapper {
+        .nav-wrapper {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .nav-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .nav-chip {
+                &:first-child {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .nav-chip {
+            display: flex;
+            flex: 1 1 50%;
+            align-items: center;
+            border: 1px solid black;
+            padding: 8px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+
+            .nav-title-wrapper {
+                flex-grow: 1;
+                margin-right: 10px;
+
+                .nav-title {
+                    font-size: 5vw;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+            }
+
+            ion-icon {
+                font-size: 36px;
+            }
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
         }
     }
 }
