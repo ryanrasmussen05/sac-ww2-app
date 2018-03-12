@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MenuController, Nav, Platform } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
 import { HomePage } from '../pages/home/home.page';
 import { IndividualExhibitsPage } from '../pages/individualExhibits/individual.exhibits.page';
 import { ContinuousExhibitsPage } from '../pages/continuousExhibits/continuous.exhibits.page';
@@ -20,7 +21,7 @@ export class AppComponent {
     rootPage = HomePage;
     pages: Page[];
 
-    constructor(public platform: Platform, public menu: MenuController, public splashScreen: SplashScreen) {
+    constructor(public platform: Platform, public menu: MenuController, public statusBar: StatusBar, public splashScreen: SplashScreen) {
         this.initializeApp();
 
         this.pages = [
@@ -35,6 +36,12 @@ export class AppComponent {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             this.splashScreen.hide();
+
+            if (this.platform.is('android')) {
+                this.statusBar.backgroundColorByName('black');
+            } else {
+                this.statusBar.styleDefault();
+            }
         });
     }
 
