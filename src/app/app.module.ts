@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { Insomnia } from '@ionic-native/insomnia';
 import { AppComponent } from './app.component';
 import { HomePage } from '../pages/home/home.page';
 import { IndividualExhibitsPage } from '../pages/individualExhibits/individual.exhibits.page';
@@ -44,6 +45,7 @@ import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
         StatusBar,
         SplashScreen,
         ScreenOrientation,
+        Insomnia,
         ExhibitDataService,
         {provide: ErrorHandler, useClass: IonicErrorHandler}
     ]
