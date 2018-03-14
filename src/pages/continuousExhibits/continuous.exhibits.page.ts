@@ -1,4 +1,4 @@
-import { Slides } from 'ionic-angular';
+import { Content, Slides } from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
 import { Artifact, Exhibit } from '../../data/model/exhibit';
@@ -8,6 +8,7 @@ import { Artifact, Exhibit } from '../../data/model/exhibit';
     templateUrl: 'continuous.exhibits.page.html'
 })
 export class ContinuousExhibitsPage {
+    @ViewChild('content') content: Content;
     @ViewChild('slider') slider: Slides;
 
     exhibits: Exhibit[];
@@ -61,6 +62,7 @@ export class ContinuousExhibitsPage {
         this.currentPictureIndex = 0;
         this.slider.update();
         this.slider.slideTo(0, 0, false);
+        this.content.scrollToTop(0);
     }
 
     previousArtifact(): void {
@@ -78,6 +80,7 @@ export class ContinuousExhibitsPage {
         this.currentPictureIndex = 0;
         this.slider.update();
         this.slider.slideTo(0, 0, false);
+        this.content.scrollToTop(0);
     }
 
     onSlideChanged() {
