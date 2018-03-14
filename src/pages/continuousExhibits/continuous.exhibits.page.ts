@@ -1,4 +1,4 @@
-import { Content, Slides } from 'ionic-angular';
+import { AlertController, App, Content, NavController, Slides } from 'ionic-angular';
 import { AfterViewInit, Component, OnDestroy, ViewChild } from '@angular/core';
 import { AudioProvider, AudioTrackComponent, ITrackConstraint } from 'ionic-audio';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
@@ -25,7 +25,10 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
     artifactIndex: number;
     totalArtifacts: number;
 
-    constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider) {
+    allowExit: boolean = false;
+
+    constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider,
+                public alertCtrl: AlertController, public navCtrl: NavController, public app: App) {
         this.exhibits = exhibitDataService.getExhibitData();
 
         this.currentExhibit = this.exhibits[0];
@@ -50,6 +53,35 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
     ngOnDestroy(): void {
         this.audioProvider.stop();
         this.audioProvider.tracks.length = 0;
+    }
+
+    ionViewCanLeave(): boolean {
+        if (this.hasNextArtifact() && !this.allowExit) {
+
+            const leaveAlert = this.alertCtrl.create({
+                title: 'Exit the Audio Tour?',
+                message: 'Audio Tour is still in progress. Are you sure you want to leave?',
+                buttons: [
+                    {
+                        text: 'Leave',
+                        handler: () => {
+                            this.allowExit = true;
+                            this.navCtrl.popToRoot();
+                        }
+                    },
+                    {
+                        text: 'Stay'
+                    }
+                ]
+            });
+
+            leaveAlert.present();
+
+            return false;
+        } else {
+            return true;
+        }
+
     }
 
     hasNextArtifact(): boolean {
