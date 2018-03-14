@@ -66,10 +66,14 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
         const artifactIndexInExhibit = this.currentExhibit.artifacts.indexOf(this.currentArtifact);
 
         if (artifactIndexInExhibit < this.currentExhibit.artifacts.length - 1) {
-            this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit + 1];
+            setTimeout(() => {
+                this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit + 1];
+            });
         } else {
-            this.currentExhibit = this._getNextViewableExhibit();
-            this.currentArtifact = this.currentExhibit.artifacts[0];
+            setTimeout(() => {
+                this.currentExhibit = this._getNextViewableExhibit();
+                this.currentArtifact = this.currentExhibit.artifacts[0];
+            });
         }
 
         this.currentPictureIndex = 0;
@@ -86,10 +90,14 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
         const artifactIndexInExhibit = this.currentExhibit.artifacts.indexOf(this.currentArtifact);
 
         if (artifactIndexInExhibit > 0) {
-            this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit - 1];
+            setTimeout(() => {
+                this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit - 1];
+            });
         } else {
-            this.currentExhibit = this._getPreviousViewableExhibit();
-            this.currentArtifact = this.currentExhibit.artifacts[this.currentExhibit.artifacts.length - 1];
+            setTimeout(() => {
+                this.currentExhibit = this._getPreviousViewableExhibit();
+                this.currentArtifact = this.currentExhibit.artifacts[this.currentExhibit.artifacts.length - 1];
+            });
         }
 
         this.currentPictureIndex = 0;
@@ -110,6 +118,14 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
 
     previousSlide() {
         this.slider.slidePrev();
+    }
+
+    trackFinished() {
+        if (this.hasNextArtifact()) {
+            this.nextArtifact();
+        } else {
+            //TODO show notification that tour is over
+        }
     }
 
     private _getNextViewableExhibit(): Exhibit {
@@ -154,7 +170,7 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
             preload: 'metadata'
         };
 
-        //wait for component to load new track
+        //wait for track to load
         setTimeout(() => { this.audioTrack.play() });
     }
 }

@@ -37,7 +37,7 @@
 
 <ion-footer class="continuous-exhibits">
     <ion-toolbar color="dark">
-        <audio-track #audioTrack [track]="currentTrack">
+        <audio-track #audioTrack [track]="currentTrack" (onFinish)="trackFinished()">
             <div class="audio-wrapper" padding-left padding-right>
                 <audio-track-play [audioTrack]="audioTrack"><ion-spinner></ion-spinner></audio-track-play>
                 <div class="progress-bar-wrapper">
