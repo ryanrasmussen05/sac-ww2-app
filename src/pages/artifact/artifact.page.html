@@ -6,47 +6,49 @@
 
 <ion-content class="artifact">
 
-    <div>
-        <div class="small-carousel-wrapper">
-            <div class="small-carousel-content">
+    <div class="small-carousel-wrapper">
+        <div class="small-carousel-content">
 
-                <ion-slides #slider [style.background-color]="artifact.background" [zoom]="false" [effect]="'slide'"
-                            [pager]="artifact.pictures.length > 1" (ionSlideDidChange)="onSlideChanged()">
+            <ion-slides #slider [style.background-color]="artifact.background" [zoom]="false" [effect]="'slide'"
+                        [pager]="artifact.pictures.length > 1" (ionSlideDidChange)="onSlideChanged()">
 
-                    <ion-slide *ngFor="let picture of artifact.pictures">
-                        <img [src]="'assets/pictures/' + picture + '.jpg'" imageViewer>
-                    </ion-slide>
+                <ion-slide *ngFor="let picture of artifact.pictures">
+                    <img [src]="'assets/pictures/' + picture + '.jpg'" imageViewer>
+                </ion-slide>
 
-                </ion-slides>
+            </ion-slides>
 
-                <div *ngIf="currentIndex > 0 && artifact.pictures.length > 1" class="swiper-button-prev swiper-button-white" (click)="previousSlide()"></div>
-                <div *ngIf="currentIndex < artifact.pictures.length-1 && artifact.pictures.length > 1" class="swiper-button-next swiper-button-white" (click)="nextSlide()"></div>
+            <div *ngIf="currentIndex > 0 && artifact.pictures.length > 1" class="swiper-button-prev swiper-button-white" (click)="previousSlide()"></div>
+            <div *ngIf="currentIndex < artifact.pictures.length-1 && artifact.pictures.length > 1" class="swiper-button-next swiper-button-white" (click)="nextSlide()"></div>
 
+        </div>
+    </div>
+
+    <h1 text-center>{{ artifact.name }}</h1>
+
+    <audio-track #audioTrack [track]="track">
+        <div class="audio-wrapper" padding-left padding-right>
+            <div *ngIf="audioTrack.canPlay" class="control-wrapper">
+                <button *ngIf="!audioTrack.isPlaying" ion-button icon-only (click)="audioTrack.play()">
+                    <ion-icon name="play"></ion-icon>
+                </button>
+                <button *ngIf="audioTrack.isPlaying" ion-button icon-only (click)="audioTrack.pause()">
+                    <ion-icon name="pause"></ion-icon>
+                </button>
+            </div>
+            <div class="progress-bar-wrapper">
+                <audio-track-progress-bar duration progress [audioTrack]="audioTrack"></audio-track-progress-bar>
             </div>
         </div>
+    </audio-track>
 
-        <h1 text-center>{{ artifact.name }}</h1>
+    <!--<div padding-left padding-right>-->
+    <!--<audio controls controlsList="nodownload">-->
+    <!--<source [src]="'assets/audio/' + artifact.audio" type="audio/mpeg">-->
+    <!--Your browser does not support the audio element.-->
+    <!--</audio>-->
+    <!--</div>-->
 
-        <audio-track #audioTrack [track]="track">
-            <div class="audio-wrapper" padding-left padding-right>
-                <div *ngIf="audioTrack.canPlay" class="control-wrapper">
-                    <button *ngIf="!audioTrack.isPlaying" ion-button icon-only (click)="audioTrack.play()"><ion-icon name="play"></ion-icon></button>
-                    <button *ngIf="audioTrack.isPlaying" ion-button icon-only (click)="audioTrack.pause()"><ion-icon name="pause"></ion-icon></button>
-                </div>
-                <div class="progress-bar-wrapper">
-                    <audio-track-progress-bar duration progress [audioTrack]="audioTrack"></audio-track-progress-bar>
-                </div>
-            </div>
-        </audio-track>
-
-        <!--<div padding-left padding-right>-->
-            <!--<audio controls controlsList="nodownload">-->
-                <!--<source [src]="'assets/audio/' + artifact.audio" type="audio/mpeg">-->
-                <!--Your browser does not support the audio element.-->
-            <!--</audio>-->
-        <!--</div>-->
-
-        <div padding class="artifact-description">{{ artifact.description }}</div>
-    </div>
+    <div padding class="artifact-description">{{ artifact.description }}</div>
 
 </ion-content>
