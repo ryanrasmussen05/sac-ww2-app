@@ -1,5 +1,6 @@
 import { Content, Slides } from 'ionic-angular';
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, ViewChild } from '@angular/core';
+import { AudioProvider, AudioTrackComponent, ITrackConstraint } from 'ionic-audio';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
 import { Artifact, Exhibit } from '../../data/model/exhibit';
 
@@ -7,9 +8,10 @@ import { Artifact, Exhibit } from '../../data/model/exhibit';
     selector: 'continuous-exhibits-page',
     templateUrl: 'continuous.exhibits.page.html'
 })
-export class ContinuousExhibitsPage {
+export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
     @ViewChild('content') content: Content;
     @ViewChild('slider') slider: Slides;
+    @ViewChild('audioTrack') audioTrack: AudioTrackComponent;
 
     exhibits: Exhibit[];
 
@@ -18,10 +20,12 @@ export class ContinuousExhibitsPage {
 
     currentPictureIndex: number;
 
+    currentTrack: ITrackConstraint;
+
     artifactIndex: number;
     totalArtifacts: number;
 
-    constructor(public exhibitDataService: ExhibitDataService) {
+    constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider) {
         this.exhibits = exhibitDataService.getExhibitData();
 
         this.currentExhibit = this.exhibits[0];
@@ -36,7 +40,16 @@ export class ContinuousExhibitsPage {
             exhibit.artifacts.forEach(() => {
                 this.totalArtifacts++;
             });
-        })
+        });
+    }
+
+    ngAfterViewInit(): void {
+        this._loadAudioTrack();
+    }
+
+    ngOnDestroy(): void {
+        this.audioProvider.stop();
+        this.audioProvider.tracks.length = 0;
     }
 
     hasNextArtifact(): boolean {
@@ -63,6 +76,8 @@ export class ContinuousExhibitsPage {
         this.slider.update();
         this.slider.slideTo(0, 0, false);
         this.content.scrollToTop(0);
+
+        this._loadAudioTrack();
     }
 
     previousArtifact(): void {
@@ -81,6 +96,8 @@ export class ContinuousExhibitsPage {
         this.slider.update();
         this.slider.slideTo(0, 0, false);
         this.content.scrollToTop(0);
+
+        this._loadAudioTrack();
     }
 
     onSlideChanged() {
@@ -129,5 +146,15 @@ export class ContinuousExhibitsPage {
         }
 
         return previousExhibit;
+    }
+
+    private _loadAudioTrack(): void {
+        this.currentTrack = {
+            src: 'assets/audio/' + this.currentArtifact.audio,
+            preload: 'metadata'
+        };
+
+        //wait for component to load new track
+        setTimeout(() => { this.audioTrack.play() });
     }
 }
