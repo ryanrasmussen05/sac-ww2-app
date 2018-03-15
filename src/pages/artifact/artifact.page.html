@@ -26,29 +26,19 @@
 
     <h1 text-center>{{ artifact.name }}</h1>
 
-    <audio-track #audioTrack [track]="track">
-        <div class="audio-wrapper" padding-left padding-right>
-            <div *ngIf="audioTrack.canPlay" class="control-wrapper">
-                <button *ngIf="!audioTrack.isPlaying" ion-button icon-only (click)="audioTrack.play()">
-                    <ion-icon name="play"></ion-icon>
-                </button>
-                <button *ngIf="audioTrack.isPlaying" ion-button icon-only (click)="audioTrack.pause()">
-                    <ion-icon name="pause"></ion-icon>
-                </button>
-            </div>
-            <div class="progress-bar-wrapper">
-                <audio-track-progress-bar duration progress [audioTrack]="audioTrack"></audio-track-progress-bar>
-            </div>
-        </div>
-    </audio-track>
-
-    <!--<div padding-left padding-right>-->
-    <!--<audio controls controlsList="nodownload">-->
-    <!--<source [src]="'assets/audio/' + artifact.audio" type="audio/mpeg">-->
-    <!--Your browser does not support the audio element.-->
-    <!--</audio>-->
-    <!--</div>-->
-
-    <div padding class="artifact-description">{{ artifact.description }}</div>
+    <div padding-left padding-right padding-bottom class="artifact-description">{{ artifact.description }}</div>
 
 </ion-content>
+
+<ion-footer class="artifact">
+    <ion-toolbar color="dark">
+        <audio-track #audioTrack [track]="track">
+            <div class="audio-wrapper">
+                <audio-track-play [audioTrack]="audioTrack"><ion-spinner></ion-spinner></audio-track-play>
+                <div class="progress-bar-wrapper">
+                    <audio-track-progress-bar duration progress [audioTrack]="audioTrack"></audio-track-progress-bar>
+                </div>
+            </div>
+        </audio-track>
+    </ion-toolbar>
+</ion-footer>

@@ -1,4 +1,8 @@
 .artifact, .continuous-exhibits {
+    h1 {
+        margin-top: 1rem;
+    }
+
     .artifact-description {
         font-size: 1.6rem;
         line-height: 1.5;
@@ -49,9 +53,9 @@
                 flex: 1;
             }
         }
-    }
 
-    audio {
-        width: 100%;
+        time {
+            color: white;
+        }
     }
 }
