@@ -6,6 +6,7 @@
     .artifact-description {
         font-size: 1.6rem;
         line-height: 1.5;
+        white-space: pre-wrap; //to preserve line breaks
     }
 
     ion-slides {
