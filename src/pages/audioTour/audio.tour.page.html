@@ -7,7 +7,7 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content [hidden]="!intro" class="continuous-exhibits">
+<ion-content [hidden]="!intro" class="audio-tour">
     <div padding class="intro">
         <div text-center>
             <ion-icon name="volume-up"></ion-icon>
@@ -27,7 +27,7 @@
 </ion-content>
 
 
-<ion-content #content [hidden]="intro" class="continuous-exhibits">
+<ion-content #content [hidden]="intro" class="audio-tour">
 
     <div class="small-carousel-wrapper">
         <div class="small-carousel-content">
@@ -54,7 +54,7 @@
 </ion-content>
 
 
-<ion-footer [hidden]="intro" class="continuous-exhibits">
+<ion-footer [hidden]="intro" class="audio-tour">
     <ion-toolbar color="dark">
         <audio-track #audioTrack [track]="currentTrack" (onFinish)="trackFinished()">
             <div class="audio-wrapper" padding-left padding-right>

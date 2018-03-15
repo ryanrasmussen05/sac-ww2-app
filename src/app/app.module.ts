@@ -7,21 +7,22 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { Insomnia } from '@ionic-native/insomnia';
 import { AppComponent } from './app.component';
 import { HomePage } from '../pages/home/home.page';
-import { IndividualExhibitsPage } from '../pages/individualExhibits/individual.exhibits.page';
-import { ContinuousExhibitsPage } from '../pages/continuousExhibits/continuous.exhibits.page';
 import { ExhibitDataService } from '../data/exhibit.data.service';
-import { ExhibitPage } from '../pages/exhibit/exhibit.page';
 import { ArtifactPage } from '../pages/artifact/artifact.page';
+import { BrowseRoomsPage } from '../pages/browseRooms/browse.rooms.page';
+import { AudioTourPage } from '../pages/audioTour/audio.tour.page';
+import { RoomPage } from '../pages/room/room.page';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
+
 
 @NgModule({
     declarations: [
         AppComponent,
         HomePage,
-        IndividualExhibitsPage,
-        ContinuousExhibitsPage,
-        ExhibitPage,
+        BrowseRoomsPage,
+        AudioTourPage,
+        RoomPage,
         ArtifactPage
     ],
     imports: [
@@ -36,9 +37,9 @@ import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
     entryComponents: [
         AppComponent,
         HomePage,
-        IndividualExhibitsPage,
-        ContinuousExhibitsPage,
-        ExhibitPage,
+        BrowseRoomsPage,
+        AudioTourPage,
+        RoomPage,
         ArtifactPage
     ],
     providers: [

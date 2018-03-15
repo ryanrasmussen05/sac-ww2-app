@@ -5,19 +5,19 @@ import { ArtifactPage } from '../artifact/artifact.page';
 
 
 @Component({
-    selector: 'exhibit-page',
-    templateUrl: 'exhibit.page.html'
+    selector: 'room-page',
+    templateUrl: 'room.page.html'
 })
-export class ExhibitPage {
-    exhibit: Exhibit;
+export class RoomPage {
+    room: Exhibit;
 
     constructor(public navParams: NavParams, public navCtrl: NavController) {
-        this.exhibit = navParams.get('exhibit');
+        this.room = navParams.get('room');
     }
 
     artifactClicked(artifact: Artifact): void {
         this.navCtrl.push(ArtifactPage, {
-            exhibit: this.exhibit,
+            room: this.room,
             artifact: artifact
         });
     }

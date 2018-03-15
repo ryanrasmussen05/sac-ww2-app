@@ -3,15 +3,15 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Individual Exhibits</ion-title>
+        <ion-title>Browse Artifacts</ion-title>
     </ion-navbar>
 </ion-header>
 
 
 <ion-content>
     <ion-list>
-        <button ion-item *ngFor="let exhibit of exhibits" (click)="exhibitClicked(exhibit)">
-            {{ exhibit.name }}
+        <button ion-item *ngFor="let room of rooms" (click)="roomClicked(room)">
+            {{ room.name }}
         </button>
     </ion-list>
 </ion-content>

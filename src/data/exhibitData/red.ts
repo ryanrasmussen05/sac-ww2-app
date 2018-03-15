@@ -1,9 +1,9 @@
-import { Exhibit } from '../model/exhibit';
+import { Room } from '../model/room';
 
-const redExhibit: Exhibit = {
+const redRoom: Room = {
     name: 'Red',
     color: 'red',
     artifacts: []
 };
 
-export default redExhibit;
+export default redRoom;

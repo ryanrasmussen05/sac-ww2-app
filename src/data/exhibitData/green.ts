@@ -1,6 +1,6 @@
-import { Exhibit } from '../model/exhibit';
+import { Room } from '../model/room';
 
-const greenExhibit: Exhibit = {
+const greenRoom: Room = {
     name: 'Green',
     color: 'green',
     artifacts: [
@@ -55,4 +55,4 @@ const greenExhibit: Exhibit = {
     ]
 };
 
-export default greenExhibit;
+export default greenRoom;

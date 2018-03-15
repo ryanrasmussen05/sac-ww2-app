@@ -1,4 +1,4 @@
-export interface Exhibit {
+export interface Room {
     name: string;
     color: string;
     artifacts: Artifact[];

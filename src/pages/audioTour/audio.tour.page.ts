@@ -2,20 +2,20 @@ import { AlertController, App, Content, NavController, Slides } from 'ionic-angu
 import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { AudioProvider, AudioTrackComponent, ITrackConstraint } from 'ionic-audio';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
-import { Artifact, Exhibit } from '../../data/model/exhibit';
+import { Artifact, Room } from '../../data/model/room';
 
 @Component({
-    selector: 'continuous-exhibits-page',
-    templateUrl: 'continuous.exhibits.page.html'
+    selector: 'audio-tour-page',
+    templateUrl: 'audio.tour.page.html'
 })
-export class ContinuousExhibitsPage implements OnDestroy {
+export class AudioTourPage implements OnDestroy {
     @ViewChild('content') content: Content;
     @ViewChild('slider') slider: Slides;
     @ViewChild('audioTrack') audioTrack: AudioTrackComponent;
 
-    exhibits: Exhibit[];
+    rooms: Room[];
 
-    currentExhibit: Exhibit;
+    currentRoom: Room;
     currentArtifact: Artifact;
 
     currentPictureIndex: number;
@@ -30,18 +30,18 @@ export class ContinuousExhibitsPage implements OnDestroy {
 
     constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider,
                 public alertCtrl: AlertController, public navCtrl: NavController, public app: App) {
-        this.exhibits = exhibitDataService.getExhibitData();
+        this.rooms = exhibitDataService.getExhibitData();
 
-        this.currentExhibit = this.exhibits[0];
-        this.currentArtifact = this.currentExhibit.artifacts[0];
+        this.currentRoom = this.rooms[0];
+        this.currentArtifact = this.currentRoom.artifacts[0];
 
         this.artifactIndex = 0;
         this.totalArtifacts = 0;
 
         this.currentPictureIndex = 0;
 
-        this.exhibits.forEach((exhibit: Exhibit) => {
-            exhibit.artifacts.forEach(() => {
+        this.rooms.forEach((room: Room) => {
+            room.artifacts.forEach(() => {
                 this.totalArtifacts++;
             });
         });
@@ -96,13 +96,13 @@ export class ContinuousExhibitsPage implements OnDestroy {
     nextArtifact(): void {
         this.artifactIndex++;
 
-        const artifactIndexInExhibit = this.currentExhibit.artifacts.indexOf(this.currentArtifact);
+        const artifactIndexInExhibit = this.currentRoom.artifacts.indexOf(this.currentArtifact);
 
-        if (artifactIndexInExhibit < this.currentExhibit.artifacts.length - 1) {
-            this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit + 1];
+        if (artifactIndexInExhibit < this.currentRoom.artifacts.length - 1) {
+            this.currentArtifact = this.currentRoom.artifacts[artifactIndexInExhibit + 1];
         } else {
-            this.currentExhibit = this._getNextViewableExhibit();
-            this.currentArtifact = this.currentExhibit.artifacts[0];
+            this.currentRoom = this._getNextViewableExhibit();
+            this.currentArtifact = this.currentRoom.artifacts[0];
         }
 
         this.currentPictureIndex = 0;
@@ -116,13 +116,13 @@ export class ContinuousExhibitsPage implements OnDestroy {
     previousArtifact(): void {
         this.artifactIndex--;
 
-        const artifactIndexInExhibit = this.currentExhibit.artifacts.indexOf(this.currentArtifact);
+        const artifactIndexInExhibit = this.currentRoom.artifacts.indexOf(this.currentArtifact);
 
         if (artifactIndexInExhibit > 0) {
-            this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit - 1];
+            this.currentArtifact = this.currentRoom.artifacts[artifactIndexInExhibit - 1];
         } else {
-            this.currentExhibit = this._getPreviousViewableExhibit();
-            this.currentArtifact = this.currentExhibit.artifacts[this.currentExhibit.artifacts.length - 1];
+            this.currentRoom = this._getPreviousViewableRoom();
+            this.currentArtifact = this.currentRoom.artifacts[this.currentRoom.artifacts.length - 1];
         }
 
         this.currentPictureIndex = 0;
@@ -161,40 +161,40 @@ export class ContinuousExhibitsPage implements OnDestroy {
         }
     }
 
-    private _getNextViewableExhibit(): Exhibit {
-        let currentExhibitIndex = this.exhibits.indexOf(this.currentExhibit);
-        currentExhibitIndex++;
+    private _getNextViewableExhibit(): Room {
+        let currentRoomIndex = this.rooms.indexOf(this.currentRoom);
+        currentRoomIndex++;
 
-        let nextExhibit: Exhibit = null;
+        let nextRoom: Room = null;
 
-        while (currentExhibitIndex <= this.exhibits.length - 1) {
-            if (this.exhibits[currentExhibitIndex].artifacts.length > 0) {
-                nextExhibit = this.exhibits[currentExhibitIndex];
+        while (currentRoomIndex <= this.rooms.length - 1) {
+            if (this.rooms[currentRoomIndex].artifacts.length > 0) {
+                nextRoom = this.rooms[currentRoomIndex];
                 break;
             } else {
-                currentExhibitIndex++;
+                currentRoomIndex++;
             }
         }
 
-        return nextExhibit;
+        return nextRoom;
     }
 
-    private _getPreviousViewableExhibit(): Exhibit {
-        let currentExhibitIndex = this.exhibits.indexOf(this.currentExhibit);
-        currentExhibitIndex--;
+    private _getPreviousViewableRoom(): Room {
+        let currentRoomIndex = this.rooms.indexOf(this.currentRoom);
+        currentRoomIndex--;
 
-        let previousExhibit: Exhibit = null;
+        let previousRoom: Room = null;
 
-        while (currentExhibitIndex >= 0) {
-            if (this.exhibits[currentExhibitIndex].artifacts.length > 0) {
-                previousExhibit = this.exhibits[currentExhibitIndex];
+        while (currentRoomIndex >= 0) {
+            if (this.rooms[currentRoomIndex].artifacts.length > 0) {
+                previousRoom = this.rooms[currentRoomIndex];
                 break;
             } else {
-                currentExhibitIndex--;
+                currentRoomIndex--;
             }
         }
 
-        return previousExhibit;
+        return previousRoom;
     }
 
     private _loadAudioTrack(): void {

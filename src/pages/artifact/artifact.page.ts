@@ -1,7 +1,7 @@
 import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { NavParams, Slides } from 'ionic-angular';
 import { AudioProvider, ITrackConstraint } from 'ionic-audio';
-import { Artifact, Exhibit } from '../../data/model/exhibit';
+import { Artifact, Room } from '../../data/model/room';
 
 
 @Component({
@@ -11,14 +11,14 @@ import { Artifact, Exhibit } from '../../data/model/exhibit';
 export class ArtifactPage implements OnDestroy {
     @ViewChild('slider') slider: Slides;
 
-    exhibit: Exhibit;
+    room: Room;
     artifact: Artifact;
     track: ITrackConstraint;
 
     currentIndex = 0;
 
     constructor(public navParams: NavParams, public audioProvider: AudioProvider) {
-        this.exhibit = navParams.get('exhibit');
+        this.room = navParams.get('room');
         this.artifact = navParams.get('artifact');
 
         this.track = {

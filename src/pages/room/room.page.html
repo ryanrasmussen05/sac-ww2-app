@@ -1,12 +1,12 @@
 <ion-header>
-    <ion-navbar [color]="exhibit.color">
-        <ion-title>{{ exhibit.name }}</ion-title>
+    <ion-navbar [color]="room.color">
+        <ion-title>{{ room.name }}</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
     <ion-list>
-        <button ion-item *ngFor="let artifact of exhibit.artifacts" (click)="artifactClicked(artifact)">
+        <button ion-item *ngFor="let artifact of room.artifacts" (click)="artifactClicked(artifact)">
             <span>{{ artifact.number }}</span>
             <span>{{ artifact.name }}</span>
         </button>

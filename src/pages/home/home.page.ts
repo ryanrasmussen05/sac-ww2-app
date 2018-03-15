@@ -1,8 +1,9 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
-import { IndividualExhibitsPage } from '../individualExhibits/individual.exhibits.page';
-import { ContinuousExhibitsPage } from '../continuousExhibits/continuous.exhibits.page';
+import { BrowseRoomsPage } from '../browseRooms/browse.rooms.page';
+import { AudioTourPage } from '../audioTour/audio.tour.page';
+
 
 @Component({
     selector: 'home-page',
@@ -21,11 +22,11 @@ export class HomePage implements OnDestroy {
         }
     }
 
-    goToIndividualExhibits(): void {
-        this.navCtrl.push(IndividualExhibitsPage);
+    goToBrowseRoomsPage(): void {
+        this.navCtrl.push(BrowseRoomsPage);
     }
 
-    goToContinuousExhibits(): void {
-        this.navCtrl.push(ContinuousExhibitsPage);
+    goToAudioTourPage(): void {
+        this.navCtrl.push(AudioTourPage);
     }
 }
