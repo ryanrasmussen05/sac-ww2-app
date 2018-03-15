@@ -1,5 +1,5 @@
 import { AlertController, App, Content, NavController, Slides } from 'ionic-angular';
-import { AfterViewInit, Component, OnDestroy, ViewChild } from '@angular/core';
+import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { AudioProvider, AudioTrackComponent, ITrackConstraint } from 'ionic-audio';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
 import { Artifact, Exhibit } from '../../data/model/exhibit';
@@ -8,7 +8,7 @@ import { Artifact, Exhibit } from '../../data/model/exhibit';
     selector: 'continuous-exhibits-page',
     templateUrl: 'continuous.exhibits.page.html'
 })
-export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
+export class ContinuousExhibitsPage implements OnDestroy {
     @ViewChild('content') content: Content;
     @ViewChild('slider') slider: Slides;
     @ViewChild('audioTrack') audioTrack: AudioTrackComponent;
@@ -25,6 +25,7 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
     artifactIndex: number;
     totalArtifacts: number;
 
+    intro: boolean = true;
     allowExit: boolean = false;
 
     constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider,
@@ -46,17 +47,13 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
         });
     }
 
-    ngAfterViewInit(): void {
-        this._loadAudioTrack();
-    }
-
     ngOnDestroy(): void {
         this.audioProvider.stop();
         this.audioProvider.tracks.length = 0;
     }
 
     ionViewCanLeave(): boolean {
-        if (this.hasNextArtifact() && !this.allowExit) {
+        if (this.hasNextArtifact() && !this.allowExit && !this.intro) {
 
             const leaveAlert = this.alertCtrl.create({
                 title: 'Exit the Audio Tour?',
@@ -81,7 +78,11 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
         } else {
             return true;
         }
+    }
 
+    beginTour(): void {
+        this.intro = false;
+        this._loadAudioTrack();
     }
 
     hasNextArtifact(): boolean {

@@ -62,6 +62,12 @@ home-page {
                     font-weight: 700;
                     margin-bottom: 5px;
                 }
+
+                @media (min-width: 768px) {
+                    .nav-title {
+                        font-size: 3vw;
+                    }
+                }
             }
 
             ion-icon {
