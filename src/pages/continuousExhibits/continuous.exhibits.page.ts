@@ -98,14 +98,10 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
         const artifactIndexInExhibit = this.currentExhibit.artifacts.indexOf(this.currentArtifact);
 
         if (artifactIndexInExhibit < this.currentExhibit.artifacts.length - 1) {
-            setTimeout(() => {
-                this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit + 1];
-            });
+            this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit + 1];
         } else {
-            setTimeout(() => {
-                this.currentExhibit = this._getNextViewableExhibit();
-                this.currentArtifact = this.currentExhibit.artifacts[0];
-            });
+            this.currentExhibit = this._getNextViewableExhibit();
+            this.currentArtifact = this.currentExhibit.artifacts[0];
         }
 
         this.currentPictureIndex = 0;
@@ -122,14 +118,10 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
         const artifactIndexInExhibit = this.currentExhibit.artifacts.indexOf(this.currentArtifact);
 
         if (artifactIndexInExhibit > 0) {
-            setTimeout(() => {
-                this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit - 1];
-            });
+            this.currentArtifact = this.currentExhibit.artifacts[artifactIndexInExhibit - 1];
         } else {
-            setTimeout(() => {
-                this.currentExhibit = this._getPreviousViewableExhibit();
-                this.currentArtifact = this.currentExhibit.artifacts[this.currentExhibit.artifacts.length - 1];
-            });
+            this.currentExhibit = this._getPreviousViewableExhibit();
+            this.currentArtifact = this.currentExhibit.artifacts[this.currentExhibit.artifacts.length - 1];
         }
 
         this.currentPictureIndex = 0;
@@ -154,9 +146,17 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
 
     trackFinished() {
         if (this.hasNextArtifact()) {
-            this.nextArtifact();
+            setTimeout(() => { //do this to prevent change after check error
+                this.nextArtifact();
+            });
         } else {
-            //TODO show notification that tour is over
+            const completedAlert = this.alertCtrl.create({
+                title: 'Audio Tour Completed',
+                subTitle: 'You have reached the end of the audio tour.',
+                buttons: ['OK']
+            });
+
+            completedAlert.present();
         }
     }
 
@@ -203,6 +203,8 @@ export class ContinuousExhibitsPage implements AfterViewInit, OnDestroy {
         };
 
         //wait for track to load
-        setTimeout(() => { this.audioTrack.play() });
+        setTimeout(() => {
+            this.audioTrack.play()
+        });
     }
 }
