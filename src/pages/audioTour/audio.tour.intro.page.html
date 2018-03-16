@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar color="light">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Audio Tour</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="audio-tour-intro">
+    <div padding class="intro">
+        <div text-center>
+            <ion-icon name="volume-up"></ion-icon>
+        </div>
+        <div text-center>
+            <h1>Audio Tour</h1>
+        </div>
+        <div class="intro-text">
+            The audio tour will take you on a step-by-step walk-through of the entire exhibit, while playing a narration
+            and showing details about the various artifacts.  You can skip artifacts or pause the tour at anytime by
+            using the controls at the bottom of the screen.
+        </div>
+        <div text-center margin-top>
+            <button ion-button (click)="beginTour()">Begin Audio Tour</button>
+        </div>
+    </div>
+</ion-content>

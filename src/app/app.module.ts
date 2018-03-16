@@ -12,6 +12,7 @@ import { ArtifactPage } from '../pages/artifact/artifact.page';
 import { BrowseRoomsPage } from '../pages/browseRooms/browse.rooms.page';
 import { AudioTourPage } from '../pages/audioTour/audio.tour.page';
 import { RoomPage } from '../pages/room/room.page';
+import { AudioTourIntroPage } from '../pages/audioTour/audio.tour.intro.page';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
 
@@ -23,7 +24,8 @@ import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
         BrowseRoomsPage,
         AudioTourPage,
         RoomPage,
-        ArtifactPage
+        ArtifactPage,
+        AudioTourIntroPage
     ],
     imports: [
         BrowserModule,
@@ -40,7 +42,8 @@ import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
         BrowseRoomsPage,
         AudioTourPage,
         RoomPage,
-        ArtifactPage
+        ArtifactPage,
+        AudioTourIntroPage
     ],
     providers: [
         StatusBar,

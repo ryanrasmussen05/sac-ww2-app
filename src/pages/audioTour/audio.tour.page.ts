@@ -25,7 +25,6 @@ export class AudioTourPage implements OnDestroy {
     artifactIndex: number;
     totalArtifacts: number;
 
-    intro: boolean = true;
     allowExit: boolean = false;
 
     constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider,
@@ -52,8 +51,12 @@ export class AudioTourPage implements OnDestroy {
         this.audioProvider.tracks.length = 0;
     }
 
+    ngAfterViewInit(): void {
+        this._loadAudioTrack();
+    }
+
     ionViewCanLeave(): boolean {
-        if (this.hasNextArtifact() && !this.allowExit && !this.intro) {
+        if (this.hasNextArtifact() && !this.allowExit) {
 
             const leaveAlert = this.alertCtrl.create({
                 title: 'Exit the Audio Tour?',
@@ -78,11 +81,6 @@ export class AudioTourPage implements OnDestroy {
         } else {
             return true;
         }
-    }
-
-    beginTour(): void {
-        this.intro = false;
-        this._loadAudioTrack();
     }
 
     hasNextArtifact(): boolean {

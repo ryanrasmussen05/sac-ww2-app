@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Artifact, Exhibit } from '../../data/model/exhibit';
 import { ArtifactPage } from '../artifact/artifact.page';
+import { Artifact, Room } from '../../data/model/room';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { ArtifactPage } from '../artifact/artifact.page';
     templateUrl: 'room.page.html'
 })
 export class RoomPage {
-    room: Exhibit;
+    room: Room;
 
     constructor(public navParams: NavParams, public navCtrl: NavController) {
         this.room = navParams.get('room');

@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { BrowseRoomsPage } from '../browseRooms/browse.rooms.page';
-import { AudioTourPage } from '../audioTour/audio.tour.page';
+import { AudioTourIntroPage } from '../audioTour/audio.tour.intro.page';
 
 
 @Component({
@@ -27,6 +27,6 @@ export class HomePage implements OnDestroy {
     }
 
     goToAudioTourPage(): void {
-        this.navCtrl.push(AudioTourPage);
+        this.navCtrl.push(AudioTourIntroPage);
     }
 }
