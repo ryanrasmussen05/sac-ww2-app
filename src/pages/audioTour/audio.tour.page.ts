@@ -224,6 +224,6 @@ export class AudioTourPage implements OnDestroy {
         //wait for track to load
         setTimeout(() => {
             this.audioTrack.play()
-        });
+        }, 1000);
     }
 }
