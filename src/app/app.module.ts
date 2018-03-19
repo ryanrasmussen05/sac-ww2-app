@@ -15,6 +15,7 @@ import { RoomPage } from '../pages/room/room.page';
 import { AudioTourIntroPage } from '../pages/audioTour/audio.tour.intro.page';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         IonicModule.forRoot(AppComponent, {
             //mode: 'ios'
         }),

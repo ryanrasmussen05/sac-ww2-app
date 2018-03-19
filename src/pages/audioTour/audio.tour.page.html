@@ -8,29 +8,31 @@
 </ion-header>
 
 
-<ion-content #content class="audio-tour">
+<ion-content #content class="audio-tour" *ngFor="let currentArtifact of currentArtifacts" [@slideInOut]="true">
 
-    <div class="small-carousel-wrapper">
-        <div class="small-carousel-content">
+    <div>
+        <div class="small-carousel-wrapper">
+            <div class="small-carousel-content">
 
-            <ion-slides #slider [style.background-color]="currentArtifact.background" [zoom]="false" [effect]="'slide'"
-                        [pager]="currentArtifact.pictures.length > 1" (ionSlideDidChange)="onSlideChanged()">
+                <ion-slides #slider [style.background-color]="currentArtifact.background" [zoom]="false" [effect]="'slide'"
+                            [pager]="currentArtifact.pictures.length > 1" (ionSlideDidChange)="onSlideChanged()">
 
-                <ion-slide *ngFor="let picture of currentArtifact.pictures">
-                    <img [src]="'assets/pictures/' + picture + '.jpg'" imageViewer>
-                </ion-slide>
+                    <ion-slide *ngFor="let picture of currentArtifact.pictures">
+                        <img [src]="'assets/pictures/' + picture + '.jpg'" imageViewer>
+                    </ion-slide>
 
-            </ion-slides>
+                </ion-slides>
 
-            <div *ngIf="currentPictureIndex > 0 && currentArtifact.pictures.length > 1" class="swiper-button-prev swiper-button-white" (click)="previousSlide()"></div>
-            <div *ngIf="currentPictureIndex < currentArtifact.pictures.length-1 && currentArtifact.pictures.length > 1" class="swiper-button-next swiper-button-white" (click)="nextSlide()"></div>
+                <div *ngIf="currentPictureIndex > 0 && currentArtifact.pictures.length > 1" class="swiper-button-prev swiper-button-white" (click)="previousSlide()"></div>
+                <div *ngIf="currentPictureIndex < currentArtifact.pictures.length-1 && currentArtifact.pictures.length > 1" class="swiper-button-next swiper-button-white" (click)="nextSlide()"></div>
 
+            </div>
         </div>
+
+        <h1 padding-left padding-right text-center>{{ currentArtifact.name }}</h1>
+
+        <div padding-left padding-right padding-bottom class="artifact-description">{{ currentArtifact.description }}</div>
     </div>
-
-    <h1 padding-left padding-right text-center>{{ currentArtifact.name }}</h1>
-
-    <div padding-left padding-right padding-bottom class="artifact-description">{{ currentArtifact.description }}</div>
 
 </ion-content>
 

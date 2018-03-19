@@ -3,10 +3,22 @@ import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { AudioProvider, AudioTrackComponent, ITrackConstraint } from 'ionic-audio';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
 import { Artifact, Room } from '../../data/model/room';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
     selector: 'audio-tour-page',
-    templateUrl: 'audio.tour.page.html'
+    templateUrl: 'audio.tour.page.html',
+    animations: [
+        trigger('slideInOut', [
+            transition(':enter', [
+                style({transform: 'translateX(100%)'}),
+                animate(300)
+            ]),
+            transition(':leave', [
+                animate(300, style({transform: 'translateX(-100%)'}))
+            ])
+        ])
+    ]
 })
 export class AudioTourPage implements OnDestroy {
     @ViewChild('content') content: Content;
@@ -16,7 +28,11 @@ export class AudioTourPage implements OnDestroy {
     rooms: Room[];
 
     currentRoom: Room;
-    currentArtifact: Artifact;
+    currentArtifacts: Artifact[] = []; //use this array to more easily allow animations
+
+    get currentArtifact(): Artifact {
+        return this.currentArtifacts[0];
+    }
 
     currentPictureIndex: number;
 
@@ -32,7 +48,7 @@ export class AudioTourPage implements OnDestroy {
         this.rooms = exhibitDataService.getExhibitData();
 
         this.currentRoom = this.rooms[0];
-        this.currentArtifact = this.currentRoom.artifacts[0];
+        this.setCurrentArtifact(this.currentRoom.artifacts[0]);
 
         this.artifactIndex = 0;
         this.totalArtifacts = 0;
@@ -44,6 +60,10 @@ export class AudioTourPage implements OnDestroy {
                 this.totalArtifacts++;
             });
         });
+    }
+
+    setCurrentArtifact(artifact: Artifact): void {
+        this.currentArtifacts = [artifact];
     }
 
     ngOnDestroy(): void {
@@ -97,18 +117,19 @@ export class AudioTourPage implements OnDestroy {
         const artifactIndexInExhibit = this.currentRoom.artifacts.indexOf(this.currentArtifact);
 
         if (artifactIndexInExhibit < this.currentRoom.artifacts.length - 1) {
-            this.currentArtifact = this.currentRoom.artifacts[artifactIndexInExhibit + 1];
+            this.setCurrentArtifact(this.currentRoom.artifacts[artifactIndexInExhibit + 1]);
         } else {
             this.currentRoom = this._getNextViewableExhibit();
-            this.currentArtifact = this.currentRoom.artifacts[0];
+            this.setCurrentArtifact(this.currentRoom.artifacts[0]);
         }
 
         this.currentPictureIndex = 0;
-        this.slider.update();
-        this.slider.slideTo(0, 0, false);
-        this.content.scrollToTop(0);
 
         this._loadAudioTrack();
+
+        setTimeout(() => {
+           this.content.resize();
+        });
     }
 
     previousArtifact(): void {
@@ -117,18 +138,19 @@ export class AudioTourPage implements OnDestroy {
         const artifactIndexInExhibit = this.currentRoom.artifacts.indexOf(this.currentArtifact);
 
         if (artifactIndexInExhibit > 0) {
-            this.currentArtifact = this.currentRoom.artifacts[artifactIndexInExhibit - 1];
+            this.setCurrentArtifact(this.currentRoom.artifacts[artifactIndexInExhibit - 1]);
         } else {
             this.currentRoom = this._getPreviousViewableRoom();
-            this.currentArtifact = this.currentRoom.artifacts[this.currentRoom.artifacts.length - 1];
+            this.setCurrentArtifact(this.currentRoom.artifacts[this.currentRoom.artifacts.length - 1]);
         }
 
         this.currentPictureIndex = 0;
-        this.slider.update();
-        this.slider.slideTo(0, 0, false);
-        this.content.scrollToTop(0);
 
         this._loadAudioTrack();
+
+        setTimeout(() => {
+            this.content.resize();
+        });
     }
 
     onSlideChanged() {
