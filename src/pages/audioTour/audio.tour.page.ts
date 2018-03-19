@@ -1,24 +1,14 @@
-import { AlertController, App, Content, NavController, Slides } from 'ionic-angular';
-import { Component, OnDestroy, ViewChild } from '@angular/core';
+import { AlertController, Content, NavController, Slides } from 'ionic-angular';
+import { ChangeDetectorRef, Component, OnDestroy, ViewChild } from '@angular/core';
 import { AudioProvider, AudioTrackComponent, ITrackConstraint } from 'ionic-audio';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
 import { Artifact, Room } from '../../data/model/room';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { slideInOutAnimation } from './animations';
 
 @Component({
     selector: 'audio-tour-page',
     templateUrl: 'audio.tour.page.html',
-    animations: [
-        trigger('slideInOut', [
-            transition(':enter', [
-                style({transform: 'translateX(100%)'}),
-                animate(300)
-            ]),
-            transition(':leave', [
-                animate(300, style({transform: 'translateX(-100%)'}))
-            ])
-        ])
-    ]
+    animations: [slideInOutAnimation]
 })
 export class AudioTourPage implements OnDestroy {
     @ViewChild('content') content: Content;
@@ -43,8 +33,10 @@ export class AudioTourPage implements OnDestroy {
 
     allowExit: boolean = false;
 
+    slideState: string = 'next';
+
     constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider,
-                public alertCtrl: AlertController, public navCtrl: NavController, public app: App) {
+                public alertCtrl: AlertController, public navCtrl: NavController, public cdRef: ChangeDetectorRef) {
         this.rooms = exhibitDataService.getExhibitData();
 
         this.currentRoom = this.rooms[0];
@@ -112,6 +104,9 @@ export class AudioTourPage implements OnDestroy {
     }
 
     nextArtifact(): void {
+        this.slideState = 'next';
+        this.cdRef.detectChanges(); //immediately change animation state
+
         this.artifactIndex++;
 
         const artifactIndexInExhibit = this.currentRoom.artifacts.indexOf(this.currentArtifact);
@@ -128,11 +123,14 @@ export class AudioTourPage implements OnDestroy {
         this._loadAudioTrack();
 
         setTimeout(() => {
-           this.content.resize();
+            this.content.resize();
         });
     }
 
     previousArtifact(): void {
+        this.slideState = 'previous';
+        this.cdRef.detectChanges();
+
         this.artifactIndex--;
 
         const artifactIndexInExhibit = this.currentRoom.artifacts.indexOf(this.currentArtifact);
