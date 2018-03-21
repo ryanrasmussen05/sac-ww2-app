@@ -47,7 +47,7 @@ const blueRoom: Room = {
             number: '1.1.3',
             name: 'Martin MB-1',
             pictures: [
-                'Martin MB-1',
+                'MartinMB-1',
             ],
             audio: 'blue-artifact-1.mp3',
             description: 'Designed by the Glenn Martin Company, the Martin MB-1 was the first American designed heavy bomber purchased in mass and became the ' +

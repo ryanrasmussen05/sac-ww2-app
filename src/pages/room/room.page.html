@@ -7,8 +7,10 @@
 <ion-content>
     <ion-list>
         <button ion-item *ngFor="let artifact of room.artifacts" (click)="artifactClicked(artifact)">
-            <span>{{ artifact.number }}</span>
-            <span>{{ artifact.name }}</span>
+            <ion-thumbnail item-start [ngStyle]="{'background': 'url(assets/pictures/' + artifact.pictures[0] + '.jpg) no-repeat center/contain'}">
+            </ion-thumbnail>
+            <h2 style="text-overflow: ellipsis; overflow: hidden;">{{ artifact.name }}</h2>
+            <p>{{ artifact.number }}</p>
         </button>
     </ion-list>
 </ion-content>
