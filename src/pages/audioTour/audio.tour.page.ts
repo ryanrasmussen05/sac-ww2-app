@@ -164,6 +164,7 @@ export class AudioTourPage implements OnDestroy {
     }
 
     trackFinished() {
+        console.log('TRACK FINISHED');
         if (this.hasNextArtifact()) {
             setTimeout(() => { //do this to prevent change after check error
                 this.nextArtifact();

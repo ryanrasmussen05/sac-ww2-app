@@ -14,9 +14,12 @@ import { AudioTourPage } from '../pages/audioTour/audio.tour.page';
 import { RoomPage } from '../pages/room/room.page';
 import { AudioTourIntroPage } from '../pages/audioTour/audio.tour.intro.page';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
-import { defaultAudioProviderFactory, IonicAudioModule } from 'ionic-audio';
+import { IonicAudioModule, WebAudioProvider } from 'ionic-audio';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+export function myCustomAudioProviderFactory() {
+    return new WebAudioProvider(); //cordova media player not working right
+}
 
 @NgModule({
     declarations: [
@@ -31,11 +34,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        IonicModule.forRoot(AppComponent, {
-            //mode: 'ios'
-        }),
+        IonicModule.forRoot(AppComponent),
         IonicImageViewerModule,
-        IonicAudioModule.forRoot(defaultAudioProviderFactory)
+        IonicAudioModule.forRoot(myCustomAudioProviderFactory)
     ],
     bootstrap: [IonicApp],
     entryComponents: [

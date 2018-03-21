@@ -30,6 +30,7 @@ export class AppComponent {
             }
 
             this.platform.pause.subscribe(() => {
+                console.log('PLATFORM PAUSE');
                 this.audioProvider.stop();
             });
 
