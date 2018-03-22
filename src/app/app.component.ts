@@ -3,8 +3,8 @@ import { MenuController, Nav, Platform } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Insomnia } from '@ionic-native/insomnia';
-import { AudioProvider } from 'ionic-audio';
 import { HomePage } from '../pages/home/home.page';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 @Component({
     templateUrl: 'app.html'
@@ -15,7 +15,7 @@ export class AppComponent {
     rootPage = HomePage;
 
     constructor(public platform: Platform, public menu: MenuController, public statusBar: StatusBar,
-                public splashScreen: SplashScreen, public audioProvider: AudioProvider, public insomnia: Insomnia) {
+                public splashScreen: SplashScreen, public insomnia: Insomnia, public screenOrientation: ScreenOrientation) {
         this.initializeApp();
     }
 
@@ -29,14 +29,11 @@ export class AppComponent {
                 this.statusBar.styleDefault();
             }
 
-            this.platform.pause.subscribe(() => {
-                console.log('PLATFORM PAUSE');
-                this.audioProvider.stop();
-            });
-
             this.insomnia.keepAwake();
+
+            if (this.platform.is('cordova')) {
+                this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+            }
         });
-
-
     }
 }

@@ -1,5 +1,5 @@
 import { Component, OnDestroy, ViewChild } from '@angular/core';
-import { NavParams, Slides } from 'ionic-angular';
+import { NavParams, Platform, Slides } from 'ionic-angular';
 import { AudioProvider, ITrackConstraint } from 'ionic-audio';
 import { Artifact, Room } from '../../data/model/room';
 
@@ -17,7 +17,9 @@ export class ArtifactPage implements OnDestroy {
 
     currentIndex = 0;
 
-    constructor(public navParams: NavParams, public audioProvider: AudioProvider) {
+    private _pauseSubscription: any;
+
+    constructor(public navParams: NavParams, public audioProvider: AudioProvider, platform: Platform) {
         this.room = navParams.get('room');
         this.artifact = navParams.get('artifact');
 
@@ -25,11 +27,20 @@ export class ArtifactPage implements OnDestroy {
             src: 'assets/audio/' + this.artifact.audio,
             preload: 'metadata'
         };
+
+        platform.ready().then(() => {
+            this._pauseSubscription = platform.pause.subscribe(() => {
+                console.log('PLATFORM PAUSE - ARTIFACT PAGE');
+                this.audioProvider.stop();
+            });
+        });
     }
 
     ngOnDestroy(): void {
         this.audioProvider.stop();
         this.audioProvider.tracks.length = 0;
+
+        this._pauseSubscription.unsubscribe();
     }
 
     onSlideChanged() {

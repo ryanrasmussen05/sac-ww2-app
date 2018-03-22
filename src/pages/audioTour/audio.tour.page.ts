@@ -1,4 +1,4 @@
-import { AlertController, Content, NavController, Slides } from 'ionic-angular';
+import { AlertController, Content, NavController, Platform, Slides } from 'ionic-angular';
 import { ChangeDetectorRef, Component, OnDestroy, ViewChild } from '@angular/core';
 import { AudioProvider, AudioTrackComponent, ITrackConstraint } from 'ionic-audio';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
@@ -35,7 +35,11 @@ export class AudioTourPage implements OnDestroy {
 
     slideState: string = 'next';
 
-    constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider,
+    private _autoPlayNext: boolean = true;
+    private _pauseSubscription: any;
+    private _resumeSubscription: any;
+
+    constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider, platform: Platform,
                 public alertCtrl: AlertController, public navCtrl: NavController, public cdRef: ChangeDetectorRef) {
         this.rooms = exhibitDataService.getExhibitData();
 
@@ -52,6 +56,19 @@ export class AudioTourPage implements OnDestroy {
                 this.totalArtifacts++;
             });
         });
+
+        platform.ready().then(() => {
+            this._pauseSubscription = platform.pause.subscribe(() => {
+                console.log('PLATFORM PAUSE - AUDIO TOUR PAGE');
+                this._autoPlayNext = false;
+                this.audioProvider.stop();
+            });
+
+            this._resumeSubscription = platform.resume.subscribe(() => {
+                console.log('PLATFORM RESUME - AUDIO TOUR PAGE');
+                this._autoPlayNext = true;
+            });
+        });
     }
 
     setCurrentArtifact(artifact: Artifact): void {
@@ -61,6 +78,9 @@ export class AudioTourPage implements OnDestroy {
     ngOnDestroy(): void {
         this.audioProvider.stop();
         this.audioProvider.tracks.length = 0;
+
+        this._pauseSubscription.unsubscribe();
+        this._resumeSubscription.unsubscribe();
     }
 
     ngAfterViewInit(): void {
@@ -165,6 +185,12 @@ export class AudioTourPage implements OnDestroy {
 
     trackFinished() {
         console.log('TRACK FINISHED');
+
+        // if app is paused
+        if (!this._autoPlayNext) {
+            return;
+        }
+
         if (this.hasNextArtifact()) {
             setTimeout(() => { //do this to prevent change after check error
                 this.nextArtifact();

@@ -1,6 +1,5 @@
-import { Component, OnDestroy } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
-import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 import { BrowseRoomsPage } from '../browseRooms/browse.rooms.page';
 import { AudioTourIntroPage } from '../audioTour/audio.tour.intro.page';
 
@@ -9,17 +8,8 @@ import { AudioTourIntroPage } from '../audioTour/audio.tour.intro.page';
     selector: 'home-page',
     templateUrl: 'home.page.html'
 })
-export class HomePage implements OnDestroy {
-    constructor(public navCtrl: NavController, public screenOrientation: ScreenOrientation, public platform: Platform) {
-        if (platform.is('cordova')) {
-            this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
-        }
-    }
-
-    ngOnDestroy(): void {
-        if (this.platform.is('cordova')) {
-            this.screenOrientation.unlock();
-        }
+export class HomePage {
+    constructor(public navCtrl: NavController) {
     }
 
     goToBrowseRoomsPage(): void {
