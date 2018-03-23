@@ -92,8 +92,9 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+$font-family-base: Futura;
+$font-family-ios-base: Futura;
+$font-family-md-base: Futura;
 
 // Ionic Audio
 $ionic-audio-track-color: color($colors, primary);
