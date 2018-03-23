@@ -20,9 +20,15 @@ home-page {
         justify-content: space-between;
 
         .title {
-            font-size: 15vw;
-            font-weight: 700;
+            font-family: DukeFill;
+            font-size: 25vw;
             text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .title {
+                line-height: 0.9;
+            }
         }
 
         .nav-wrapper {
