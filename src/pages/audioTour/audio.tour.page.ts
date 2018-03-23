@@ -33,7 +33,7 @@ export class AudioTourPage implements OnDestroy {
 
     allowExit: boolean = false;
 
-    slideState: string = 'next';
+    slideState: string;
 
     private _autoPlayNext: boolean = true;
     private _pauseSubscription: any;
