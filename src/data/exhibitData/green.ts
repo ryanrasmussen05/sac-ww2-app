@@ -20,11 +20,7 @@ const greenRoom: Room = {
        ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
-                'green-artifact-1-1',
-                'green-artifact-1-2',
-                'green-artifact-1-3',
-                'green-artifact-1-4',
-                'green-artifact-1-5'
+                'NaziFlag'
             ],
             audio: 'green-artifact-1.mp3'
         },
@@ -44,11 +40,7 @@ const greenRoom: Room = {
        ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             pictures: [
-                'green-artifact-2-1',
-                'green-artifact-2-2',
-                'green-artifact-2-3',
-                'green-artifact-2-4',
-                'green-artifact-2-5'
+                'HitlerYouth'
             ],
             audio: 'green-artifact-2.mp3'
         }

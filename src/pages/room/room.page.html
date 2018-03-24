@@ -1,3 +1,4 @@
+<!--suppress HtmlUnknownTag -->
 <ion-header>
     <ion-navbar [color]="room.color">
         <ion-title>{{ room.name }}</ion-title>
@@ -7,7 +8,7 @@
 <ion-content>
     <ion-list>
         <button ion-item *ngFor="let artifact of room.artifacts" (click)="artifactClicked(artifact)">
-            <ion-thumbnail item-start [ngStyle]="{'background': 'url(assets/pictures/' + artifact.pictures[0] + '.jpg) no-repeat center/contain'}">
+            <ion-thumbnail item-start [ngStyle]="{'background': 'url(assets/pictures/' + artifact.pictures[0] + '-thumb.jpg) no-repeat center/contain'}">
             </ion-thumbnail>
             <h2 style="text-overflow: ellipsis; overflow: hidden;">{{ artifact.name }}</h2>
             <p>{{ artifact.number }}</p>

@@ -12,7 +12,7 @@ export class ExhibitDataService {
     rooms: Room[];
 
     constructor() {
-        this.rooms = [blueRoom, brownRoom, greenRoom, orangeRoom, redRoom, yellowRoom];
+        this.rooms = [blueRoom, greenRoom, brownRoom, orangeRoom, redRoom, yellowRoom];
     }
 
     getExhibitData(): Room[] {
