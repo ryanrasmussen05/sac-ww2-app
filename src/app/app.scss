@@ -14,6 +14,8 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+@import "../theme/colors";
+
 @font-face {
     font-family: DukeFill;
     src: url("../assets/font/Duke Fill.otf") format("opentype");
@@ -41,4 +43,34 @@
     font-family: Futura;
     font-weight: 700;
     src: url("../assets/font/Futura-Bold.otf") format("opentype");
+}
+
+.room-blue {
+    background-color: $exhibit-blue;
+    color: $exhibit-blue-contrast;
+}
+
+.room-brown {
+    background-color: $exhibit-brown;
+    color: $exhibit-brown-contrast;
+}
+
+.room-green {
+    background-color: $exhibit-green;
+    color: $exhibit-green-contrast;
+}
+
+.room-orange {
+    background-color: $exhibit-orange;
+    color: $exhibit-orange-contrast;
+}
+
+.room-red {
+    background-color: $exhibit-red;
+    color: $exhibit-red-contrast;
+}
+
+.room-yellow {
+    background-color: $exhibit-yellow;
+    color: $exhibit-yellow-contrast;
 }

@@ -8,10 +8,31 @@
 </ion-header>
 
 
-<ion-content>
-    <ion-list>
-        <button ion-item *ngFor="let room of rooms" (click)="roomClicked(room)">
-            {{ room.name }}
-        </button>
-    </ion-list>
+<ion-content class="browse-rooms">
+    <ion-grid>
+        <ion-row>
+            <ion-col *ngFor="let room of rooms" col-12 col-md-6>
+                <ion-card>
+                    <div class="room-label" [ngClass]="'room-' + room.color" (click)="roomClicked(room)">
+                        {{ room.name }}
+                    </div>
+                    <ion-row>
+                        <ion-col>
+                            <button ion-button icon-left clear>
+                                <ion-icon name="information-circle"></ion-icon>
+                                About
+                            </button>
+                        </ion-col>
+                        <ion-col text-right>
+                            <button ion-button icon-right (click)="roomClicked(room)">
+                                Enter
+                                <ion-icon name="arrow-forward"></ion-icon>
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
 </ion-content>

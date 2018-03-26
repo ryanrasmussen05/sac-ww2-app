@@ -1,0 +1,19 @@
+.browse-rooms {
+
+    .room-label {
+        height: 160px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3em;
+        font-family: DukeFill;
+    }
+
+    @media (min-width: 600px) {
+        .room-label {
+            height: 200px;
+        }
+    }
+}
