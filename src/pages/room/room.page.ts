@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { ModalController, NavController, NavParams } from 'ionic-angular';
 import { ArtifactPage } from '../artifact/artifact.page';
 import { Artifact, Room } from '../../data/model/room';
+import { RoomDetailPage } from '../browseRooms/room.detail.page';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { Artifact, Room } from '../../data/model/room';
 export class RoomPage {
     room: Room;
 
-    constructor(public navParams: NavParams, public navCtrl: NavController) {
+    constructor(public navParams: NavParams, public navCtrl: NavController, public modalCtrl: ModalController) {
         this.room = navParams.get('room');
     }
 
@@ -20,5 +21,12 @@ export class RoomPage {
             room: this.room,
             artifact: artifact
         });
+    }
+
+    roomInfo(event: any): void {
+        event.stopPropagation();
+
+        const modal = this.modalCtrl.create(RoomDetailPage, {room: this.room});
+        modal.present();
     }
 }

@@ -9,7 +9,7 @@
 
 
 <ion-content class="browse-rooms">
-    <ion-grid>
+    <ion-grid *ngIf="test === 'A'" class="a">
         <ion-row>
             <ion-col *ngFor="let room of rooms" col-12 col-md-6>
                 <ion-card>
@@ -18,7 +18,7 @@
                     </div>
                     <ion-row>
                         <ion-col>
-                            <button ion-button icon-left clear>
+                            <button ion-button icon-left clear (click)="roomInfo(room, $event)">
                                 <ion-icon name="information-circle"></ion-icon>
                                 About
                             </button>
@@ -35,4 +35,51 @@
         </ion-row>
     </ion-grid>
 
+    <ion-grid *ngIf="test === 'B'" class="b">
+        <ion-row>
+            <ion-col *ngFor="let room of rooms" col-12 col-md-6>
+                <div class="room-card" [ngClass]="'room-' + room.color" (click)="roomClicked(room)">
+                    <div class="room-card-label">{{ room.name }}</div>
+                    <div class="room-card-icon"><ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon></div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid *ngIf="test === 'C'" class="c">
+        <ion-row>
+            <ion-col *ngFor="let room of rooms" col-12 col-md-6>
+                <div class="room-card" [ngClass]="'room-' + room.color" (click)="roomClicked(room)">
+                    <div class="room-card-label">{{ room.name }}</div>
+                    <div class="room-card-icon"><ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon></div>
+                    <button ion-button icon-only clear class="info-button" [ngClass]="'room-' + room.color" (click)="roomInfo(room, $event)">
+                        <ion-icon ios="ios-information-circle-outline" md="ios-information-circle-outline"></ion-icon>
+                    </button>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid *ngIf="test === 'D'" class="d">
+        <ion-row>
+            <ion-col *ngFor="let room of rooms" col-12 col-md-6>
+                <div class="room-card" [ngClass]="'room-' + room.color" (click)="roomClicked(room)">
+                    <div class="room-card-label">{{ room.name }}</div>
+                    <button ion-button icon-only clear class="info-button" [ngClass]="'room-' + room.color" (click)="roomInfo(room, $event)">
+                        <ion-icon ios="ios-information-circle-outline" md="ios-information-circle-outline"></ion-icon>
+                    </button>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
+
+<!--TODO DELETE THIS-->
+<ion-footer>
+    <ion-toolbar>
+        <button ion-button (click)="test = 'A'">A</button>
+        <button ion-button (click)="test = 'B'">B</button>
+        <button ion-button (click)="test = 'C'">C</button>
+        <button ion-button (click)="test = 'D'">D</button>
+    </ion-toolbar>
+</ion-footer>

@@ -1,5 +1,6 @@
 export interface Room {
     name: string;
+    description: string;
     color: string;
     artifacts: Artifact[];
 }

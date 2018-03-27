@@ -16,6 +16,7 @@ import { AudioTourIntroPage } from '../pages/audioTour/audio.tour.intro.page';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { IonicAudioModule, WebAudioProvider } from 'ionic-audio';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RoomDetailPage } from '../pages/browseRooms/room.detail.page';
 
 export function myCustomAudioProviderFactory() {
     return new WebAudioProvider(); //cordova media player not working right
@@ -29,7 +30,8 @@ export function myCustomAudioProviderFactory() {
         AudioTourPage,
         RoomPage,
         ArtifactPage,
-        AudioTourIntroPage
+        AudioTourIntroPage,
+        RoomDetailPage
     ],
     imports: [
         BrowserModule,
@@ -46,7 +48,8 @@ export function myCustomAudioProviderFactory() {
         AudioTourPage,
         RoomPage,
         ArtifactPage,
-        AudioTourIntroPage
+        AudioTourIntroPage,
+        RoomDetailPage
     ],
     providers: [
         StatusBar,

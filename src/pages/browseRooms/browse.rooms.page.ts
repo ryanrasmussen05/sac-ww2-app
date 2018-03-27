@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
 import { Room } from '../../data/model/room';
-import { NavController } from 'ionic-angular';
+import { ModalController, NavController } from 'ionic-angular';
 import { RoomPage } from '../room/room.page';
+import { RoomDetailPage } from './room.detail.page';
 
 @Component({
     selector: 'browse-rooms-page',
@@ -11,7 +12,10 @@ import { RoomPage } from '../room/room.page';
 export class BrowseRoomsPage {
     rooms: Room[];
 
-    constructor(public navCtrl: NavController, public exhibitDataService: ExhibitDataService) {
+    //TODO DELETE
+    test: string = 'A';
+
+    constructor(public navCtrl: NavController, public exhibitDataService: ExhibitDataService, public modalCtrl: ModalController) {
         this.rooms = exhibitDataService.getExhibitData();
     }
 
@@ -19,5 +23,12 @@ export class BrowseRoomsPage {
         this.navCtrl.push(RoomPage, {
             room: room
         });
+    }
+
+    roomInfo(room: Room, event: any): void {
+        event.stopPropagation();
+
+        const modal = this.modalCtrl.create(RoomDetailPage, {room: room});
+        modal.present();
     }
 }
