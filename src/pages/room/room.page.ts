@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController, NavController, NavParams } from 'ionic-angular';
 import { ArtifactPage } from '../artifact/artifact.page';
-import { RoomDetailPage } from '../browseRooms/room.detail.page';
+import { RoomDetailPage } from './room.detail.page';
 import { Artifact, Room } from '../../data/model/exhibit';
 
 

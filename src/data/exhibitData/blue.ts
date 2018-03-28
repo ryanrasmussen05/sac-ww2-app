@@ -3,6 +3,7 @@ import { Room } from '../model/exhibit';
 const blueRoom: Room = {
     name: 'WWI and the Interwar Years',
     color: 'blue',
+    audio: 'blue-room.mp3',
     description: 'The Blue Room depicts some of the early days of aviation and initial bombing capabilities of a variety of air forces. Small ' +
     'aircraft generally performed reconnaissance missions in support of ground commanders who understood that aerial observation of their ground ' +
     'deployments and posture could compromise operations. From this was born fighter aircraft whose duty it was to prevent other aircraft from ' +

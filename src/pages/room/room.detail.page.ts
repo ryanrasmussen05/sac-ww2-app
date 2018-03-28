@@ -1,31 +1,30 @@
 import { Component, OnDestroy } from '@angular/core';
-import { Platform, ViewController } from 'ionic-angular';
-import { ExhibitDataService } from '../../data/exhibit.data.service';
+import { NavParams, Platform, ViewController } from 'ionic-angular';
+import { Room } from '../../data/model/exhibit';
 import { AudioProvider, ITrackConstraint } from 'ionic-audio';
-import { Exhibit } from '../../data/model/exhibit';
 
 @Component({
-    selector: 'about-page',
-    templateUrl: 'about.page.html'
+    selector: 'room-detail-page',
+    templateUrl: 'room.detail.page.html'
 })
-export class AboutPage implements OnDestroy {
-    exhibit: Exhibit;
+export class RoomDetailPage implements OnDestroy {
+    room: Room;
 
     track: ITrackConstraint;
 
     private _pauseSubscription: any;
 
-    constructor(exhibitDataService: ExhibitDataService, public viewCtrl: ViewController, public audioProvider: AudioProvider, platform: Platform) {
-        this.exhibit = exhibitDataService.getExhibitData();
+    constructor(params: NavParams, public viewCtrl: ViewController, public audioProvider: AudioProvider, platform: Platform) {
+        this.room = params.get('room');
 
         this.track = {
-            src: 'assets/audio/' + this.exhibit.audio,
+            src: 'assets/audio/' + this.room.audio,
             preload: 'metadata'
         };
 
         platform.ready().then(() => {
             this._pauseSubscription = platform.pause.subscribe(() => {
-                console.log('PLATFORM PAUSE - ABOUT EXHIBIT PAGE');
+                console.log('PLATFORM PAUSE - ROOM DETAIL PAGE');
                 this.audioProvider.stop();
             });
         });

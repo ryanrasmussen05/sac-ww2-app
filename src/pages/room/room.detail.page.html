@@ -1,17 +1,17 @@
 <ion-header>
-    <ion-navbar color="dark">
+    <ion-navbar [color]="room.color">
         <ion-buttons start>
             <button ion-button icon-only (click)="dismiss()">
                 <ion-icon name="close"></ion-icon>
             </button>
         </ion-buttons>
-        <ion-title>About</ion-title>
+        <ion-title>{{ room.name }}</ion-title>
     </ion-navbar>
 </ion-header>
 
 
 <ion-content padding class="description">
-    {{ exhibit.description }}
+    {{ room.description }}
 </ion-content>
 
 <ion-footer>

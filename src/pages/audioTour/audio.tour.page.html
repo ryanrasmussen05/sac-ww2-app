@@ -31,7 +31,7 @@
 
         <h1 padding-left padding-right text-center>{{ currentArtifact.name }}</h1>
 
-        <div padding-left padding-right padding-bottom class="artifact-description">{{ currentArtifact.description }}</div>
+        <div padding-left padding-right padding-bottom class="description">{{ currentArtifact.description }}</div>
     </div>
 
 </ion-content>
@@ -40,7 +40,7 @@
 <ion-footer class="audio-tour">
     <ion-toolbar color="dark">
         <audio-track #audioTrack [track]="currentTrack" (onFinish)="trackFinished()">
-            <div class="audio-wrapper" padding-left padding-right>
+            <div class="audio-wrapper">
                 <audio-track-play [audioTrack]="audioTrack"><ion-spinner></ion-spinner></audio-track-play>
                 <div class="progress-bar-wrapper">
                     <audio-track-progress-bar duration progress [audioTrack]="audioTrack"></audio-track-progress-bar>

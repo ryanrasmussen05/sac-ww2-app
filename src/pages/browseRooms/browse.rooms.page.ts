@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
 import { ModalController, NavController } from 'ionic-angular';
 import { RoomPage } from '../room/room.page';
-import { RoomDetailPage } from './room.detail.page';
+import { RoomDetailPage } from '../room/room.detail.page';
 import { Room } from '../../data/model/exhibit';
 
 @Component({

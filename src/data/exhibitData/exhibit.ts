@@ -8,6 +8,7 @@ const exhibit: Exhibit = {
     'dropped over the side on ground targets, leading to better ways to put heavier ordnance on target. Eventually larger period bomber aircraft ' +
     'carried small bomb loads at low altitudes and generally attacked area targets such as large troop formations. These larger aircraft were ' +
     'vulnerable to smaller, faster fighters.',
+    audio: 'exhibit.mp3',
     rooms: []
 };
 
