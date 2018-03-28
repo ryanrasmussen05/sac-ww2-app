@@ -31,57 +31,46 @@ home-page {
             }
         }
 
-        .nav-wrapper {
+        .button-bar-wrapper {
             display: flex;
             flex-direction: column;
-        }
 
-        @media (min-width: 768px) {
-            .nav-wrapper {
-                flex-direction: row;
+            .button-row {
+                display: flex;
+                justify-content: center;
             }
-        }
 
-        @media (max-width: 767px) {
-            .nav-chip {
-                &:first-child {
-                    margin-bottom: 10px;
-                }
-            }
-        }
-
-        .nav-chip {
-            display: flex;
-            flex: 1 1 50%;
-            align-items: center;
-            border: 1px solid black;
-            padding: 8px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.3);
-
-            .nav-title-wrapper {
-                flex-grow: 1;
-                margin-right: 10px;
-
-                .nav-title {
-                    font-size: 5vw;
-                    font-weight: 700;
+            button {
+                &.primary {
+                    width: 50%;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    color: white;
+                    border: 1px solid rgba(0, 0, 0, 0.6);
                     margin-bottom: 5px;
+
+                    &:active {
+                        background-color: rgba(0, 0, 0, 0.2);
+                    }
+
+                    &.button-ios {
+                        font-size: 1.8rem;
+                    }
+
+                    &.button-md {
+                        height: 5rem;
+                    }
+
                 }
 
-                @media (min-width: 768px) {
-                    .nav-title {
-                        font-size: 3vw;
+                &.secondary {
+                    background-color: rgba(255, 255, 255, 0.3);
+                    color: black;
+                    border: 1px solid rgba(0,0,0,0.6);
+
+                    &:active {
+                        background-color: rgba(0, 0, 0, 0.1);
                     }
                 }
-            }
-
-            ion-icon {
-                font-size: 36px;
-            }
-
-            &:active {
-                background-color: rgba(0, 0, 0, 0.3);
             }
         }
     }

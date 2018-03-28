@@ -5,23 +5,17 @@
             COURAGE FROM ABOVE
         </div>
 
-        <div class="nav-wrapper">
-            <div class="nav-chip" (click)="goToBrowseRoomsPage()">
-                <div class="nav-title-wrapper">
-                    <div class="nav-title">Browse Artifacts</div>
-                    <div class="nav-subtitle">Browse Individual Artifacts</div>
-                </div>
-                <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+        <div class="button-bar-wrapper">
+            <div class="button-row">
+                <button ion-button class="primary" (click)="goToAudioTourPage()">Audio Tour</button>
+                <button ion-button class="primary" (click)="goToBrowseRoomsPage()">Browse Artifacts</button>
             </div>
 
-            <div style="width: 16px"></div>
-
-            <div class="nav-chip" (click)="goToAudioTourPage()">
-                <div class="nav-title-wrapper">
-                    <div class="nav-title">Audio Tour</div>
-                    <div class="nav-subtitle">Take a guided walk-through of the entire exhibit</div>
-                </div>
-                <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+            <div class="button-row">
+                <button ion-button icon-start small class="secondary" (click)="goToAboutPage()">
+                    <ion-icon ios="ios-information-circle-outline" md="ios-information-circle-outline"></ion-icon>
+                    About
+                </button>
             </div>
         </div>
     </div>
