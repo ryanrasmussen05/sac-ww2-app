@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Room } from '../../data/model/room';
 import { NavParams, ViewController } from 'ionic-angular';
+import { Room } from '../../data/model/exhibit';
 
 @Component({
     selector: 'room-detail-page',

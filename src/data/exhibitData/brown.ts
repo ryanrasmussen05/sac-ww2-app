@@ -1,4 +1,4 @@
-import { Room } from '../model/room';
+import { Room } from '../model/exhibit';
 
 const brownRoom: Room = {
     name: 'Brown',

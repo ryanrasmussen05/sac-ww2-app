@@ -2,8 +2,8 @@ import { AlertController, Content, NavController, Platform, Slides } from 'ionic
 import { ChangeDetectorRef, Component, OnDestroy, ViewChild } from '@angular/core';
 import { AudioProvider, AudioTrackComponent, ITrackConstraint } from 'ionic-audio';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
-import { Artifact, Room } from '../../data/model/room';
 import { slideInOutAnimation } from './animations';
+import { Artifact, Room } from '../../data/model/exhibit';
 
 @Component({
     selector: 'audio-tour-page',
@@ -41,7 +41,7 @@ export class AudioTourPage implements OnDestroy {
 
     constructor(public exhibitDataService: ExhibitDataService, public audioProvider: AudioProvider, platform: Platform,
                 public alertCtrl: AlertController, public navCtrl: NavController, public cdRef: ChangeDetectorRef) {
-        this.rooms = exhibitDataService.getExhibitData();
+        this.rooms = exhibitDataService.getExhibitData().rooms;
 
         this.currentRoom = this.rooms[0];
         this.setCurrentArtifact(this.currentRoom.artifacts[0]);

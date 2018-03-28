@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
-import { Room } from '../../data/model/room';
 import { ModalController, NavController } from 'ionic-angular';
 import { RoomPage } from '../room/room.page';
 import { RoomDetailPage } from './room.detail.page';
+import { Room } from '../../data/model/exhibit';
 
 @Component({
     selector: 'browse-rooms-page',
@@ -16,7 +16,7 @@ export class BrowseRoomsPage {
     test: string = 'A';
 
     constructor(public navCtrl: NavController, public exhibitDataService: ExhibitDataService, public modalCtrl: ModalController) {
-        this.rooms = exhibitDataService.getExhibitData();
+        this.rooms = exhibitDataService.getExhibitData().rooms;
     }
 
     roomClicked(room: Room): void {

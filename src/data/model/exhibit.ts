@@ -1,3 +1,8 @@
+export interface Exhibit {
+    description: string;
+    rooms: Room[];
+}
+
 export interface Room {
     name: string;
     description: string;

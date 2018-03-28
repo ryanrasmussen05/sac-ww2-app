@@ -1,8 +1,7 @@
 import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { NavParams, Platform, Slides } from 'ionic-angular';
 import { AudioProvider, ITrackConstraint } from 'ionic-audio';
-import { Artifact, Room } from '../../data/model/room';
-
+import { Artifact, Room } from '../../data/model/exhibit';
 
 @Component({
     selector: 'artifact-page',

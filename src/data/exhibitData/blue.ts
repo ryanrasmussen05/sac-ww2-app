@@ -1,4 +1,4 @@
-import { Room } from '../model/room';
+import { Room } from '../model/exhibit';
 
 const blueRoom: Room = {
     name: 'WWI and the Interwar Years',

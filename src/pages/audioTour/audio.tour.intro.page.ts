@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { AudioTourPage } from './audio.tour.page';
 
 @Component({
-    selector: 'audio-tour--intro-page',
+    selector: 'audio-tour-intro-page',
     templateUrl: 'audio.tour.intro.page.html'
 })
 export class AudioTourIntroPage {

@@ -10,7 +10,7 @@ export class AboutPage {
     aboutText: string;
 
     constructor(exhibitDataService: ExhibitDataService, public viewCtrl: ViewController) {
-        this.aboutText = exhibitDataService.getAboutExhibitText();
+        this.aboutText = exhibitDataService.getExhibitData().description;
     }
 
     dismiss() {
