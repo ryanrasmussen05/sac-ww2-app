@@ -1,12 +1,12 @@
 export interface Exhibit {
-    description: string;
+    description: string[];
     audio: string;
     rooms: Room[];
 }
 
 export interface Room {
     name: string;
-    description: string;
+    description: string[];
     color: string;
     audio: string;
     artifacts: Artifact[];
@@ -15,7 +15,7 @@ export interface Room {
 export interface Artifact {
     number: string;
     name: string;
-    description: string;
+    description: string[];
     pictures: string[];
     audio: string;
     background?: string;

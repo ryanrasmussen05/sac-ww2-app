@@ -26,7 +26,9 @@
 
     <h1 padding-left padding-right text-center>{{ artifact.name }}</h1>
 
-    <div padding-left padding-right padding-bottom class="description">{{ artifact.description }}</div>
+    <div padding-left padding-right padding-bottom>
+        <p *ngFor="let paragraph of artifact.description" class="description">{{ paragraph }}</p>
+    </div>
 
 </ion-content>
 

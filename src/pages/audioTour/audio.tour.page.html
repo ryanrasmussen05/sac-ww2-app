@@ -31,7 +31,13 @@
 
         <h1 padding-left padding-right text-center>{{ currentArtifact.name }}</h1>
 
-        <div padding-left padding-right padding-bottom class="description">{{ currentArtifact.description }}</div>
+        <div text-center padding-bottom>
+            <span class="chip" [ngClass]="'room-' + currentRoom.color">{{ currentArtifact.number }}</span>
+        </div>
+
+        <div padding-left padding-right padding-bottom>
+            <p *ngFor="let paragraph of currentArtifact.description" class="description">{{ paragraph }}</p>
+        </div>
     </div>
 
 </ion-content>

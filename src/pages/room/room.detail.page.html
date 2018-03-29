@@ -10,8 +10,8 @@
 </ion-header>
 
 
-<ion-content padding class="description">
-    {{ room.description }}
+<ion-content padding>
+    <p *ngFor="let paragraph of room.description" class="description">{{ paragraph }}</p>
 </ion-content>
 
 <ion-footer>
