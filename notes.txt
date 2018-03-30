@@ -1,0 +1,13 @@
+IOS:
+
+Build in IOS terminal using "ionic cordova build ios --prod --release"
+
+Open generated platforms/ios folder in Xcode
+
+It top lever folder -> General, make sure signing is set to automatic
+
+Analyze, then Archive and upload to apple
+
+
+ANDROID:
+
