@@ -5,6 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { Insomnia } from '@ionic-native/insomnia';
+import { Media } from '@ionic-native/media';
 import { AppComponent } from './app.component';
 import { HomePage } from '../pages/home/home.page';
 import { ExhibitDataService } from '../data/exhibit.data.service';
@@ -18,6 +19,8 @@ import { IonicAudioModule, WebAudioProvider } from 'ionic-audio';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutPage } from '../pages/home/about.page';
 import { RoomDetailPage } from '../pages/room/room.detail.page';
+import { AudioPlayer } from '../components/audioPlayer/audio.player';
+import { TimerPipe } from '../components/audioPlayer/timer.pipe';
 
 export function myCustomAudioProviderFactory() {
     return new WebAudioProvider(); //cordova media player not working right
@@ -33,7 +36,9 @@ export function myCustomAudioProviderFactory() {
         ArtifactPage,
         AudioTourIntroPage,
         RoomDetailPage,
-        AboutPage
+        AboutPage,
+        AudioPlayer,
+        TimerPipe
     ],
     imports: [
         BrowserModule,
@@ -59,6 +64,7 @@ export function myCustomAudioProviderFactory() {
         SplashScreen,
         ScreenOrientation,
         Insomnia,
+        Media,
         ExhibitDataService,
         {provide: ErrorHandler, useClass: IonicErrorHandler}
     ]

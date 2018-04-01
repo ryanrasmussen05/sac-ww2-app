@@ -1,0 +1,13 @@
+<ion-toolbar color="dark">
+    <ion-buttons left>
+        <ion-spinner *ngIf="!isLoaded()"></ion-spinner>
+        <button *ngIf="isLoaded()" ion-button icon-only clear color="primary" (click)="playPause()">
+            <ion-icon [name]="isPlaying() ? 'pause' : 'play'"></ion-icon>
+        </button>
+    </ion-buttons>
+
+    <ion-range [min]="0" [max]="duration" [debounce]="0" [(ngModel)]="rangePosition" (ionChange)="audioPositionChanged($event)">
+        <ion-label range-left>{{ rangePosition | timer }}</ion-label>
+        <ion-label range-right>{{ duration | timer }}</ion-label>
+    </ion-range>
+</ion-toolbar>
