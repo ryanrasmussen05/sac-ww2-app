@@ -1,6 +1,7 @@
 import { Component, Input, NgZone, OnChanges, OnDestroy } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { Media, MEDIA_ERROR, MEDIA_STATUS, MediaObject } from '@ionic-native/media';
+import { File } from '@ionic-native/file';
 
 @Component({
     selector: 'audio-player',
@@ -20,21 +21,23 @@ export class AudioPlayer implements OnDestroy, OnChanges {
     private _pauseSubscription: any;
     private _resumeSubscription: any;
 
-    constructor(private _media: Media, private _ngZone: NgZone, private _platform: Platform) {
+    constructor(private _media: Media, private _ngZone: NgZone, private _platform: Platform, private _file: File) {
 
-        this._pauseSubscription = this._platform.pause.subscribe(() => {
-            console.log('PLATFORM PAUSE - AUDIO');
-            clearInterval(this._timer);
-            if (!!this._audioFile) {
-                this._audioFile.pause();
-            }
-        });
+        this._platform.ready().then(() => {
+            this._pauseSubscription = this._platform.pause.subscribe(() => {
+                console.log('PLATFORM PAUSE - AUDIO');
+                clearInterval(this._timer);
+                if (!!this._audioFile) {
+                    this._audioFile.pause();
+                }
+            });
 
-        this._resumeSubscription = this._platform.resume.subscribe(() => {
-            console.log('PLATFORM RESUME - AUDIO');
-            if (!!this._audioFile) {
-                this._startTimer();
-            }
+            this._resumeSubscription = this._platform.resume.subscribe(() => {
+                console.log('PLATFORM RESUME - AUDIO');
+                if (!!this._audioFile) {
+                    this._startTimer();
+                }
+            });
         });
     }
 
@@ -122,11 +125,11 @@ export class AudioPlayer implements OnDestroy, OnChanges {
         this._platform.ready().then(() => {
 
             //default path (web view)
-            let path = 'assets/audio/';
+            let path = 'www/assets/audio/';
 
             //android path
             if (this._platform.is('android')) {
-                path = '/android_asset/www/assets/audio/';
+                path = this._file.applicationDirectory + path;
             }
 
             if (this._platform.is('cordova')) {

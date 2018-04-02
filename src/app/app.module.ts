@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { Insomnia } from '@ionic-native/insomnia';
 import { Media } from '@ionic-native/media';
+import { File } from '@ionic-native/file';
 import { AppComponent } from './app.component';
 import { HomePage } from '../pages/home/home.page';
 import { ExhibitDataService } from '../data/exhibit.data.service';
@@ -66,6 +67,7 @@ export function myCustomAudioProviderFactory() {
         Insomnia,
         Media,
         ExhibitDataService,
+        File,
         {provide: ErrorHandler, useClass: IonicErrorHandler}
     ]
 })
