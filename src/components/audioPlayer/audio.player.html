@@ -6,7 +6,7 @@
         </button>
     </ion-buttons>
 
-    <ion-range [min]="0" [max]="duration" [debounce]="0" [(ngModel)]="rangePosition" (ionChange)="audioPositionChanged($event)">
+    <ion-range [min]="0" [max]="duration" [debounce]="0" [(ngModel)]="rangePosition" (ionChange)="audioPositionChanged()">
         <ion-label range-left>{{ rangePosition | timer }}</ion-label>
         <ion-label range-right>{{ duration | timer }}</ion-label>
     </ion-range>
