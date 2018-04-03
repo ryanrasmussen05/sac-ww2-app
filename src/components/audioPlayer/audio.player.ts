@@ -18,8 +18,14 @@ export class AudioPlayer implements OnDestroy, OnChanges {
     private _timer: number;
     private _status: MEDIA_STATUS;
 
+    private _initialLoad: boolean = false;
+
     private _pauseSubscription: any;
     private _resumeSubscription: any;
+
+    private _statusSubscription: any;
+    private _successSubscription: any;
+    private _errorSubscription: any;
 
     constructor(private _media: Media, private _ngZone: NgZone, private _platform: Platform, private _file: File) {
 
@@ -27,7 +33,7 @@ export class AudioPlayer implements OnDestroy, OnChanges {
             this._pauseSubscription = this._platform.pause.subscribe(() => {
                 console.log('PLATFORM PAUSE - AUDIO');
                 clearInterval(this._timer);
-                if (!!this._audioFile) {
+                if (!!this._audioFile && this.isPlaying()) {
                     this._audioFile.pause();
                 }
             });
@@ -43,6 +49,7 @@ export class AudioPlayer implements OnDestroy, OnChanges {
 
     ngOnChanges(): void {
         if (!!this._audioFile) {
+            this._unsubscribeAudio();
             this._audioFile.stop();
             this._audioFile.release();
             this._audioFile = null;
@@ -58,8 +65,10 @@ export class AudioPlayer implements OnDestroy, OnChanges {
     ngOnDestroy(): void {
         clearInterval(this._timer);
         this._pauseSubscription.unsubscribe();
+        this._resumeSubscription.unsubscribe();
 
         if (!!this._audioFile) {
+            this._unsubscribeAudio();
             this._audioFile.stop();
             this._audioFile.release();
         }
@@ -93,10 +102,19 @@ export class AudioPlayer implements OnDestroy, OnChanges {
     private _onStatusUpdate(status: MEDIA_STATUS) {
         console.log('MEDIA STATUS', status);
         this._status = status;
+
+        if (this._initialLoad && status === MEDIA_STATUS.RUNNING) {
+            this._audioFile.pause();
+            this._initialLoad = false;
+        }
     }
 
     private _onSuccess() {
         console.log('Finished Playback');
+
+        //reload the track when it completes
+        this._initialLoad = true;
+        this._audioFile.play({playAudioWhenScreenIsLocked: false});
     }
 
     private _onError(error: MEDIA_ERROR) {
@@ -112,8 +130,10 @@ export class AudioPlayer implements OnDestroy, OnChanges {
 
             this._audioFile.getCurrentPosition().then((position) => {
                 this._ngZone.run(() => {
-                    this._audioPosition = position;
-                    this.rangePosition = position;
+                    if (position > -1) {
+                        this._audioPosition = position;
+                        this.rangePosition = position;
+                    }
                 });
             });
 
@@ -129,23 +149,36 @@ export class AudioPlayer implements OnDestroy, OnChanges {
             if (this._platform.is('android')) {
                 path = this._file.applicationDirectory + 'www/assets/audio/' + this.file;
             } else if (this._platform.is('ios')) {
-                //path = this._file.applicationDirectory + 'www/assets/audio/';
-                // this._file.resolveLocalFilesystemUrl(path).then((entry) => {
-                //    console.log(entry.toInternalURL());
-                // });
                 path = 'cdvfile://localhost/bundle/www/assets/audio/' + this.file;
             }
 
             if (this._platform.is('cordova')) {
                 this._audioFile = this._media.create(path);
-                this._audioFile.onStatusUpdate.subscribe((status: MEDIA_STATUS) => this._onStatusUpdate(status));
-                this._audioFile.onSuccess.subscribe(() => this._onSuccess());
-                this._audioFile.onError.subscribe((error: MEDIA_ERROR) => this._onError(error));
+                this._statusSubscription = this._audioFile.onStatusUpdate.subscribe((status: MEDIA_STATUS) => this._onStatusUpdate(status));
+                this._successSubscription = this._audioFile.onSuccess.subscribe(() => this._onSuccess());
+                this._errorSubscription = this._audioFile.onError.subscribe((error: MEDIA_ERROR) => this._onError(error));
 
-                this._audioFile.seekTo(0); //do this to load the track and get duration
+                this._initialLoad = true;
+                this._audioFile.play({playAudioWhenScreenIsLocked: false}); //do this to load the track and get duration
                 this._startTimer();
             }
-
         });
+    }
+
+    private _unsubscribeAudio(): void {
+        if (!!this._statusSubscription) {
+            this._statusSubscription.unsubscribe();
+            this._statusSubscription = null;
+        }
+
+        if (!!this._successSubscription) {
+            this._successSubscription.unsubscribe();
+            this._successSubscription = null;
+        }
+
+        if (!!this._errorSubscription) {
+            this._errorSubscription.unsubscribe();
+            this._errorSubscription = null;
+        }
     }
 }
