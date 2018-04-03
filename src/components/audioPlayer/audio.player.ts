@@ -127,24 +127,24 @@ export class AudioPlayer implements OnDestroy, OnChanges {
             let path;
 
             if (this._platform.is('android')) {
-                path = this._file.applicationDirectory + 'www/assets/audio/';
+                path = this._file.applicationDirectory + 'www/assets/audio/' + this.file;
             } else if (this._platform.is('ios')) {
-                path = this._file.applicationDirectory + 'www/assets/audio/';
-                this._file.resolveLocalFilesystemUrl(path).then((entry) => {
-                   console.log(entry.toInternalURL());
-                });
-                //path = 'cdvfile://localhost/bundle/www/assets/audio/';
+                //path = this._file.applicationDirectory + 'www/assets/audio/';
+                // this._file.resolveLocalFilesystemUrl(path).then((entry) => {
+                //    console.log(entry.toInternalURL());
+                // });
+                path = 'cdvfile://localhost/bundle/www/assets/audio/' + this.file;
             }
 
-            // if (this._platform.is('cordova')) {
-            //     this._audioFile = this._media.create(`${path}${this.file}`);
-            //     this._audioFile.onStatusUpdate.subscribe((status: MEDIA_STATUS) => this._onStatusUpdate(status));
-            //     this._audioFile.onSuccess.subscribe(() => this._onSuccess());
-            //     this._audioFile.onError.subscribe((error: MEDIA_ERROR) => this._onError(error));
-            //
-            //     this._audioFile.seekTo(0); //do this to load the track and get duration
-            //     this._startTimer();
-            // }
+            if (this._platform.is('cordova')) {
+                this._audioFile = this._media.create(path);
+                this._audioFile.onStatusUpdate.subscribe((status: MEDIA_STATUS) => this._onStatusUpdate(status));
+                this._audioFile.onSuccess.subscribe(() => this._onSuccess());
+                this._audioFile.onError.subscribe((error: MEDIA_ERROR) => this._onError(error));
+
+                this._audioFile.seekTo(0); //do this to load the track and get duration
+                this._startTimer();
+            }
 
         });
     }
