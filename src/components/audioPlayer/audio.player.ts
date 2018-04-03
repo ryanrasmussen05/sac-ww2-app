@@ -124,7 +124,13 @@ export class AudioPlayer implements OnDestroy, OnChanges {
 
         this._platform.ready().then(() => {
 
-            const path = this._file.applicationDirectory + 'www/assets/audio/';
+            let path;
+
+            if (this._platform.is('android')) {
+                path = this._file.applicationDirectory + 'www/assets/audio/';
+            } else if (this._platform.is('ios')) {
+                path = 'cdvfile://localhost/bundle/www/assets/audio/';
+            }
 
             if (this._platform.is('cordova')) {
                 this._audioFile = this._media.create(`${path}${this.file}`);
