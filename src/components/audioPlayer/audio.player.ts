@@ -113,6 +113,7 @@ export class AudioPlayer implements OnDestroy, OnChanges {
         console.log('Finished Playback');
 
         //reload the track when it completes
+        this.rangePosition = 0;
         this._initialLoad = true;
         this._audioFile.play({playAudioWhenScreenIsLocked: false});
     }
