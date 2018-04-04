@@ -138,7 +138,7 @@ export class AudioPlayer implements OnDestroy, OnChanges {
                 });
             });
 
-        }, 1000);
+        }, 500);
     }
 
     private _loadAudioFile(): void {

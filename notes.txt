@@ -1,3 +1,6 @@
+Cordova Version: 7.1.0
+Ionic Version: 3.20.0
+
 IOS:
 
 Build in IOS terminal using "ionic cordova build ios --prod --release"
