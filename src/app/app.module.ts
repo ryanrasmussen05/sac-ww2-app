@@ -20,6 +20,7 @@ import { IonicAudioModule, WebAudioProvider } from 'ionic-audio';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutPage } from '../pages/home/about.page';
 import { RoomDetailPage } from '../pages/room/room.detail.page';
+import { NewAudioTourPage } from '../pages/audioTour/new.audio.tour.page';
 import { AudioPlayer } from '../components/audioPlayer/audio.player';
 import { TimerPipe } from '../components/audioPlayer/timer.pipe';
 
@@ -37,6 +38,8 @@ export function myCustomAudioProviderFactory() {
         ArtifactPage,
         AudioTourIntroPage,
         RoomDetailPage,
+        AboutPage,
+        NewAudioTourPage,
         AboutPage,
         AudioPlayer,
         TimerPipe
@@ -58,7 +61,8 @@ export function myCustomAudioProviderFactory() {
         ArtifactPage,
         AudioTourIntroPage,
         RoomDetailPage,
-        AboutPage
+        AboutPage,
+        NewAudioTourPage
     ],
     providers: [
         StatusBar,

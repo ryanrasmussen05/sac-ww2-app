@@ -1,0 +1,75 @@
+.audio-tour {
+    ion-icon.intro {
+        font-size: 50vw;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .intro-text {
+        max-width: 425px;
+        margin: auto;
+    }
+
+    .now-playing {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 2rem;
+    }
+
+    .context-wrapper {
+        height: 50vh;
+
+        ion-card {
+            height: 100%;
+        }
+
+        .exhibit {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            padding: 20px;
+            font-size: 6rem;
+            background-color: #4d4d4d;
+            color: white;
+            font-family: DukeFill;
+        }
+
+        .room {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            padding: 20px;
+            font-size: 6rem;
+            font-family: DukeFill;
+        }
+
+        .artifact {
+            display: flex;
+            flex-direction: column;
+
+            .picture {
+                flex-grow: 1;
+            }
+
+            .artifact-name {
+                font-size: 2.6rem;
+                font-weight: 500;
+            }
+
+            .chip-wrapper {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+}
