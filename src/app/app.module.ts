@@ -17,7 +17,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutPage } from '../pages/home/about.page';
 import { RoomDetailPage } from '../pages/room/room.detail.page';
-import { NewAudioTourPage } from '../pages/audioTour/new.audio.tour.page';
+import { AudioTourPage } from '../pages/audioTour/audio.tour.page';
 import { AudioPlayer } from '../components/audioPlayer/audio.player';
 import { TimerPipe } from '../components/audioPlayer/timer.pipe';
 
@@ -30,7 +30,7 @@ import { TimerPipe } from '../components/audioPlayer/timer.pipe';
         ArtifactPage,
         RoomDetailPage,
         AboutPage,
-        NewAudioTourPage,
+        AudioTourPage,
         AboutPage,
         AudioPlayer,
         TimerPipe
@@ -50,7 +50,7 @@ import { TimerPipe } from '../components/audioPlayer/timer.pipe';
         ArtifactPage,
         RoomDetailPage,
         AboutPage,
-        NewAudioTourPage
+        AudioTourPage
     ],
     providers: [
         StatusBar,

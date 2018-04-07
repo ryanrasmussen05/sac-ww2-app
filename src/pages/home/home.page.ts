@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController, NavController } from 'ionic-angular';
 import { BrowseRoomsPage } from '../browseRooms/browse.rooms.page';
 import { AboutPage } from './about.page';
-import { NewAudioTourPage } from '../audioTour/new.audio.tour.page';
+import { AudioTourPage } from '../audioTour/audio.tour.page';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class HomePage {
     }
 
     goToAudioTourPage(): void {
-        this.navCtrl.push(NewAudioTourPage);
+        this.navCtrl.push(AudioTourPage);
     }
 
     goToAboutPage(): void {

@@ -7,11 +7,11 @@ import { Media, MEDIA_ERROR, MEDIA_STATUS, MediaObject } from '@ionic-native/med
 import { File } from '@ionic-native/file';
 
 @Component({
-    selector: 'new-audio-tour-page',
-    templateUrl: 'new.audio.tour.page.html',
+    selector: 'audio-tour-page',
+    templateUrl: 'audio.tour.page.html',
     animations: [slideInOutAnimation]
 })
-export class NewAudioTourPage implements OnDestroy {
+export class AudioTourPage implements OnDestroy {
 
     exhibit: Exhibit;
 
