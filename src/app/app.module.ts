@@ -12,11 +12,8 @@ import { HomePage } from '../pages/home/home.page';
 import { ExhibitDataService } from '../data/exhibit.data.service';
 import { ArtifactPage } from '../pages/artifact/artifact.page';
 import { BrowseRoomsPage } from '../pages/browseRooms/browse.rooms.page';
-import { AudioTourPage } from '../pages/audioTour/audio.tour.page';
 import { RoomPage } from '../pages/room/room.page';
-import { AudioTourIntroPage } from '../pages/audioTour/audio.tour.intro.page';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
-import { IonicAudioModule, WebAudioProvider } from 'ionic-audio';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutPage } from '../pages/home/about.page';
 import { RoomDetailPage } from '../pages/room/room.detail.page';
@@ -24,19 +21,13 @@ import { NewAudioTourPage } from '../pages/audioTour/new.audio.tour.page';
 import { AudioPlayer } from '../components/audioPlayer/audio.player';
 import { TimerPipe } from '../components/audioPlayer/timer.pipe';
 
-export function myCustomAudioProviderFactory() {
-    return new WebAudioProvider(); //cordova media player not working right
-}
-
 @NgModule({
     declarations: [
         AppComponent,
         HomePage,
         BrowseRoomsPage,
-        AudioTourPage,
         RoomPage,
         ArtifactPage,
-        AudioTourIntroPage,
         RoomDetailPage,
         AboutPage,
         NewAudioTourPage,
@@ -48,18 +39,15 @@ export function myCustomAudioProviderFactory() {
         BrowserModule,
         BrowserAnimationsModule,
         IonicModule.forRoot(AppComponent),
-        IonicImageViewerModule,
-        IonicAudioModule.forRoot(myCustomAudioProviderFactory)
+        IonicImageViewerModule
     ],
     bootstrap: [IonicApp],
     entryComponents: [
         AppComponent,
         HomePage,
         BrowseRoomsPage,
-        AudioTourPage,
         RoomPage,
         ArtifactPage,
-        AudioTourIntroPage,
         RoomDetailPage,
         AboutPage,
         NewAudioTourPage

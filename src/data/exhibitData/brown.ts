@@ -19,6 +19,7 @@ const brownRoom: Room = {
     artifacts: [
         {
             number: '1',
+            roomColor: 'brown',
             name: 'Brown Artifact #1',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -43,6 +44,7 @@ const brownRoom: Room = {
         },
         {
             number: '2',
+            roomColor: 'brown',
             name: 'Brown Artifact #2',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -67,6 +69,7 @@ const brownRoom: Room = {
         },
         {
             number: '3',
+            roomColor: 'brown',
             name: 'Brown Artifact #3',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -91,6 +94,7 @@ const brownRoom: Room = {
         },
         {
             number: '4',
+            roomColor: 'brown',
             name: 'Brown Artifact #4',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -115,6 +119,7 @@ const brownRoom: Room = {
         },
         {
             number: '5',
+            roomColor: 'brown',
             name: 'Brown Artifact #5',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -139,6 +144,7 @@ const brownRoom: Room = {
         },
         {
             number: '6',
+            roomColor: 'brown',
             name: 'Brown Artifact #6',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -163,6 +169,7 @@ const brownRoom: Room = {
         },
         {
             number: '7',
+            roomColor: 'brown',
             name: 'Brown Artifact #7',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -187,6 +194,7 @@ const brownRoom: Room = {
         },
         {
             number: '8',
+            roomColor: 'brown',
             name: 'Brown Artifact #8',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -211,6 +219,7 @@ const brownRoom: Room = {
         },
         {
             number: '9',
+            roomColor: 'brown',
             name: 'Brown Artifact #9',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -235,6 +244,7 @@ const brownRoom: Room = {
         },
         {
             number: '10',
+            roomColor: 'brown',
             name: 'Brown Artifact #10',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -259,6 +269,7 @@ const brownRoom: Room = {
         },
         {
             number: '11',
+            roomColor: 'brown',
             name: 'Brown Artifact #11',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 

@@ -16,10 +16,8 @@
             <h1>Audio Tour</h1>
         </div>
         <div class="intro-text description">
-            <!--TODO UPDATE THSI TEXT-->
-            The audio tour will take you on a step-by-step walk-through of the entire exhibit, while playing a narration
-            and showing details about the various artifacts. You can skip artifacts or pause the tour at anytime by
-            using the controls at the bottom of the screen.
+            The audio tour will take you on a step-by-step walk-through of the entire exhibit, while playing a narration about the various rooms and artifacts.
+            You can skip artifacts or pause the tour at anytime by using the controls on the screen.
         </div>
         <div text-center margin-top>
             <button ion-button (click)="beginTour()">Begin Audio Tour</button>
@@ -30,21 +28,27 @@
         <div class="now-playing">Currently Playing:</div>
 
         <div class="context-wrapper">
-            <ion-card *ngIf="currentExhibit" class="exhibit">
-                Courage From Above
-            </ion-card>
 
-            <ion-card *ngIf="currentRoom && !currentArtifact" class="room" [ngClass]="'room-' + currentRoom.color">
-                {{ currentRoom.name }}
-            </ion-card>
+            <!--USE NGFOR TO GET ANIMATIONS-->
+            <div class="card-wrapper" *ngFor="let item of currentItems" [@slideInOut]="slideState">
+                <ion-card [ngClass]="setCardClasses(item)">
+                    <div *ngIf="isExhibit(item)">
+                        Courage From Above
+                    </div>
 
-            <ion-card *ngIf="currentArtifact" class="artifact">
-                <div class="picture" [ngStyle]="{'background': 'url(assets/pictures/' + currentArtifact.pictures[0] + '.jpg) no-repeat center/contain'}"></div>
-                <div class="artifact-name" text-center>{{ currentArtifact.name }}</div>
-                <div class="chip-wrapper">
-                    <div class="chip" [ngClass]="'room-' + currentRoom.color">{{ currentArtifact.number }}</div>
-                </div>
-            </ion-card>
+                    <div *ngIf="isRoom(item)">
+                        {{ item.name }}
+                    </div>
+
+                    <div *ngIf="isArtifact(item)" class="wrapper">
+                        <div class="picture" [ngStyle]="{'background': 'url(assets/pictures/' + item.pictures[0] + '.jpg) no-repeat center/contain'}"></div>
+                        <div class="artifact-name" text-center>{{ item.name }}</div>
+                        <div class="chip-wrapper">
+                            <div class="chip" [ngClass]="'room-' + item.roomColor">{{ item.number }}</div>
+                        </div>
+                    </div>
+                </ion-card>
+            </div>
         </div>
 
         <div class="button-wrapper">

@@ -19,6 +19,7 @@ const greenRoom: Room = {
     artifacts: [
         {
             number: '1',
+            roomColor: 'green',
             name: 'Green Artifact #1',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -39,6 +40,7 @@ const greenRoom: Room = {
         },
         {
             number: '2',
+            roomColor: 'green',
             name: 'Green Artifact #2',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 

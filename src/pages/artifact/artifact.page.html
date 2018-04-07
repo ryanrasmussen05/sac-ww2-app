@@ -38,4 +38,18 @@
 
 <ion-footer>
     <audio-player [file]="artifact.audio"></audio-player>
+    <ion-toolbar color="dark">
+        <ion-buttons left>
+            <button ion-button icon-start>
+                <ion-icon name="arrow-back"></ion-icon>
+                Previous Artifact
+            </button>
+        </ion-buttons>
+        <ion-buttons right>
+            <button ion-button icon-end>
+                Next Artifact
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-footer>

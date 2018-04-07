@@ -15,9 +15,7 @@ export class NewAudioTourPage implements OnDestroy {
 
     exhibit: Exhibit;
 
-    currentExhibit: Exhibit;
-    currentRoom: Room;
-    currentArtifact: Artifact;
+    currentItems: any[] = []; //use this array to more easily allow animations
 
     currentClipIndex: number;
     totalClips: number;
@@ -90,6 +88,20 @@ export class NewAudioTourPage implements OnDestroy {
         }
     }
 
+    setCardClasses(item: any): any[] {
+        let classes: any = {
+            'exhibit': this.isExhibit(item),
+            'room': this.isRoom(item),
+            'artifact': this.isArtifact(item)
+        };
+
+        if (this.isRoom(item)) {
+            classes['room-' + item.color] = true;
+        }
+
+        return classes;
+    }
+
     ionViewCanLeave(): boolean {
         if (this.hasNextClip() && !this.allowExit) {
 
@@ -148,7 +160,6 @@ export class NewAudioTourPage implements OnDestroy {
         this.currentClipIndex++;
 
         this._setDisplayItemByIndex(this.currentClipIndex);
-        this._loadAudioFile();
     }
 
     previousClip(): void {
@@ -158,16 +169,27 @@ export class NewAudioTourPage implements OnDestroy {
         this.currentClipIndex--;
 
         this._setDisplayItemByIndex(this.currentClipIndex);
-        this._loadAudioFile();
     }
 
     isPlaying(): boolean {
         return this._status === MEDIA_STATUS.RUNNING;
     }
 
+    isExhibit(item: any): item is Exhibit {
+        return (<Exhibit>item).rooms !== undefined;
+    }
+
+    isRoom(item: any): item is Room {
+        return(<Room>item).artifacts !== undefined;
+    }
+
+    isArtifact(item: any): item is Artifact {
+        return(<Artifact>item).pictures !== undefined;
+    }
+
     private _setDisplayItemByIndex(index: number): void {
         if (index === 0) {
-            this._setContextExhibit(this.exhibit);
+            this._setContextItem(this.exhibit);
             return;
         }
 
@@ -177,7 +199,7 @@ export class NewAudioTourPage implements OnDestroy {
             currentDisplayIndex++;
 
             if (currentDisplayIndex === index) {
-                this._setContextRoom(room);
+                this._setContextItem(room);
                 return;
             }
 
@@ -185,42 +207,27 @@ export class NewAudioTourPage implements OnDestroy {
                 currentDisplayIndex++;
 
                 if (currentDisplayIndex === index) {
-                    this._setContextArtifact(artifact, room);
+                    this._setContextItem(artifact);
                     return;
                 }
             });
         });
     }
 
-    private _setContextExhibit(exhibit: Exhibit): void {
-        this.currentExhibit = exhibit;
-        this.currentRoom = null;
-        this.currentArtifact = null;
+    private _setContextItem(item: Exhibit | Room | Artifact): void {
+        this.currentItems.push(item);
+        this.cdRef.detectChanges();
+        this._removePreviousItem();
+        this._loadAudioFile(item.audio);
     }
 
-    private _setContextRoom(room: Room): void {
-        this.currentExhibit = null;
-        this.currentRoom = room;
-        this.currentArtifact = null;
-    }
-
-    private _setContextArtifact(artifact: Artifact, room: Room): void {
-        this.currentExhibit = null;
-        this.currentRoom = room;
-        this.currentArtifact = artifact;
-    }
-
-    private _getAudioFileName(): string {
-        if (this.currentArtifact) {
-            return this.currentArtifact.audio;
-        } else if (this.currentRoom) {
-            return this.currentRoom.audio;
-        } else {
-            return this.exhibit.audio;
+    private _removePreviousItem(): void {
+        if (this.currentItems.length > 1) {
+            this.currentItems.splice(0, 1);
         }
     }
 
-    private _loadAudioFile(): void {
+    private _loadAudioFile(fileName: string): void {
 
         this.platform.ready().then(() => {
 
@@ -247,9 +254,9 @@ export class NewAudioTourPage implements OnDestroy {
             let path;
 
             if (this.platform.is('android')) {
-                path = this.file.applicationDirectory + 'www/assets/audio/' + this._getAudioFileName();
+                path = this.file.applicationDirectory + 'www/assets/audio/' + fileName;
             } else if (this.platform.is('ios')) {
-                path = 'cdvfile://localhost/bundle/www/assets/audio/' + this._getAudioFileName();
+                path = 'cdvfile://localhost/bundle/www/assets/audio/' + fileName;
             }
 
             if (this.platform.is('cordova')) {

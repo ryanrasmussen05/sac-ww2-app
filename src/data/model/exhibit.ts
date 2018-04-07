@@ -15,6 +15,7 @@ export interface Room {
 export interface Artifact {
     number: string;
     name: string;
+    roomColor: string;
     description: string[];
     pictures: string[];
     audio: string;

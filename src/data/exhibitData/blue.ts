@@ -16,6 +16,7 @@ const blueRoom: Room = {
     artifacts: [
         {
             number: '1.1.1',
+            roomColor: 'blue',
             name: 'Jarvis Offutt',
             pictures: [
                 'Offutt'
@@ -44,6 +45,7 @@ const blueRoom: Room = {
         },
         {
             number: '1.1.2',
+            roomColor: 'blue',
             name: 'Jarvis Offutt Scrapbook',
             pictures: [
                 'MusicalClubs'
@@ -59,6 +61,7 @@ const blueRoom: Room = {
         },
         {
             number: '1.1.3',
+            roomColor: 'blue',
             name: 'Martin MB-1',
             pictures: [
                 'MartinMB-1',
@@ -76,6 +79,7 @@ const blueRoom: Room = {
         },
         {
             number: '1.1.4',
+            roomColor: 'blue',
             name: 'De Havilland DH.4',
             pictures: [
                 'DeHavilland',
@@ -92,6 +96,7 @@ const blueRoom: Room = {
         ,
         {
             number: '1.1.5',
+            roomColor: 'blue',
             name: 'Vajen Bader Smoke Helmet',
             pictures: [
                 'Mask'
@@ -109,6 +114,7 @@ const blueRoom: Room = {
         },
         {
             number: '1.1.6',
+            roomColor: 'blue',
             name: 'Arisaka type 99 Bolt Action Rifle',
             pictures: [
                 'Rifle'
@@ -125,6 +131,7 @@ const blueRoom: Room = {
         },
         {
             number: '1.1.7',
+            roomColor: 'blue',
             name: 'Japanese "Good Luck" Flag',
             pictures: [
                 'Flag'

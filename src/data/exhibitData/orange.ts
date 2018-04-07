@@ -19,6 +19,7 @@ const orangeRoom: Room = {
     artifacts: [
         {
             number: '1',
+            roomColor: 'orange',
             name: 'Orange Artifact #1',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -43,6 +44,7 @@ const orangeRoom: Room = {
         },
         {
             number: '2',
+            roomColor: 'orange',
             name: 'Orange Artifact #2',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -67,6 +69,7 @@ const orangeRoom: Room = {
         },
         {
             number: '3',
+            roomColor: 'orange',
             name: 'Orange Artifact #3',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -91,6 +94,7 @@ const orangeRoom: Room = {
         },
         {
             number: '4',
+            roomColor: 'orange',
             name: 'Orange Artifact #4',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -115,6 +119,7 @@ const orangeRoom: Room = {
         },
         {
             number: '5',
+            roomColor: 'orange',
             name: 'Orange Artifact #5',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -139,6 +144,7 @@ const orangeRoom: Room = {
         },
         {
             number: '6',
+            roomColor: 'orange',
             name: 'Orange Artifact #6',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
@@ -163,6 +169,7 @@ const orangeRoom: Room = {
         },
         {
             number: '7',
+            roomColor: 'orange',
             name: 'Orange Artifact #7',
             description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 

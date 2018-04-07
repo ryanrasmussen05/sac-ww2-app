@@ -21,9 +21,18 @@
 
     .context-wrapper {
         height: 50vh;
+        display: flex;
+
+        .card-wrapper {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-shrink: 0;
+        }
 
         ion-card {
-            height: 100%;
+            height: calc(100% - 20px);
+            flex-shrink: 0;
         }
 
         .exhibit {
@@ -35,7 +44,7 @@
             font-size: 6rem;
             background-color: #4d4d4d;
             color: white;
-            font-family: DukeFill;
+            font-family: DukeFill, "Roboto", "Helvetica Neue", sans-serif;
         }
 
         .room {
@@ -45,12 +54,18 @@
             justify-content: center;
             padding: 20px;
             font-size: 6rem;
-            font-family: DukeFill;
+            font-family: DukeFill, "Roboto", "Helvetica Neue", sans-serif;
         }
 
         .artifact {
             display: flex;
             flex-direction: column;
+
+            .wrapper {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
 
             .picture {
                 flex-grow: 1;
