@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="dark">
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
@@ -27,14 +27,14 @@
     </div>
     <div *ngIf="!showIntro">
 
-        <div class="now-playing">Now Playing</div>
+        <div class="now-playing">Currently Playing:</div>
 
         <div class="context-wrapper">
-            <ion-card *ngIf="currentExhibit" class="exhibit" [@slideInOut]="slideState">
+            <ion-card *ngIf="currentExhibit" class="exhibit">
                 Courage From Above
             </ion-card>
 
-            <ion-card *ngIf="currentRoom && !currentArtifact" class="room" [ngClass]="'room-' + currentRoom.color" [@slideInOut]="slideState">
+            <ion-card *ngIf="currentRoom && !currentArtifact" class="room" [ngClass]="'room-' + currentRoom.color">
                 {{ currentRoom.name }}
             </ion-card>
 
@@ -52,9 +52,9 @@
                 <ion-icon name="skip-backward"></ion-icon>
             </button>
 
-            <button ion-button icon-left large>
-                <ion-icon name="pause"></ion-icon>
-                Pause
+            <button ion-button icon-left large (click)="playPause()">
+                <ion-icon [name]="isPlaying() ? 'pause' : 'play'"></ion-icon>
+                {{ isPlaying() ? 'Pause' : 'Play' }}
             </button>
 
             <button ion-button icon-only large [disabled]="!hasNextClip()" (click)="nextClip()">
