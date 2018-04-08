@@ -266,7 +266,7 @@ export class AudioTourPage implements OnDestroy {
                 this._errorSubscription = this._currentAudioFile.onError.subscribe((error: MEDIA_ERROR) => this._onError(error));
 
                 if (this._autoPlayNext) {
-                    this._currentAudioFile.play({playAudioWhenScreenIsLocked: false});
+                    this._currentAudioFile.play({playAudioWhenScreenIsLocked: true});
                 }
             }
         });

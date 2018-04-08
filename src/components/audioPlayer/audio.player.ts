@@ -115,7 +115,7 @@ export class AudioPlayer implements OnDestroy, OnChanges {
         //reload the track when it completes
         this.rangePosition = 0;
         this._initialLoad = true;
-        this._audioFile.play({playAudioWhenScreenIsLocked: false});
+        this._audioFile.play({playAudioWhenScreenIsLocked: true});
     }
 
     private _onError(error: MEDIA_ERROR) {
@@ -160,7 +160,7 @@ export class AudioPlayer implements OnDestroy, OnChanges {
                 this._errorSubscription = this._audioFile.onError.subscribe((error: MEDIA_ERROR) => this._onError(error));
 
                 this._initialLoad = true;
-                this._audioFile.play({playAudioWhenScreenIsLocked: false}); //do this to load the track and get duration
+                this._audioFile.play({playAudioWhenScreenIsLocked: true}); //do this to load the track and get duration
                 this._startTimer();
             }
         });
