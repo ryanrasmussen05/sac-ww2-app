@@ -13,7 +13,7 @@ export class BrowseRoomsPage {
     rooms: Room[];
 
     //TODO DELETE
-    test: string = 'A';
+    test: string = 'D';
 
     constructor(public navCtrl: NavController, public exhibitDataService: ExhibitDataService, public modalCtrl: ModalController) {
         this.rooms = exhibitDataService.getExhibitData().rooms;
