@@ -1,10 +1,10 @@
 <ion-header>
     <ion-navbar [color]="room.color">
-        <ion-title>{{ artifact.name }}</ion-title>
+        <ion-title>{{ currentArtifact.name }}</ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content #content *ngFor="let artifact of currentArtifacts" [@artifactSlideInOut]="slideState">
 
     <div class="small-carousel-wrapper">
         <div class="small-carousel-content">
@@ -37,7 +37,7 @@
 </ion-content>
 
 <ion-footer>
-    <audio-player [file]="artifact.audio"></audio-player>
+    <audio-player [file]="currentArtifact.audio"></audio-player>
     <ion-toolbar color="dark">
         <ion-buttons left>
             <button ion-button icon-start [hidden]="!hasPreviousArtifact()" (click)="previousArtifact()">

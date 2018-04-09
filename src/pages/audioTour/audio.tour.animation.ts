@@ -1,7 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 
-export const slideInOutAnimation =
-    trigger('slideInOut', [
+export const audioTourSlideInOutAnimation =
+    trigger('audioTourSlideInOut', [
 
         transition('next => void', [
             style( {order: -1}), //apply this style immediately

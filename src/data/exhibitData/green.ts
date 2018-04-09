@@ -59,7 +59,7 @@ const greenRoom: Room = {
             pictures: [
                 'HitlerYouth-Knife'
             ],
-            audio: 'green-artifact-2.mp3',
+            audio: 'green-artifact-3.mp3',
             description: [
                 'Established in 1939, the Hitler Youth was the sole official youth organization in Germany for ' +
                 'male youths aged 14 to 18. In 1934, a law declared the Hitler Youth to be the only legally ' +
@@ -78,7 +78,7 @@ const greenRoom: Room = {
             pictures: [
                 'NaziFlag'
             ],
-            audio: 'green-artifact-2.mp3',
+            audio: 'green-artifact-4.mp3',
             description: [
                 'Used 5,000 years before its adoption by the Nazis, the swastika comes from the Sanskrit ' +
                 'svastika, which means “good fortune” or “well-being.&quot; To this day, it is a sacred symbol in ' +
@@ -100,7 +100,7 @@ const greenRoom: Room = {
             pictures: [
                 'NaziFlag'
             ],
-            audio: 'green-artifact-2.mp3',
+            audio: 'green-artifact-5.mp3',
             description: [
                 'During the raids on London, deep shelters provided most of the protection for civilians during ' +
                 'the Blitz. The most important shelters were the London Underground station as shown on the ' +

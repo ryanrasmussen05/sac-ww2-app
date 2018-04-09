@@ -1,7 +1,7 @@
 import { AlertController, NavController, Platform } from 'ionic-angular';
 import { ChangeDetectorRef, Component, NgZone, OnDestroy } from '@angular/core';
 import { ExhibitDataService } from '../../data/exhibit.data.service';
-import { slideInOutAnimation } from './animations';
+import { audioTourSlideInOutAnimation } from './audio.tour.animation';
 import { Artifact, Exhibit, Room } from '../../data/model/exhibit';
 import { Media, MEDIA_ERROR, MEDIA_STATUS, MediaObject } from '@ionic-native/media';
 import { File } from '@ionic-native/file';
@@ -9,7 +9,7 @@ import { File } from '@ionic-native/file';
 @Component({
     selector: 'audio-tour-page',
     templateUrl: 'audio.tour.page.html',
-    animations: [slideInOutAnimation]
+    animations: [audioTourSlideInOutAnimation]
 })
 export class AudioTourPage implements OnDestroy {
 
