@@ -1,112 +1,18 @@
 .browse-rooms {
 
-    .a {
-        ion-card {
-            margin: 0;
-            width: 100%;
-        }
+    .room-test {
+        flex: 1 0 0;
+        font-family: DukeFill;
+        margin: 5px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10vw;
+        box-shadow: 0 15px 10px -10px rgba(0,0,0,0.4);
 
-        .room-label {
-            height: 160px;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 3em;
-            font-family: DukeFill;
-        }
-
-        @media (min-width: 600px) {
-            .room-label {
-                height: 200px;
-            }
+        &:active {
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.4);
         }
     }
-
-    .b {
-        .room-card {
-            height: 160px;
-            padding: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            .room-card-label {
-                flex: 1 0 0;
-                font-family: DukeFill;
-                font-size: 3em;
-            }
-
-            .room-card-icon {
-                position: absolute;
-                right: 10px;
-                font-size: 3em;
-            }
-        }
-
-        @media (min-width: 600px) {
-            .room-card {
-                height: 200px;
-            }
-        }
-    }
-
-    .c {
-        .room-card {
-            height: 200px;
-            padding: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            .room-card-label {
-                flex: 1 0 0;
-                font-family: DukeFill;
-                font-size: 3em;
-            }
-
-            .room-card-icon {
-                position: absolute;
-                right: 10px;
-                font-size: 3em;
-            }
-
-            .info-button {
-                position: absolute;
-                left: 5px;
-                bottom: 5px;
-                margin: 0;
-            }
-        }
-    }
-
-    .d {
-        .room-card {
-            height: 200px;
-            padding: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            border-radius: 10px;
-
-            .room-card-label {
-                flex: 1 0 0;
-                font-family: DukeFill;
-                font-size: 3em;
-            }
-
-            .info-button {
-                position: absolute;
-                left: 5px;
-                bottom: 5px;
-                margin: 0;
-                border-radius: 10px;
-            }
-        }
-    }
-
 }
