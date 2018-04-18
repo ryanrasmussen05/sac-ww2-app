@@ -22,3 +22,13 @@ export const artifactsSlideInOutAnimation =
             animate('0.3s ease-in-out', style({transform: 'translateX(100%)'}))
         ])
     ]);
+
+export const textFadeOutAnimation =
+    trigger('textFadeOut', [
+        state('*', style({opacity: 0})),
+
+        transition(':enter', [
+            style( {opacity: 1}), //apply this style immediately
+            animate('1s 3s', style({opacity: 0})) //animate to this style
+        ])
+    ]);

@@ -42,9 +42,21 @@
             justify-content: center;
             padding: 20px;
             font-size: 6rem;
-            background-color: #4d4d4d;
-            color: white;
+            position: relative;;
+            color: black;
             font-family: DukeFill, "Roboto", "Helvetica Neue", sans-serif;
+        }
+
+        .exhibit::after {
+            content: "";
+            background: url("../assets/pictures/crew.jpg") center;
+            background-size: cover;
+            opacity: 0.6;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
         }
 
         .room {

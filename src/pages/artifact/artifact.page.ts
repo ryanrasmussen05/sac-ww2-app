@@ -1,12 +1,13 @@
 import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { Content, NavParams, Slides } from 'ionic-angular';
 import { Artifact, Room } from '../../data/model/exhibit';
-import { artifactsSlideInOutAnimation } from './artifact.animation';
+import { artifactsSlideInOutAnimation, textFadeOutAnimation } from './artifact.animation';
+import { HelperTextService } from '../../services/helper.text.service';
 
 @Component({
     selector: 'artifact-page',
     templateUrl: 'artifact.page.html',
-    animations: [artifactsSlideInOutAnimation]
+    animations: [artifactsSlideInOutAnimation, textFadeOutAnimation]
 })
 export class ArtifactPage {
     @ViewChild('slider') slider: Slides;
@@ -24,7 +25,7 @@ export class ArtifactPage {
         return this.currentArtifacts[0];
     }
 
-    constructor(public navParams: NavParams, public cdRef: ChangeDetectorRef) {
+    constructor(public navParams: NavParams, public cdRef: ChangeDetectorRef, public helperTextService: HelperTextService) {
         this.room = Object.create(navParams.get('room'));
         this.currentArtifacts.push(Object.create(navParams.get('artifact')));
     }
@@ -53,6 +54,8 @@ export class ArtifactPage {
         this.slideState = 'next';
         this.cdRef.detectChanges(); //immediately change animation state
 
+        this.helperTextService.turnOffHelperText();
+
         this.setCurrentArtifact(this.room.artifacts[this._getCurrentIndex() + 1]);
         this.slider.slideTo(0, 0, false);
         this.currentIndex = 0;
@@ -65,6 +68,8 @@ export class ArtifactPage {
     previousArtifact(): void {
         this.slideState = 'previous';
         this.cdRef.detectChanges(); //immediately change animation state
+
+        this.helperTextService.turnOffHelperText();
 
         this.setCurrentArtifact(this.room.artifacts[this._getCurrentIndex() - 1]);
         this.slider.slideTo(0, 0, false);

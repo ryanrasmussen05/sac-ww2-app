@@ -32,7 +32,7 @@
             <!--USE NGFOR TO GET ANIMATIONS-->
             <div class="card-wrapper" *ngFor="let item of currentItems" [@audioTourSlideInOut]="slideState">
                 <ion-card [ngClass]="setCardClasses(item)">
-                    <div *ngIf="isExhibit(item)">
+                    <div *ngIf="isExhibit(item)" style="z-index: 2">
                         Courage From Above
                     </div>
 

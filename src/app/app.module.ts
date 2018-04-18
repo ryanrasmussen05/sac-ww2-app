@@ -20,6 +20,7 @@ import { RoomDetailPage } from '../pages/room/room.detail.page';
 import { AudioTourPage } from '../pages/audioTour/audio.tour.page';
 import { AudioPlayer } from '../components/audioPlayer/audio.player';
 import { TimerPipe } from '../components/audioPlayer/timer.pipe';
+import { HelperTextService } from '../services/helper.text.service';
 
 @NgModule({
     declarations: [
@@ -59,6 +60,7 @@ import { TimerPipe } from '../components/audioPlayer/timer.pipe';
         Insomnia,
         Media,
         ExhibitDataService,
+        HelperTextService,
         File,
         {provide: ErrorHandler, useClass: IonicErrorHandler}
     ]

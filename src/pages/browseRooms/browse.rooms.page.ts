@@ -4,6 +4,7 @@ import { ModalController, NavController } from 'ionic-angular';
 import { RoomPage } from '../room/room.page';
 import { RoomDetailPage } from '../room/room.detail.page';
 import { Room } from '../../data/model/exhibit';
+import { HelperTextService } from '../../services/helper.text.service';
 
 @Component({
     selector: 'browse-rooms-page',
@@ -12,14 +13,14 @@ import { Room } from '../../data/model/exhibit';
 export class BrowseRoomsPage {
     rooms: Room[];
 
-    //TODO DELETE
-    test: string = 'D';
-
-    constructor(public navCtrl: NavController, public exhibitDataService: ExhibitDataService, public modalCtrl: ModalController) {
+    constructor(public navCtrl: NavController, public exhibitDataService: ExhibitDataService,
+                public modalCtrl: ModalController, public helperTextService: HelperTextService) {
         this.rooms = exhibitDataService.getExhibitData().rooms;
     }
 
     roomClicked(room: Room): void {
+        this.helperTextService.turnOnHelperText();
+
         this.navCtrl.push(RoomPage, {
             room: room
         });

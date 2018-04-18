@@ -6,6 +6,10 @@
 
 <ion-content #content *ngFor="let artifact of currentArtifacts" [@artifactSlideInOut]="slideState">
 
+    <div text-center style="font-weight: 500" @textFadeOut *ngIf="helperTextService.shouldShowHelperText">
+        Tap image to view full screen
+    </div>
+
     <div class="small-carousel-wrapper">
         <div class="small-carousel-content">
 
