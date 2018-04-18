@@ -16,9 +16,9 @@ const blueRoom: Room = {
             roomColor: 'blue',
             name: 'Jarvis Offutt',
             pictures: [
-                'Offutt'
+                '1.1.1'
             ],
-            audio: 'blue-artifact-1.mp3',
+            audio: '1.1.1.mp3',
             description: [
                 'In 1916, Jarvis Offutt was one of 300 candidates sent from the United States to Canada to be trained by the ' +
                 'Royal Flying Corps Canada.  Upon pilot qualification, he was sent to Fort Worth, Texas where he received his ' +
@@ -37,9 +37,9 @@ const blueRoom: Room = {
             roomColor: 'blue',
             name: 'Jarvis Offutt Scrapbook',
             pictures: [
-                'MusicalClubs'
+                '1.1.2'
             ],
-            audio: 'blue-artifact-2.mp3',
+            audio: '1.1.2.mp3',
             description: [
                 'This scrapbook is a collection of photos and documents from Jarvis Offutt’s personal life. This includes his ' +
                 'time at Lawrenceville Preparatory School, New Jersey, from which he graduated in 1913. The scrapbook contains ' +
@@ -51,9 +51,9 @@ const blueRoom: Room = {
             roomColor: 'blue',
             name: 'Martin MB-1',
             pictures: [
-                'MartinMB-1',
+                '1.1.3'
             ],
-            audio: 'blue-artifact-3.mp3',
+            audio: '1.1.3.mp3',
             description: [
                 'Designed by the Glenn Martin Company, the Martin MB-1 was the first American designed heavy bomber ' +
                 'purchased in mass quantities and became the main United States Army Air Service bomber for several years.  ' +
@@ -67,9 +67,9 @@ const blueRoom: Room = {
             roomColor: 'blue',
             name: 'De Havilland DH.4',
             pictures: [
-                'DeHavilland',
+                '1.1.4',
             ],
-            audio: 'blue-artifact-4.mp3',
+            audio: '1.1.4.mp3',
             description: [
                 'The De Havilland DH.4 was one of the most successful fighter aircraft of WW1, with over 6,000 units built by war’s ' +
                 'end. It carried a crew of two with the pilot seated ahead of the gunner/observer. There was quite a bit of ' +
@@ -85,9 +85,9 @@ const blueRoom: Room = {
             roomColor: 'blue',
             name: 'Vajen Bader Smoke Helmet',
             pictures: [
-                'Mask'
+                '1.1.5'
             ],
-            audio: 'blue-artifact-5.mp3',
+            audio: '1.1.5.mp3',
             background: '#f6f5f1',
             description: [
                 'The Vajen Bader Smoke Helmet was invented in the 1890s by Willis Vajen and William Bader.  The Smoke Helmet ' +
@@ -103,9 +103,9 @@ const blueRoom: Room = {
             roomColor: 'blue',
             name: 'Arisaka Type 99 Bolt Action Rifle',
             pictures: [
-                'Rifle'
+                '1.1.6'
             ],
-            audio: 'blue-artifact-6.mp3',
+            audio: '1.1.6.mp3',
             description: [
                 'Although the Type 99 didn’t appear until 1939, it is on display as a representative of the Arisaka rifles used by ' +
                 'the growing Japanese empire in the early 1930s.  The Type 38 Arisaka, used during the Sino-Japanese war of ' +
@@ -122,9 +122,9 @@ const blueRoom: Room = {
             roomColor: 'blue',
             name: 'Japanese "Good Luck" Flag',
             pictures: [
-                'Flag'
+                '1.1.7'
             ],
-            audio: 'blue-artifact-7.mp3',
+            audio: '1.1.7.mp3',
             description: [
                 'Known as yosegaki hinomaru, “good luck” flags were parting gifts for soldiers deployed overseas and typically carried in ' +
                 'their pockets.  The Japanese National flag, or hinomaru, was the common medium for messages, prayers, ' +

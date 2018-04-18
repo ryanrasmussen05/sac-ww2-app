@@ -22,7 +22,7 @@ const greenRoom: Room = {
             roomColor: 'green',
             name: 'German Heer M35 Sports Shirt',
             pictures: [
-                'HitlerYouth-Shirt'
+                '1.2.1'
             ],
             audio: 'green-artifact-1.mp3',
             description: [
@@ -39,7 +39,7 @@ const greenRoom: Room = {
             roomColor: 'green',
             name: 'Waffen SS Officer’s Armband',
             pictures: [
-                'HitlerYouth-Band'
+                '1.2.2'
             ],
             audio: 'green-artifact-2.mp3',
             description: [
@@ -57,7 +57,7 @@ const greenRoom: Room = {
             roomColor: 'green',
             name: 'Hitler Youth Knife',
             pictures: [
-                'HitlerYouth-Knife'
+                '1.2.3'
             ],
             audio: 'green-artifact-3.mp3',
             description: [
@@ -76,7 +76,7 @@ const greenRoom: Room = {
             roomColor: 'green',
             name: 'Flag of Nazi Germany',
             pictures: [
-                'NaziFlag'
+                '1.2.4'
             ],
             audio: 'green-artifact-4.mp3',
             description: [
@@ -98,7 +98,7 @@ const greenRoom: Room = {
             roomColor: 'green',
             name: 'Subway Room',
             pictures: [
-                'NaziFlag'
+                '1.2.4'
             ],
             audio: 'green-artifact-5.mp3',
             description: [
