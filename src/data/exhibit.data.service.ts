@@ -14,7 +14,7 @@ export class ExhibitDataService {
 
     constructor() {
         this.exhibit = exhibit;
-        this.exhibit.rooms = [blueRoom, greenRoom, brownRoom, orangeRoom, redRoom, yellowRoom];
+        this.exhibit.rooms = [blueRoom, greenRoom, yellowRoom, brownRoom, orangeRoom, redRoom];
     }
 
     getExhibitData(): Exhibit {

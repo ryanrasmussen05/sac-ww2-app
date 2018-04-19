@@ -98,7 +98,7 @@ const greenRoom: Room = {
             roomColor: 'green',
             name: 'Subway Room',
             pictures: [
-                '1.2.4'
+                '1.2.5'
             ],
             audio: 'green-artifact-5.mp3',
             description: [
