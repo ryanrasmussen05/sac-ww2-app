@@ -1,63 +1,56 @@
 import { Room } from '../model/exhibit';
 
 const yellowRoom: Room = {
-    name: 'Yellow',
+    name: 'America Enters the War',
     color: 'yellow',
     audio: 'yellow-room.mp3',
-    description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-      laborum.  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam 
-      rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores 
-      eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
-      consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam 
-      quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-       ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
-       nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`],
+    description: [
+        'Japan was expanding its influence in the Pacific Region, China, and Korea; then identified ' +
+        'potential concerns with the United States as a competitor for regional resources.',
+        'America’s isolation from war ended December 7, 1941, when Japan staged a devastating ' +
+        'surprise attack at Pearl Harbor, Hawaii where much of the Pacific Fleet was moored. Japanese ' +
+        'warplanes sank or damaged 18 warships and destroyed 162 aircraft. Over 2,400 servicemen ' +
+        'and civilians lost their lives. President Franklin D. Roosevelt responded with a statement of ' +
+        'American will: “No matter how long it may take us to overcome this premeditated invasion, the ' +
+        'American people in their righteous might will win through to absolute victory.” ' +
+        'Though stunned by the events of December 7, Americans were also resolute. On December 8, ' +
+        'president Roosevelt asked Congress to pass a resolution declaring war on Japan. The ' +
+        'declaration passed with only a single dissent. Germany, Italy, and France declared war on the ' +
+        'United States three days later. America was now drawn into a global war. The United States ' +
+        'joined allies in the fight including Great Britain and the Soviet Union. '
+    ],
     artifacts: [
         {
             number: '1.3.1',
             roomColor: 'yellow',
-            name: 'Yellow Artifact #1',
+            name: 'Akagi Aircraft Carrier',
             pictures: [
                 '1.3.1'
             ],
             audio: 'yellow-artifact-1.mp3',
-            description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-      laborum.  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam 
-      rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores 
-      eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
-      consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam 
-      quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-       ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
-       nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`]
+            description: [
+                'The aircraft carrier dramatically changed naval combat in World War II, because air power was ' +
+                'becoming a significant factor in warfare. The advent of aircraft as focal weapons was driven by ' +
+                'their superior range, flexibility, and effectiveness when launched from carriers. They also had ' +
+                'greater range and precision than naval guns, making them highly effective for bombardment.'
+            ]
         },
         {
             number: '1.3.2',
             roomColor: 'yellow',
-            name: 'Yellow Artifact #2',
+            name: 'Philco Radio',
             pictures: [
                 '1.3.2'
             ],
             audio: 'yellow-artifact-2.mp3',
-            description: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-      laborum.  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam 
-      rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores 
-      eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
-      consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam 
-      quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-       ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
-       nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`]
+            description: [
+                'Before television, radio served as the primary form of mass communication, with families ' +
+                'gathering around the radio for the day’s entertainment, music and news broadcasts. Perhaps ' +
+                'the most famous dramatic radio broadcast was the October 30, 1938 broadcast of the ' +
+                'documentary style retelling of HG Wells’ novel War of the Worlds by Orson Welles. The majority ' +
+                'of listeners tuned in shortly after the broadcast started and were greeted by serious warnings of ' +
+                'aliens and burning towns, which led to some minor moments of hysteria.'
+            ]
         }
     ]
 };

@@ -44,7 +44,9 @@ export class AudioTourPage implements OnDestroy {
         this.totalClips = 1;  //start with 1 for exhibit clip
 
         this.exhibit.rooms.forEach((room: Room) => {
-            this.totalClips++; //about room clip
+            if (room.audio) {
+                this.totalClips++; //about room clip
+            }
 
             room.artifacts.forEach(() => {
                 this.totalClips++;
@@ -196,11 +198,13 @@ export class AudioTourPage implements OnDestroy {
         let currentDisplayIndex = 0;
 
         this.exhibit.rooms.forEach((room: Room) => {
-            currentDisplayIndex++;
+            if (room.audio) {
+                currentDisplayIndex++;
 
-            if (currentDisplayIndex === index) {
-                this._setContextItem(room);
-                return;
+                if (currentDisplayIndex === index) {
+                    this._setContextItem(room);
+                    return;
+                }
             }
 
             room.artifacts.forEach((artifact: Artifact) => {

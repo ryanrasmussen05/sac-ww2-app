@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar [color]="room.color">
-        <ion-buttons end>
+        <ion-buttons end *ngIf="room.description.length > 0">
             <button ion-button outline (click)="roomInfo($event)">
                 About
             </button>

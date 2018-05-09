@@ -8,7 +8,7 @@ export interface Room {
     name: string;
     description: string[];
     color: string;
-    audio: string;
+    audio?: string;
     artifacts: Artifact[];
 }
 
