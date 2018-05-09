@@ -27,7 +27,7 @@ const brownRoom: Room = {
                 'Germans invaded in May of 1940. Although none of them participated in any aerial combat in France, several ' +
                 'traveled to Britain. Risking a loss of US citizenship due to American laws forbidding enlistment in foreign ' +
                 'militaries, these men volunteered to serve alongside their British allies in the Royal Air Force. ',
-                'Sweeney&#39;s nephew had already formed a Home Guard unit of Americans living in London, and presented the ' +
+                'Sweeney\'s nephew had already formed a Home Guard unit of Americans living in London, and presented the ' +
                 'idea of creating an American squadron in the RAF. In July of 1940, The English Air Ministry agreed that the ' +
                 'handful of Americans, plus any new recruits, would be formed into their own national units, dubbed the Eagle ' +
                 'Squadrons. The first squadron was organized in September, and two more followed over the next twelve' +
@@ -97,10 +97,10 @@ const brownRoom: Room = {
             ],
             audio: 'brown-artifact-4.mp3',
             description: [
-                'The first usage of the term &quot;flak jacket&quot; refers to the armor originally developed by the Wilkinson Sword ' +
+                'The first usage of the term "flak jacket" refers to the armor originally developed by the Wilkinson Sword ' +
                 'company during World War II to help protect Royal Air Force aircrew from the flying debris and shell fragments ' +
-                'thrown by German anti-aircraft guns&#39; high-explosive shells (flak itself is an abbreviation for the German word ' +
-                '&quot;Fliegerabwehrkanone&quot; (aircraft-defense gun)). The idea for the flak jacket came from Col. Malcolm C. Grow, ' +
+                'thrown by German anti-aircraft guns\' high-explosive shells (flak itself is an abbreviation for the German word ' +
+                '"Fliegerabwehrkanone" (aircraft-defense gun)). The idea for the flak jacket came from Col. Malcolm C. Grow, ' +
                 'Surgeon of the US Eighth Air Force in Britain. The US Army Air Corps, bomber crews often returned from ' +
                 'missions over Nazi-occupied Europe reporting extremely dense flak, each burst spraying the aircraft with hot ' +
                 'shrapnel. Col. Grow thought that many of the wounds he was treating could have been prevented by some ' +
@@ -144,9 +144,9 @@ const brownRoom: Room = {
             description: [
                 'The Eighth Air Force was activated on January 2, 1942 at Savannah Army Air Base, Georgia. At its peak, the ' +
                 '8th Air Force could dispatch more than 2,000 four-engine bombers and 1,000 fighters on a single mission. For ' +
-                'these reasons, the 8th Air Force became known as the &quot;Mighty Eighth&quot;. The “Mighty Eighth” compiled an ' +
+                'these reasons, the 8th Air Force became known as the "Mighty Eighth". The “Mighty Eighth” compiled an ' +
                 'impressive record in the war. This achievement, however, carried a high price. The Eighth Air Force suffered ' +
-                'half of the U.S Army Air Forces&#39; casualties in World War II: 47,000-plus casualties with more than 26,000 dead. ' +
+                'half of the U.S Army Air Forces\' casualties in World War II: 47,000-plus casualties with more than 26,000 dead. ' +
                 'They flew 985 Combat Missions, losing 6,130 Bombers and Fighters. Eighth Air Force personnel earned 17 ' +
                 'Medals of Honor, 220 Distinguished Service Crosses, 850 Silver Stars, 7,000 Purple Hearts and 46,000 Air ' +
                 'Medals. Many more uncounted awards were presented to 8th Air Force veterans after the war. There were 261 ' +
@@ -168,7 +168,7 @@ const brownRoom: Room = {
             audio: 'brown-artifact-7.mp3',
             description: [
                 'Designed as a modern bomber to replace the B-17, the B-24 “Liberator” fell short of this expectation and ' +
-                'served side-by- side with the B-17 throughout WW II. Powered by four Pratt &amp; Whitney R-1830- 65 radial piston ' +
+                'served side-by- side with the B-17 throughout WW II. Powered by four Pratt & Whitney R-1830- 65 radial piston ' +
                 'engines, the B-24 could reach a top speed of 290 mph with a range of 2,001 miles, while carrying 8,800 lbs. of ' +
                 'bombs. Depending on the model of aircraft, the B-24 could have a crew of 7-10 men, with up to 10 machine ' +
                 'guns for self-defense. The most significant drawback of the aircraft was that the fuel was stored in the wings, ' +
@@ -216,10 +216,10 @@ const brownRoom: Room = {
             ],
             audio: 'brown-artifact-9.mp3',
             description: [
-                'The development of German air doctrine prior to World War II was based on Germany&#39;s central position in ' +
+                'The development of German air doctrine prior to World War II was based on Germany\'s central position in ' +
                 'Europe, with a focus on land conflict. From the onset of any conflict, the Reich faced the prospect of a major ' +
-                'struggle on the ground. The concept of &quot;Operativer Luftkrieg&quot; (operational air warfare) integrated an ' +
-                'independent air force into fighting a &quot;total war&quot;, the key tenet of which was supporting the ground forces. ' +
+                'struggle on the ground. The concept of "Operativer Luftkrieg" (operational air warfare) integrated an ' +
+                'independent air force into fighting a "total war", the key tenet of which was supporting the ground forces. ' +
                 'The Japanese made gaining and maintaining control of the air, a vital part of their Pacific war strategy. Admiral ' +
                 'Isoroku Yamamoto, the commander of the Pearl Harbor attack, had proposed a doctrine of land-based air war, ' +
                 'in 1936, focusing on the capturing of islands, building airfields and using those air bases to gain control over ' +

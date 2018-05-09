@@ -63,8 +63,8 @@ const greenRoom: Room = {
             description: [
                 'Established in 1939, the Hitler Youth was the sole official youth organization in Germany for ' +
                 'male youths aged 14 to 18. In 1934, a law declared the Hitler Youth to be the only legally ' +
-                'permitted youth organization in Germany and stated that &quot;all of the German youth in the Reich is ' +
-                'organized within the Hitler Youth&quot;. The Hitler Youth were used to break up Church youth groups, ' +
+                'permitted youth organization in Germany and stated that "all of the German youth in the Reich is ' +
+                'organized within the Hitler Youth". The Hitler Youth were used to break up Church youth groups, ' +
                 'and in anti-Church indoctrination, used to spy on religious classes and Bible studies, and ' +
                 'interfere with church attendance. Education and training programs for the Hitler Youth were ' +
                 'designed to undermine the values of the traditional elitist structures of German society along ' +
@@ -81,7 +81,7 @@ const greenRoom: Room = {
             audio: 'green-artifact-4.mp3',
             description: [
                 'Used 5,000 years before its adoption by the Nazis, the swastika comes from the Sanskrit ' +
-                'svastika, which means “good fortune” or “well-being.&quot; To this day, it is a sacred symbol in ' +
+                'svastika, which means “good fortune” or “well-being”. To this day, it is a sacred symbol in ' +
                 'Hinduism, Buddhism, Jainism, and Odinism. The symbol experienced a resurgence in the late ' +
                 'nineteenth century as a symbol of Aryan culture following extensive archaeological work by ' +
                 'archaeologist Heinrich Schliemann. Schliemann discovered the hooked cross on the site of ' +

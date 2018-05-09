@@ -20,9 +20,9 @@ const redRoom: Room = {
             description: [
                 'In the Pacific Theater of War, the conquest of each island by the Allies was met by fanatical Japanese forces ' +
                 'committed to victory. Surrender was considered a disgrace and military forces facing defeat simply committed ' +
-                'suicide or sacrificed themselves in &quot;banzai&quot; charges. An invasion of the home islands was planned, with an ' +
+                'suicide or sacrificed themselves in "banzai"; charges. An invasion of the home islands was planned, with an ' +
                 'estimated one million Allied casualties.',
-                'One alternative to invasion was the new atomic bomb developed under the &quot;Manhattan Project&quot;. Work had ' +
+                'One alternative to invasion was the new atomic bomb developed under the "Manhattan Project". Work had ' +
                 'been going on for years at facilities in throughout the United States, Canada and Great Britain. The first ' +
                 'prototype was successfully tested in mid-1945. Two additional bombs were constructed.',
                 'On August 6, 1945, a B-29 dropped the first atomic bomb on Hiroshima. The blast caused casualties ranging ' +
@@ -47,8 +47,8 @@ const redRoom: Room = {
                 '80-million people. That is 3.5% of the world’s estimated population of 1940. Both allied and Axis nations ' +
                 'witnessed and caused civilian deaths. What was discovered late in the war involved the systematic genocide of ' +
                 'particular races, cultures and even POWs.',
-                'Adolph Hitler believed the root of most of Germany&#39;s economic and social problems in the years after World ' +
-                'War I were attributable to the Jewish population and others deemed as &quot;undesirables&quot;. In 1941, the decision ' +
+                'Adolph Hitler believed the root of most of Germany\'s economic and social problems in the years after World ' +
+                'War I were attributable to the Jewish population and others deemed as "undesirables". In 1941, the decision ' +
                 'was made to solve this problem through elimination. Those that could work were usually taken to war factories ' +
                 'as slave labor. Those that were unable were exterminated. As a result, more than five million Jews living in ' +
                 'Germany and German controlled territories and an additional six million undesirables were killed.',
