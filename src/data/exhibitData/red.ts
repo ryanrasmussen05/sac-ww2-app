@@ -10,11 +10,7 @@ const redRoom: Room = {
             roomColor: 'red',
             name: 'Ending the War',
             pictures: [
-                'orange-artifact-1-1',
-                'orange-artifact-1-2',
-                'orange-artifact-1-3',
-                'orange-artifact-1-4',
-                'orange-artifact-1-5'
+                '1.6.1'
             ],
             audio: 'orange-artifact-1.mp3',
             description: [
