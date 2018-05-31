@@ -24,7 +24,7 @@ const greenRoom: Room = {
             pictures: [
                 '1.2.1'
             ],
-            audio: 'green-artifact-1.mp3',
+            audio: '1.2.1.mp3',
             description: [
                 'Training for German soldiers started as young as 14 years old. Each trainee would receive an ' +
                 'M35 sports shirt, a white tank top, with their army branch’s emblem sewn on the top. The M35, ' +
@@ -41,7 +41,7 @@ const greenRoom: Room = {
             pictures: [
                 '1.2.2'
             ],
-            audio: 'green-artifact-2.mp3',
+            audio: '1.2.2.mp3',
             description: [
                 'The SS began to accept officers in 1934. The first SS officer training school, SS-Junkerschule ' +
                 'Bad Tölz, was opened in 1936 by Adolf Hitler. Because of their backgrounds, some of the ' +
@@ -59,7 +59,7 @@ const greenRoom: Room = {
             pictures: [
                 '1.2.3'
             ],
-            audio: 'green-artifact-3.mp3',
+            audio: '1.2.3.mp3',
             description: [
                 'Established in 1939, the Hitler Youth was the sole official youth organization in Germany for ' +
                 'male youths aged 14 to 18. In 1934, a law declared the Hitler Youth to be the only legally ' +
@@ -78,7 +78,7 @@ const greenRoom: Room = {
             pictures: [
                 '1.2.4'
             ],
-            audio: 'green-artifact-4.mp3',
+            audio: '1.2.4.mp3',
             description: [
                 'Used 5,000 years before its adoption by the Nazis, the swastika comes from the Sanskrit ' +
                 'svastika, which means “good fortune” or “well-being”. To this day, it is a sacred symbol in ' +
@@ -100,7 +100,7 @@ const greenRoom: Room = {
             pictures: [
                 '1.2.5'
             ],
-            audio: 'green-artifact-5.mp3',
+            audio: '1.2.5.mp3',
             description: [
                 'During the raids on London, deep shelters provided most of the protection for civilians during ' +
                 'the Blitz. The most important shelters were the London Underground station as shown on the ' +

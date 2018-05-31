@@ -29,11 +29,7 @@ const orangeRoom: Room = {
             roomColor: 'orange',
             name: 'China, Burma, India Theater of Operations',
             pictures: [
-                'orange-artifact-1-1',
-                'orange-artifact-1-2',
-                'orange-artifact-1-3',
-                'orange-artifact-1-4',
-                'orange-artifact-1-5'
+                '1.5.1'
             ],
             audio: 'orange-artifact-1.mp3',
             description: [
@@ -74,11 +70,7 @@ const orangeRoom: Room = {
             roomColor: 'orange',
             name: 'Black Sheep Squadron Mural',
             pictures: [
-                'orange-artifact-3-1',
-                'orange-artifact-3-2',
-                'orange-artifact-3-3',
-                'orange-artifact-3-4',
-                'orange-artifact-3-5'
+                '1.5.3'
             ],
             audio: 'orange-artifact-3.mp3',
             description: [
@@ -125,11 +117,7 @@ const orangeRoom: Room = {
             roomColor: 'orange',
             name: '9th Bombardment Group Booklet “War Journal”',
             pictures: [
-                'orange-artifact-5-1',
-                'orange-artifact-5-2',
-                'orange-artifact-5-3',
-                'orange-artifact-5-4',
-                'orange-artifact-5-5'
+                '1.5.5'
             ],
             audio: 'orange-artifact-5.mp3',
             description: [

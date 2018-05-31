@@ -27,7 +27,7 @@ const yellowRoom: Room = {
             pictures: [
                 '1.3.1'
             ],
-            audio: 'yellow-artifact-1.mp3',
+            audio: '1.3.1.mp3',
             description: [
                 'The aircraft carrier dramatically changed naval combat in World War II, because air power was ' +
                 'becoming a significant factor in warfare. The advent of aircraft as focal weapons was driven by ' +
@@ -42,7 +42,7 @@ const yellowRoom: Room = {
             pictures: [
                 '1.3.2'
             ],
-            audio: 'yellow-artifact-2.mp3',
+            audio: '1.3.2.mp3',
             description: [
                 'Before television, radio served as the primary form of mass communication, with families ' +
                 'gathering around the radio for the day’s entertainment, music and news broadcasts. Perhaps ' +

@@ -20,7 +20,7 @@ const brownRoom: Room = {
             pictures: [
                 '1.4.1'
             ],
-            audio: 'brown-artifact-1.mp3',
+            audio: '1.4.1.mp3',
             description: [
                 'In 1939, American mercenary Colonel Charles Sweeney began raising money and recruiting soldiers for an ' +
                 'American squadron to fight in Europe. Eventually, over thirty Americans made their way to France before the ' +
@@ -50,7 +50,7 @@ const brownRoom: Room = {
             pictures: [
                 '1.4.2'
             ],
-            audio: 'brown-artifact-2.mp3',
+            audio: '1.4.2.mp3',
             description: [
                 'Desperate to fly and impatient for the US to join the war, Nebraska-born pilot Roland L ‘Bud’ Wolfe joined the ' +
                 'RAF as part of Eagle Squadron 133. On November 30, 1941, Wolfe’s Supermarine Spitfire engine ' +
@@ -77,7 +77,7 @@ const brownRoom: Room = {
             pictures: [
                 '1.4.3'
             ],
-            audio: 'brown-artifact-3.mp3',
+            audio: '1.4.3.mp3',
             description: [
                 'American bomber gunners were sent to gunnery schools for instruction on operation and maintenance of their ' +
                 'guns. Initially the training lasted four weeks; then it was extended to five weeks and finally six weeks. In that ' +
@@ -95,7 +95,7 @@ const brownRoom: Room = {
             pictures: [
                 '1.4.4'
             ],
-            audio: 'brown-artifact-4.mp3',
+            audio: '1.4.4.mp3',
             description: [
                 'The first usage of the term "flak jacket" refers to the armor originally developed by the Wilkinson Sword ' +
                 'company during World War II to help protect Royal Air Force aircrew from the flying debris and shell fragments ' +
@@ -114,7 +114,7 @@ const brownRoom: Room = {
             pictures: [
                 '1.4.5'
             ],
-            audio: 'brown-artifact-5.mp3',
+            audio: '1.4.5.mp3',
             description: [
                 'The B-17 “Flying Fortress” had a crew of 10 men: four Officers consisting of a Pilot, Co-Pilot, Navigator and ' +
                 'Bombardier, and six enlisted men consisting of a Flight Engineer, Radio Operator, Ball Turret Gunner, Left ' +
@@ -140,7 +140,7 @@ const brownRoom: Room = {
                 'brown-artifact-6-4',
                 'brown-artifact-6-5'
             ],
-            audio: 'brown-artifact-6.mp3',
+            audio: '1.4.6.mp3',
             description: [
                 'The Eighth Air Force was activated on January 2, 1942 at Savannah Army Air Base, Georgia. At its peak, the ' +
                 '8th Air Force could dispatch more than 2,000 four-engine bombers and 1,000 fighters on a single mission. For ' +
@@ -165,7 +165,7 @@ const brownRoom: Room = {
                 'brown-artifact-7-4',
                 'brown-artifact-7-5'
             ],
-            audio: 'brown-artifact-7.mp3',
+            audio: '1.4.7.mp3',
             description: [
                 'Designed as a modern bomber to replace the B-17, the B-24 “Liberator” fell short of this expectation and ' +
                 'served side-by- side with the B-17 throughout WW II. Powered by four Pratt & Whitney R-1830- 65 radial piston ' +
@@ -187,7 +187,7 @@ const brownRoom: Room = {
                 'brown-artifact-8-4',
                 'brown-artifact-8-5'
             ],
-            audio: 'brown-artifact-8.mp3',
+            audio: '1.4.8.mp3',
             description: [
                 'The Army Air Force and Royal Air Forces can be viewed as strategic air forces, because of their predominantly ' +
                 'heavy bomber-focused structure, and the mission to which they were committed. Both, the UK and US had ' +
@@ -214,7 +214,7 @@ const brownRoom: Room = {
                 'brown-artifact-9-4',
                 'brown-artifact-9-5'
             ],
-            audio: 'brown-artifact-9.mp3',
+            audio: '1.4.9.mp3',
             description: [
                 'The development of German air doctrine prior to World War II was based on Germany\'s central position in ' +
                 'Europe, with a focus on land conflict. From the onset of any conflict, the Reich faced the prospect of a major ' +
@@ -236,7 +236,7 @@ const brownRoom: Room = {
             pictures: [
                 '1.4.10'
             ],
-            audio: 'brown-artifact-10.mp3',
+            audio: '1.4.10.mp3',
             description: [
                 'The Enigma machine was invented by a German engineer, Arthur Scherbius, who applied for his patent on ' +
                 'February 23, 1918. The German Navy adopted the Enigma in 1926 and the Army in 1928. Both services ' +
@@ -262,7 +262,7 @@ const brownRoom: Room = {
                 'brown-artifact-11-4',
                 'brown-artifact-11-5'
             ],
-            audio: 'brown-artifact-11.mp3',
+            audio: '1.4.11.mp3',
             description: [
                 'Most of the world’s air force flying suits in WW II were simple developments of conventional overalls, with little ' +
                 'consideration given to their potential as an aid to survival. The German Fliegerschutzanzug (flight protective ' +
