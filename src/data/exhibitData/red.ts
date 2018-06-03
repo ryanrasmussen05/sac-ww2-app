@@ -12,7 +12,7 @@ const redRoom: Room = {
             pictures: [
                 '1.6.1'
             ],
-            audio: 'orange-artifact-1.mp3',
+            audio: '1.6.1.mp3',
             description: [
                 'In the Pacific Theater of War, the conquest of each island by the Allies was met by fanatical Japanese forces ' +
                 'committed to victory. Surrender was considered a disgrace and military forces facing defeat simply committed ' +
@@ -31,13 +31,9 @@ const redRoom: Room = {
             roomColor: 'red',
             name: 'What We Discovered',
             pictures: [
-                'orange-artifact-1-1',
-                'orange-artifact-1-2',
-                'orange-artifact-1-3',
-                'orange-artifact-1-4',
-                'orange-artifact-1-5'
+                '1.6.2-1', '1.6.2-2'
             ],
-            audio: 'orange-artifact-1.mp3',
+            audio: '1.6.2.mp3',
             description: [
                 'The horrific loss of life during World War II (to include those from war-related disease and famine) is more than ' +
                 '80-million people. That is 3.5% of the world’s estimated population of 1940. Both allied and Axis nations ' +
@@ -61,13 +57,9 @@ const redRoom: Room = {
             roomColor: 'red',
             name: 'United States Strategic Bombing Summary Report',
             pictures: [
-                'orange-artifact-1-1',
-                'orange-artifact-1-2',
-                'orange-artifact-1-3',
-                'orange-artifact-1-4',
-                'orange-artifact-1-5'
+                '1.6.3'
             ],
-            audio: 'orange-artifact-1.mp3',
+            audio: '1.6.3.mp3',
             description: [
                 'Europe:',
                 'At the directive of President Roosevelt, Secretary of War Henry Stimson formed the United States Strategic ' +
