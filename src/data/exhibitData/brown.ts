@@ -134,11 +134,7 @@ const brownRoom: Room = {
             roomColor: 'brown',
             name: '8th Air Force Jacket',
             pictures: [
-                'brown-artifact-6-1',
-                'brown-artifact-6-2',
-                'brown-artifact-6-3',
-                'brown-artifact-6-4',
-                'brown-artifact-6-5'
+                '1.4.6'
             ],
             audio: '1.4.6.mp3',
             description: [
@@ -159,11 +155,7 @@ const brownRoom: Room = {
             roomColor: 'brown',
             name: 'Consolidated B-24 “Liberator”',
             pictures: [
-                'brown-artifact-7-1',
-                'brown-artifact-7-2',
-                'brown-artifact-7-3',
-                'brown-artifact-7-4',
-                'brown-artifact-7-5'
+                '1.4.7'
             ],
             audio: '1.4.7.mp3',
             description: [
@@ -181,11 +173,7 @@ const brownRoom: Room = {
             roomColor: 'brown',
             name: 'American & British Aircraft Doctrine',
             pictures: [
-                'brown-artifact-8-1',
-                'brown-artifact-8-2',
-                'brown-artifact-8-3',
-                'brown-artifact-8-4',
-                'brown-artifact-8-5'
+                '1.4.8'
             ],
             audio: '1.4.8.mp3',
             description: [
@@ -208,11 +196,7 @@ const brownRoom: Room = {
             roomColor: 'brown',
             name: 'German and Japanese Aircraft Doctrine',
             pictures: [
-                'brown-artifact-9-1',
-                'brown-artifact-9-2',
-                'brown-artifact-9-3',
-                'brown-artifact-9-4',
-                'brown-artifact-9-5'
+                '1.4.9'
             ],
             audio: '1.4.9.mp3',
             description: [
@@ -256,11 +240,7 @@ const brownRoom: Room = {
             roomColor: 'brown',
             name: 'Luftwaffe Flight Suit',
             pictures: [
-                'brown-artifact-11-1',
-                'brown-artifact-11-2',
-                'brown-artifact-11-3',
-                'brown-artifact-11-4',
-                'brown-artifact-11-5'
+                '1.4.11'
             ],
             audio: '1.4.11.mp3',
             description: [
