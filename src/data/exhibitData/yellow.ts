@@ -8,7 +8,7 @@ const yellowRoom: Room = {
         'Japan was expanding its influence in the Pacific Region, China, and Korea; then identified ' +
         'potential concerns with the United States as a competitor for regional resources.',
         'America’s isolation from war ended December 7, 1941, when Japan staged a devastating ' +
-        'surprise attack at Pearl Harbor, Hawaii where much of the Pacific Fleet was moored. Japanese ' +
+        'surprise attack at Pearl Harbor, Hawaii, where much of the Pacific Fleet was moored. Japanese ' +
         'warplanes sank or damaged 18 warships and destroyed 162 aircraft. Over 2,400 servicemen ' +
         'and civilians lost their lives. President Franklin D. Roosevelt responded with a statement of ' +
         'American will: “No matter how long it may take us to overcome this premeditated invasion, the ' +

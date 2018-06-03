@@ -7,7 +7,7 @@ const blueRoom: Room = {
     description: [
         'This section depicts the early days of aviation and initial bombing capabilities of a variety of air forces.  ' +
         'Small aircraft generally performed reconnaissance missions in support of ground commanders who understood ' +
-        'that aerial observation of their ground deployments and posture could compromise operations.  From this was ' +
+        'that aerial observation of their ground deployments and posture could compromise operations.  From this were ' +
         'born fighter aircraft, whose duty it was to prevent other aircraft from observing and reporting on troop dispositions.'
     ],
     artifacts: [

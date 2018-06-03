@@ -5,7 +5,7 @@ const greenRoom: Room = {
     color: 'green',
     audio: 'green-room.mp3',
     description: [
-        'As the interwar years faded, an introspective post-WWI Germany as well as the developed ' +
+        'As the interwar years faded, an introspective post-WWI Germany, as well as the developed ' +
         'world continued aviation experimentation, to include expansion of passenger service, military ' +
         'application of aerial capabilities, and advances in aeronautical engineering. While some nations ' +
         'lagged due to a lack of urgency, European countries and Japan, were interested in expanding ' +
@@ -64,8 +64,8 @@ const greenRoom: Room = {
                 'Established in 1939, the Hitler Youth was the sole official youth organization in Germany for ' +
                 'male youths aged 14 to 18. In 1934, a law declared the Hitler Youth to be the only legally ' +
                 'permitted youth organization in Germany and stated that "all of the German youth in the Reich is ' +
-                'organized within the Hitler Youth". The Hitler Youth were used to break up Church youth groups, ' +
-                'and in anti-Church indoctrination, used to spy on religious classes and Bible studies, and ' +
+                'organized within the Hitler Youth". The Hitler Youth were used to break up church youth groups, ' +
+                'and in anti-church indoctrination, used to spy on religious classes and Bible studies, and ' +
                 'interfere with church attendance. Education and training programs for the Hitler Youth were ' +
                 'designed to undermine the values of the traditional elitist structures of German society along ' +
                 'with their privileges.'
@@ -83,7 +83,7 @@ const greenRoom: Room = {
                 'Used 5,000 years before its adoption by the Nazis, the swastika comes from the Sanskrit ' +
                 'svastika, which means “good fortune” or “well-being”. To this day, it is a sacred symbol in ' +
                 'Hinduism, Buddhism, Jainism, and Odinism. The symbol experienced a resurgence in the late ' +
-                'nineteenth century as a symbol of Aryan culture following extensive archaeological work by ' +
+                'nineteenth century as a symbol of Aryan culture, following extensive archaeological work by ' +
                 'archaeologist Heinrich Schliemann. Schliemann discovered the hooked cross on the site of ' +
                 'ancient Troy, connecting it with similar shapes found on pottery in Germany. He concluded that ' +
                 'it was a “significant religious symbol of our remote ancestors.” The Nazi party had been looking ' +
@@ -103,9 +103,9 @@ const greenRoom: Room = {
             audio: '1.2.5.mp3',
             description: [
                 'During the raids on London, deep shelters provided most of the protection for civilians during ' +
-                'the Blitz. The most important shelters were the London Underground station as shown on the ' +
-                'wall of the exhibit. Each day orderly lines of people queued until 4:00 pm, when they could ' +
-                'enter the stations. In mid-September 1940, about 150,000 people a night slept in the ' +
+                'the Blitz. The most important shelters were the London Underground station, as shown on the ' +
+                'wall of the exhibit. Each day, orderly lines of people queued until 4:00 pm, when they could ' +
+                'enter the stations. In mid-September 1940, about 150,000 people per night slept in the ' +
                 'Underground, although by the winter and spring months the numbers had declined to 100,000 ' +
                 'or less. Noises of battle were muffled, and sleep was easier in the deepest stations, but many ' +
                 'people were killed from direct hits on stations. In March 1943, 173 men, women and children ' +

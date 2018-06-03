@@ -28,9 +28,9 @@ const brownRoom: Room = {
                 'traveled to Britain. Risking a loss of US citizenship due to American laws forbidding enlistment in foreign ' +
                 'militaries, these men volunteered to serve alongside their British allies in the Royal Air Force. ',
                 'Sweeney\'s nephew had already formed a Home Guard unit of Americans living in London, and presented the ' +
-                'idea of creating an American squadron in the RAF. In July of 1940, The English Air Ministry agreed that the ' +
-                'handful of Americans, plus any new recruits, would be formed into their own national units, dubbed the Eagle ' +
-                'Squadrons. The first squadron was organized in September, and two more followed over the next twelve' +
+                'idea of creating an American squadron in the RAF. In July of 1940, the English Air Ministry agreed that the ' +
+                'handful of Americans, plus any new recruits, would be formed into their own national units, dubbed as the Eagle ' +
+                'Squadrons. The first squadron was organized in September, and two more followed over the next twelve ' +
                 'months.',
                 'By 1940, Sweeney had recruited around 50 pilots and arranged their transport to Canada and then to Britain. A ' +
                 'Canadian group, the Clayton Knight Committee, formed shortly after England entered the war, was also ' +
@@ -63,7 +63,7 @@ const brownRoom: Room = {
                 'being allowed to participate in social events with the Germans.',
                 'Wolfe managed to escape the on December 13, 1941, and made it back to his unit, only to be sent back by the ' +
                 'British, who did not wish to upset a neutral nation. He made a second attempt at escape in 1943, was caught, ' +
-                'and was allowed to rejoin the war but with the United States. Wolfe continued to fly with the Army Air Force for ' +
+                'and was allowed to rejoin the war, but with the United States. Wolfe continued to fly with the Army Air Force for ' +
                 'the rest of the war. The remains of Wolfe’s Spitfire are lost to history, as it had crashed and sank into a peat ' +
                 'bog and sank. There it remained until 2011, when a recovery crew successfully found the astoundingly well-' +
                 'preserved remains. About a dozen pieces of the wreckage, including this oxygen bottle, are on permanent ' +
@@ -80,7 +80,7 @@ const brownRoom: Room = {
             audio: '1.4.3.mp3',
             description: [
                 'American bomber gunners were sent to gunnery schools for instruction on operation and maintenance of their ' +
-                'guns. Initially the training lasted four weeks; then it was extended to five weeks and finally six weeks. In that ' +
+                'guns. Initially, the training lasted four weeks; then it was extended to five weeks and finally six weeks. In that ' +
                 'first week they were overwhelmed by a blitz of data about machine guns and ordinance, which they would be ' +
                 'required to memorize, such as how to properly tear down and reassemble the guns, and how to load drums ' +
                 'and ammunition belts. After mastering the machine gun and ammo, the trainees learned how to line up the ' +
@@ -120,7 +120,7 @@ const brownRoom: Room = {
                 'Bombardier, and six enlisted men consisting of a Flight Engineer, Radio Operator, Ball Turret Gunner, Left ' +
                 'Waist Gunner, Right Waist Gunner and Tail Turret Gunner. The pilot was the commander of the aircraft and ' +
                 'responsible for the safety and efficiency of the crew. The copilot was an executive officer: chief assistant to the ' +
-                'pilot knowledgeable on all aspects of the commander’s duties, ready to take over should the pilot become ' +
+                'pilot, knowledgeable on all aspects of the commander’s duties, ready to take over should the pilot become ' +
                 'indisposed.',
                 'The Navigator directed the flight route from departure to destination and return. An expert in Pilotage ' +
                 '(determining the exact position of the aircraft by visual reference), as well as Dead Reckoning, Radio, and ' +
@@ -178,7 +178,7 @@ const brownRoom: Room = {
             audio: '1.4.8.mp3',
             description: [
                 'The Army Air Force and Royal Air Forces can be viewed as strategic air forces, because of their predominantly ' +
-                'heavy bomber-focused structure, and the mission to which they were committed. Both, the UK and US had ' +
+                'heavy bomber-focused structure, and the mission to which they were committed. Both the UK and US had ' +
                 'adopted the position that air power in concert with the land and sea forces would bring about victory: true ' +
                 'strategic air forces focused predominantly on the heavy long-range bomber. While there were some ' +
                 'differences in development, both the UK and the US developed similar doctrines based on the views post WW' +
@@ -247,7 +247,7 @@ const brownRoom: Room = {
                 'Most of the world’s air force flying suits in WW II were simple developments of conventional overalls, with little ' +
                 'consideration given to their potential as an aid to survival. The German Fliegerschutzanzug (flight protective ' +
                 'suit) was officially designated simply as a Kombination (Overall), successive models incorporated innovative ' +
-                'features that later became standard in flight clothing design the world over. Flight protective suits were ' +
+                'features that later became standard in flight clothing design. Flight protective suits were ' +
                 'available in summer and winter weights, further sub-designated for flight over land or sea, the latter ' +
                 'constructed of materials affording greater insulation. Most aircrews followed this system of matching suit to ' +
                 'environment, although availability or personal preferences often dictated what was worn. The flight suit on ' +

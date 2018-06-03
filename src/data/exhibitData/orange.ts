@@ -73,7 +73,7 @@ const orangeRoom: Room = {
                 'This mural depicts members of the Marine Attack Squadron 214, also known as the “Black Sheep.” During ' +
                 'their eighty-four days of combat, the twenty-seven members of the Squadron, along with their commander, ' +
                 'Major Gregory “Pappy” Boyington, destroyed or damaged 203 Japanese planes, with nine members ' +
-                'accounting for ninety-seven air-to- air kills. For their exceptional service, the Black Sheep were awarded the ' +
+                'accounting for ninety-seven air-to-air kills. For their exceptional service, the Black Sheep were awarded the ' +
                 'Presidential Unit Citation, and their exploits were used as the basis for the 1970s television series "Baa Baa ' +
                 'Black Sheep."'
             ]
