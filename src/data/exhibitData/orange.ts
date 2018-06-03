@@ -31,7 +31,7 @@ const orangeRoom: Room = {
             pictures: [
                 '1.5.1'
             ],
-            audio: 'orange-artifact-1.mp3',
+            audio: '1.5.1.mp3',
             description: [
                 '“The Hump” refers to an area of the Eastern Himalayan mountains, which allied pilots had to navigate to ' +
                 'resupply the allied Chinese forces under Generalissimo Chiang Kai-Shek and American Army Air Force (AAF) ' +
@@ -47,13 +47,9 @@ const orangeRoom: Room = {
             roomColor: 'orange',
             name: 'Dalton Mark VII E6-B Computer',
             pictures: [
-                'orange-artifact-2-1',
-                'orange-artifact-2-2',
-                'orange-artifact-2-3',
-                'orange-artifact-2-4',
-                'orange-artifact-2-5'
+                '1.5.2'
             ],
-            audio: 'orange-artifact-2.mp3',
+            audio: '1.5.2.mp3',
             description: [
                 'The Dalton Mark VII E-6B Navigation Computer (1938) aka: “Prayer Wheel,” or “Whiz Wheel,” was the ' +
                 'standard flight computer used in the United States and Great Britain from 1940 through World War II. Invented ' +
@@ -72,7 +68,7 @@ const orangeRoom: Room = {
             pictures: [
                 '1.5.3'
             ],
-            audio: 'orange-artifact-3.mp3',
+            audio: '1.5.3.mp3',
             description: [
                 'This mural depicts members of the Marine Attack Squadron 214, also known as the “Black Sheep.” During ' +
                 'their eighty-four days of combat, the twenty-seven members of the Squadron, along with their commander, ' +
@@ -87,13 +83,9 @@ const orangeRoom: Room = {
             roomColor: 'orange',
             name: '20th Air Force Operations Album',
             pictures: [
-                'orange-artifact-4-1',
-                'orange-artifact-4-2',
-                'orange-artifact-4-3',
-                'orange-artifact-4-4',
-                'orange-artifact-4-5'
+                '1.5.4-1', '1.5.4-2', '1.5.4-3', '1.5.4-4', '1.5.4-5', '1.5.4-6'
             ],
-            audio: 'orange-artifact-4.mp3',
+            audio: '1.5.4.mp3',
             description: [
                 'This book contains photographs, which chronicle the missions of the Twentieth Air Force. Charged with ' +
                 'strategic bombings of the Japanese mainland, the 20 Air Force delivered the first attacks on the main islands ' +
@@ -119,7 +111,7 @@ const orangeRoom: Room = {
             pictures: [
                 '1.5.5'
             ],
-            audio: 'orange-artifact-5.mp3',
+            audio: '1.5.5.mp3',
             description: [
                 'Members of the Ninth Bombardment Group, a division of the Twentieth Air Force, would have received copies ' +
                 'of this “War Journal,” which recounts the missions flown by the group, as well as, citations and awards earned. ' +
@@ -135,13 +127,9 @@ const orangeRoom: Room = {
             roomColor: 'orange',
             name: 'Enola Gay',
             pictures: [
-                'orange-artifact-6-1',
-                'orange-artifact-6-2',
-                'orange-artifact-6-3',
-                'orange-artifact-6-4',
-                'orange-artifact-6-5'
+                '1.5.6'
             ],
-            audio: 'orange-artifact-6.mp3',
+            audio: '1.5.6.mp3',
             description: [
                 'On May 9, 1945, Colonel Paul Tibbets selected a B-29 from the assembly line of the Glenn L. Martin Bomber ' +
                 'Plant in Omaha, Nebraska. Tibbets had been briefed on the existence of an American super weapon and he ' +
@@ -155,13 +143,9 @@ const orangeRoom: Room = {
             roomColor: 'orange',
             name: 'Fat Man & Little Boy Bomb Silhouettes',
             pictures: [
-                'orange-artifact-7-1',
-                'orange-artifact-7-2',
-                'orange-artifact-7-3',
-                'orange-artifact-7-4',
-                'orange-artifact-7-5'
+                '1.5.7'
             ],
-            audio: 'orange-artifact-7.mp3',
+            audio: '1.5.7.mp3',
             description: [
                 'Each bomb worked differently - The Little Boy used a “gun-type” method to detonate the uranium. Inside the ' +
                 'casing, two pieces of uranium sat at either end of the bomb. Upon activation, conventional explosives would ' +
