@@ -34,7 +34,7 @@ export class AudioPlayer implements OnDestroy, OnChanges {
                 console.log('PLATFORM PAUSE - AUDIO');
                 clearInterval(this._timer);
                 if (!!this._audioFile && this.isPlaying()) {
-                    this._audioFile.pause();
+                    this._audioFile.stop();
                 }
             });
 
