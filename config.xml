@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.sac.sac_ww2" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.sac.sac-ww2" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Courage From Above</name>
     <description>Courage From Above exhibit tour</description>
     <author email="ryanrasmussen05@gmail.com" href="http://ryanrasmussen.us/">Ryan Rasmussen</author>
