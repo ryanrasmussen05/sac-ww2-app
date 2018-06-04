@@ -84,6 +84,14 @@ export class ArtifactPage {
         this.currentArtifacts = [artifact];
     }
 
+    isBold(paragraph: string): boolean {
+        return paragraph.indexOf('<bold>') >= 0;
+    }
+
+    formatParagraph(paragraph: string): string {
+        return paragraph.replace('<bold>', '');
+    }
+
     private _getCurrentIndex(): number {
         return this.room.artifacts.findIndex((artifact) => {
             return artifact.name === this.currentArtifact.name;

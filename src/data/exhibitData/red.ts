@@ -61,7 +61,7 @@ const redRoom: Room = {
             ],
             audio: '1.6.3.mp3',
             description: [
-                'Europe:',
+                '<bold>Europe:',
                 'At the directive of President Roosevelt, Secretary of War Henry Stimson formed the United States Strategic ' +
                 'Bombing Survey, in 1944. Released on September 30, 1945, the report concluded that the strategic bombing ' +
                 'of the oil industry and truck manufacturing was a significant contribution to Allied victory in Europe. Other ' +
@@ -71,7 +71,7 @@ const redRoom: Room = {
                 'success: Attacks on Ball Bearing plants, for example, showed no evidence of halting or slowing down ' +
                 'production of ball bearings. Germany also accepted a record number of 39,807 aircraft in 1944, compared ' +
                 'with 15,596 aircraft in 1942, but little to none of the aircraft produced in 1944 ever saw combat.',
-                'The Pacific:',
+                '<bold>The Pacific:',
                 'The Survey did a similar study on bombings against Japan. It was estimated that over 654,400 tons of ' +
                 'bombs were dropped on Japanese targets throughout the war, including 160,800 tons dropped on the home ' +
                 'islands. During early bombing raids, using high-altitude precision bombing, only 10% of the bombs fell near ' +

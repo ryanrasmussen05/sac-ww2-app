@@ -35,7 +35,9 @@
     </div>
 
     <div padding-left padding-right padding-bottom>
-        <p *ngFor="let paragraph of artifact.description" class="description">{{ paragraph }}</p>
+        <p *ngFor="let paragraph of artifact.description" class="description" [class.bold-paragraph]="isBold(paragraph)">
+            {{ formatParagraph(paragraph) }}
+        </p>
     </div>
 
 </ion-content>
