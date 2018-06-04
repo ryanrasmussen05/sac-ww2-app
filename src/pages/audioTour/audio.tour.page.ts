@@ -56,14 +56,18 @@ export class AudioTourPage implements OnDestroy {
         platform.ready().then(() => {
             this._pauseSubscription = platform.pause.subscribe(() => {
                 console.log('PLATFORM PAUSE - AUDIO TOUR PAGE');
+
                 this._autoPlayNext = false;
-                if (!!this._currentAudioFile && this.isPlaying()) {
+
+                //pause audio if playing (ios handles this automatically)
+                if (!!this._currentAudioFile && this.isPlaying() && this.platform.is('android')) {
                     this._currentAudioFile.pause();
                 }
             });
 
             this._resumeSubscription = platform.resume.subscribe(() => {
                 console.log('PLATFORM RESUME - AUDIO TOUR PAGE');
+
                 this._autoPlayNext = true;
             });
         });
@@ -270,7 +274,7 @@ export class AudioTourPage implements OnDestroy {
                 this._errorSubscription = this._currentAudioFile.onError.subscribe((error: MEDIA_ERROR) => this._onError(error));
 
                 if (this._autoPlayNext) {
-                    this._currentAudioFile.play({playAudioWhenScreenIsLocked: true});
+                    this._currentAudioFile.play();
                 }
             }
         });
