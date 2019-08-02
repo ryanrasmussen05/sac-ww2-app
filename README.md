@@ -1,4 +1,4 @@
-# ionic-sac-ww2
+# SAC Museum WWII Exhibit App
 
 Ionic Version 3.20.0
 
